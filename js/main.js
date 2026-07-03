@@ -121,6 +121,16 @@ function render() {
       </a>
     `).join('');
 
+  const eduLabel = document.getElementById('eduLabel');
+  const eduList = document.getElementById('eduList');
+  const eduLink = document.getElementById('eduLink');
+  if (eduLabel && eduList && eduLink) {
+    eduLabel.textContent = t(D.education.label);
+    eduList.innerHTML = D.education.items.map(item => `<li class="reveal">${t(item)}</li>`).join('');
+    eduLink.href = D.education.linkedinLink;
+    eduLink.textContent = t(D.education.linkedinLabel);
+  }
+
   // Tools
   document.getElementById('toolsLabel').textContent = t(D.tools.label);
   document.getElementById('toolsTitle').textContent = t(D.tools.title);

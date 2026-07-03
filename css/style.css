@@ -180,6 +180,18 @@ section { padding: 72px 0; }
   color: var(--it-muted); font-size: 14px;
   border: 1px dashed var(--it-border); border-radius: 12px;
 }
+.education-block { margin-top: 32px; }
+.education-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--it-accent); margin-bottom: 14px;
+}
+.education-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.education-list li {
+  font-size: 13.5px; color: var(--it-text); line-height: 1.55;
+  padding: 10px 14px; border: 1px solid var(--it-border); border-radius: 8px;
+  background: var(--it-surface);
+}
+.education-link { display: inline-block; margin-top: 14px; font-size: 13.5px; font-weight: 600; }
 
 /* TOOLS */
 .tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }

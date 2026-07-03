@@ -109,7 +109,46 @@ window.KKIT_DATA = {
     label: { de: 'Verifiziert', en: 'Verified' },
     title: { de: 'Zertifizierungen', en: 'Certifications' },
     empty: { de: 'Zertifizierungen werden aktuell ergänzt — schau bald wieder vorbei.', en: 'Certifications are being added soon — check back shortly.' },
-    items: [],
+    items: [
+      {
+        name: 'Microsoft Certified: Bereitstellen & Verwalten AD Domain Services',
+        issuer: 'Microsoft',
+        date: { de: '2026', en: '2026' },
+        status: { de: '✓ Microsoft Certified', en: '✓ Microsoft Certified' },
+        verifyUrl: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
+        accentColor: '#0ea5e9',
+      },
+      {
+        name: 'Microsoft Certified: Excel Grundlagen',
+        issuer: 'Microsoft',
+        date: { de: '2026', en: '2026' },
+        status: { de: '✓ Microsoft Certified', en: '✓ Microsoft Certified' },
+        verifyUrl: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
+        accentColor: '#107c41',
+      },
+    ],
+  },
+
+  // ─── WEITERBILDUNG ──────────────────────────────────────────────────────────
+  // Kursabschlüsse ohne formale Prüfung — kompakte Liste statt Karten, um sie
+  // von den geprüften Zertifizierungen oben abzugrenzen.
+  education: {
+    label: { de: 'Weiterbildung', en: 'Further education' },
+    linkedinLink: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
+    linkedinLabel: { de: 'Alle Nachweise auf LinkedIn ansehen →', en: 'View all credentials on LinkedIn →' },
+    items: [
+      { de: 'Windows 11: Administration & Troubleshooting · 3 Kurse (Administration, Hardware & Benutzerkonten, Software & Ressourcen) — LinkedIn Learning, Dez 2025 – Feb 2026', en: 'Windows 11: Administration & Troubleshooting · 3 courses (Administration, Hardware & User Accounts, Software & Resources) — LinkedIn Learning, Dec 2025 – Feb 2026' },
+      { de: 'Microsoft 365 für Administrator:innen · 3 Kurse (Benutzersupport, Grundkurs für Admins, Neue Funktionen 1. HJ 2025) — LinkedIn Learning, Dez 2025 – 2026', en: 'Microsoft 365 for Administrators · 3 courses (User Support, Admin Fundamentals, New Features H1 2025) — LinkedIn Learning, Dec 2025 – 2026' },
+      { de: 'Microsoft Entra ID Grundkurs · LinkedIn Learning — Feb 2026', en: 'Microsoft Entra ID Fundamentals · LinkedIn Learning — Feb 2026' },
+      { de: 'Microsoft Azure Fundamentals (AZ-900) · LinkedIn Learning — Feb 2026', en: 'Microsoft Azure Fundamentals (AZ-900) · LinkedIn Learning — Feb 2026' },
+      { de: 'Microsoft 365 Fundamentals (MS-900) · Teil 1 & 2 · LinkedIn Learning — Feb 2026', en: 'Microsoft 365 Fundamentals (MS-900) · Part 1 & 2 · LinkedIn Learning — Feb 2026' },
+      { de: 'Active Directory-Verwaltung automatisieren mit PowerShell · LinkedIn Learning — Mai 2026', en: 'Automating Active Directory Management with PowerShell · LinkedIn Learning — May 2026' },
+      { de: 'Introduction to Secure Networking · Microsoft — Feb 2026', en: 'Introduction to Secure Networking · Microsoft — Feb 2026' },
+      { de: 'IT-Support für hybride Arbeitsplätze — Feb 2026', en: 'IT Support for Hybrid Workplaces — Feb 2026' },
+      { de: 'ITIL 4 vs. ITIL 2011 — Feb 2026', en: 'ITIL 4 vs. ITIL 2011 — Feb 2026' },
+      { de: 'Outlook Grundlagen · Kursleitung: Microsoft Certified Trainer (JoBITS) — Dez 2025', en: 'Outlook Fundamentals · Taught by a Microsoft Certified Trainer (JoBITS) — Dec 2025' },
+      { de: 'Cisco Networking Academy: CCST IT Support (100-140) · Kursreihe, alle 10 Units — Feb 2026', en: 'Cisco Networking Academy: CCST IT Support (100-140) · Full course track, all 10 units — Feb 2026' },
+    ],
   },
 
   // ─── EIGENE TOOLS & METHODIK ────────────────────────────────────────────────
