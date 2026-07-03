@@ -27,11 +27,11 @@ window.KKIT_DATA = {
     label: { de: 'Profil', en: 'Profile' },
     title: { de: 'Infrastruktur, auf die man sich verlassen kann.', en: 'Infrastructure people can rely on.' },
     text: {
-      de: 'Seit 15 Jahren halte ich IT-Infrastruktur stabil, damit andere sich auf ihre Arbeit verlassen können. Zuletzt habe ich bei den Johanniter Bundes-IT-Services eine bundesweite KRITIS-Umgebung administriert — Active Directory, Microsoft Entra ID, Citrix, Windows-11-Rollouts und PowerShell-Automatisierung. Davor 14 Jahre BAUHAUS: Tier-1-bis-3-Support für über 200 Mitarbeitende und technische Betreuung der Warenwirtschaft. Wo ich Reibung sehe, baue ich Lösungen — vom selbstentwickelten Ticket-Zuweisungstool bis zur dokumentierten Diagnose-Methodik.',
-      en: 'For 15 years I have kept IT infrastructure stable so others can rely on it for their work. Most recently I administered a nationwide critical-infrastructure (KRITIS) environment at Johanniter Bundes-IT-Services — Active Directory, Microsoft Entra ID, Citrix, Windows 11 rollouts, and PowerShell automation. Before that, 14 years at BAUHAUS: tier 1–3 support for 200+ employees and technical ownership of the merchandise management system. Wherever I see friction, I build solutions — from a self-developed ticket assignment tool to a documented diagnosis methodology.',
+      de: 'Seit über 15 Jahren halte ich IT-Infrastruktur stabil, damit andere sich auf ihre Arbeit verlassen können. Zuletzt habe ich bei den Johanniter Bundes-IT-Services eine bundesweite KRITIS-Umgebung administriert — Active Directory, Microsoft Entra ID, Citrix, Windows-11-Rollouts und PowerShell-Automatisierung. Davor 14 Jahre BAUHAUS: Tier-1-bis-3-Support für über 200 Mitarbeitende und technische Betreuung der Warenwirtschaft. Wo ich Reibung sehe, baue ich Lösungen — vom selbstentwickelten Ticket-Zuweisungstool bis zur dokumentierten Diagnose-Methodik.',
+      en: 'For over 15 years I have kept IT infrastructure stable so others can rely on it for their work. Most recently I administered a nationwide critical-infrastructure (KRITIS) environment at Johanniter Bundes-IT-Services — Active Directory, Microsoft Entra ID, Citrix, Windows 11 rollouts, and PowerShell automation. Before that, 14 years at BAUHAUS: tier 1–3 support for 200+ employees and technical ownership of the merchandise management system. Wherever I see friction, I build solutions — from a self-developed ticket assignment tool to a documented diagnosis methodology.',
     },
     facts: [
-      { de: '15 Jahre IT-Praxis', en: '15 years of IT practice' },
+      { de: '15+ Jahre IT-Praxis', en: '15+ years of IT practice' },
       { de: 'KRITIS-Umgebung administriert', en: 'Administered KRITIS environment' },
       { de: 'Tier-1–3-Support · 200+ Mitarbeitende', en: 'Tier 1–3 support · 200+ employees' },
     ],
@@ -59,10 +59,10 @@ window.KKIT_DATA = {
         company: 'BAUHAUS',
         active: false,
         desc: {
-          de: 'Tier-1-bis-3-Support für über 200 Mitarbeitende, technische Betreuung der Warenwirtschaft, Hardware- und Prozessverantwortung im laufenden Handelsbetrieb. 15 Jahre operative Praxis: Ich kenne den Arbeitsalltag der Anwender aus erster Hand — welche Prozesse funktionieren und wo Systeme im Betrieb brechen.',
-          en: 'Tier 1–3 support for 200+ employees, technical ownership of the merchandise management system, hardware and process responsibility in day-to-day retail operations. 15 years of hands-on practice: I know users’ daily work first-hand — which processes work and where systems break in production.',
+          de: 'Tier-1-bis-3-Support für über 200 Mitarbeitende, technische Betreuung der Warenwirtschaft, Hardware- und Prozessverantwortung im laufenden Handelsbetrieb. 14 Jahre operative Praxis: Ich kenne den Arbeitsalltag der Anwender aus erster Hand — welche Prozesse funktionieren und wo Systeme im Betrieb brechen.',
+          en: 'Tier 1–3 support for 200+ employees, technical ownership of the merchandise management system, hardware and process responsibility in day-to-day retail operations. 14 years of hands-on practice: I know users\u2019 daily work first-hand \u2014 which processes work and where systems break in production.',
         },
-        tags: ['1st–3rd-Level-Support', 'Warenwirtschaft', 'Prozessoptimierung', 'Anwenderbetreuung'],
+        tags: ['1st\u20133rd-Level-Support', 'Warenwirtschaft', 'Prozessoptimierung', 'Anwenderbetreuung'],
       },
       {
         period: { de: 'seit Juni 2026', en: 'since June 2026' },
@@ -97,7 +97,7 @@ window.KKIT_DATA = {
       },
       {
         label: { de: 'Support & Methodik', en: 'Support & Methodology' },
-        items: [{ de: '1st–3rd-Level-Support', en: 'Tier 1–3 support' }, { de: 'Ticketsysteme', en: 'Ticketing systems' }, { de: 'Warenwirtschaftssysteme', en: 'Merchandise management systems' }, { de: 'Reproduzierbare Fehlerdiagnose', en: 'Reproducible fault diagnosis' }],
+        items: [{ de: '1st\u20133rd-Level-Support', en: 'Tier 1\u20133 support' }, { de: 'Ticketsysteme', en: 'Ticketing systems' }, { de: 'Warenwirtschaftssysteme', en: 'Merchandise management systems' }, { de: 'Reproduzierbare Fehlerdiagnose', en: 'Reproducible fault diagnosis' }],
       },
     ],
   },
@@ -157,13 +157,13 @@ window.KKIT_DATA = {
       },
     ],
     moreLink: 'https://kkeey92.github.io/CV_KKEEY/',
-    moreLabel: { de: 'Mehr im AI-Portfolio →', en: 'More in the AI portfolio →' },
+    moreLabel: { de: 'Mehr im AI-Portfolio \u2192', en: 'More in the AI portfolio \u2192' },
   },
 
   // ─── KONTAKT ────────────────────────────────────────────────────────────────
   contact: {
     label: { de: 'Kontakt', en: 'Contact' },
-    title: { de: 'Lassen Sie uns sprechen.', en: 'Let’s talk.' },
+    title: { de: 'Lassen Sie uns sprechen.', en: 'Let\u2019s talk.' },
     desc: {
       de: 'Offen für Festanstellungen als IT-Administrator, Systemadministrator oder IAM-Specialist. Remote · Hybrid · DE & EN.',
       en: 'Open to full-time roles as IT administrator, system administrator, or IAM specialist. Remote · Hybrid · DE & EN.',
@@ -179,14 +179,14 @@ window.KKIT_DATA = {
     navContact:  { de: 'Kontakt',         en: 'Contact' },
     namePH:      { de: 'Ihr Name',        en: 'Your name' },
     emailPH:     { de: 'Ihre E-Mail',     en: 'Your email' },
-    msgPH:       { de: 'Ihre Nachricht…', en: 'Your message…' },
-    submitLabel: { de: 'Nachricht senden →', en: 'Send message →' },
-    sentMsg:     { de: '✓ Nachricht gesendet — ich melde mich.', en: '✓ Message sent — I’ll get back to you.' },
-    sendingLabel:{ de: 'Wird gesendet…',  en: 'Sending…' },
-    sendErr:     { de: 'Fehler — bitte direkt mailen', en: 'Error — please email directly' },
+    msgPH:       { de: 'Ihre Nachricht\u2026', en: 'Your message\u2026' },
+    submitLabel: { de: 'Nachricht senden \u2192', en: 'Send message \u2192' },
+    sentMsg:     { de: '\u2713 Nachricht gesendet \u2014 ich melde mich.', en: '\u2713 Message sent \u2014 I\u2019ll get back to you.' },
+    sendingLabel:{ de: 'Wird gesendet\u2026',  en: 'Sending\u2026' },
+    sendErr:     { de: 'Fehler \u2014 bitte direkt mailen', en: 'Error \u2014 please email directly' },
     darkBtnLight:{ de: 'Hellmodus aktivieren', en: 'Switch to light mode' },
     darkBtnDark: { de: 'Dunkelmodus aktivieren', en: 'Switch to dark mode' },
-    footerCross: { de: 'Auch von mir: AI-Engineering-Portfolio →', en: 'Also by me: AI engineering portfolio →' },
+    footerCross: { de: 'Auch von mir: AI-Engineering-Portfolio \u2192', en: 'Also by me: AI engineering portfolio \u2192' },
     downloadNote:{ de: 'Bewerbungsmappe: Anschreiben, Lebenslauf & Tech-Profil (PDF, 4 Seiten)', en: 'Application portfolio: cover letter, CV & tech profile (PDF, 4 pages)' },
   },
 
