@@ -102,6 +102,16 @@ window.KKIT_DATA = {
     ],
   },
 
+  // ─── ZERTIFIZIERUNGEN ───────────────────────────────────────────────────────
+  // Fallback-Zustand: noch keine echten Einträge. Sobald Zertifikate/Badges
+  // vorliegen, hier Objekte ergänzen: { name, issuer, date, status, verifyUrl, accentColor }.
+  certifications: {
+    label: { de: 'Verifiziert', en: 'Verified' },
+    title: { de: 'Zertifizierungen', en: 'Certifications' },
+    empty: { de: 'Zertifizierungen werden aktuell ergänzt — schau bald wieder vorbei.', en: 'Certifications are being added soon — check back shortly.' },
+    items: [],
+  },
+
   // ─── EIGENE TOOLS & METHODIK ────────────────────────────────────────────────
   tools: {
     label: { de: 'Proof of Work', en: 'Proof of Work' },
@@ -175,6 +185,7 @@ window.KKIT_DATA = {
     navProfile:  { de: 'Profil',          en: 'Profile' },
     navCareer:   { de: 'Werdegang',       en: 'Career' },
     navSkills:   { de: 'Kompetenzen',     en: 'Skills' },
+    navCerts:    { de: 'Zertifikate',     en: 'Certs' },
     navTools:    { de: 'Tools',           en: 'Tools' },
     navContact:  { de: 'Kontakt',         en: 'Contact' },
     namePH:      { de: 'Ihr Name',        en: 'Your name' },

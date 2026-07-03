@@ -64,6 +64,7 @@ function render() {
   document.getElementById('navProfile').textContent = t(D.i18n.navProfile);
   document.getElementById('navCareer').textContent = t(D.i18n.navCareer);
   document.getElementById('navSkills').textContent = t(D.i18n.navSkills);
+  document.getElementById('navCerts').textContent = t(D.i18n.navCerts);
   document.getElementById('navTools').textContent = t(D.i18n.navTools);
   document.getElementById('navContact').textContent = t(D.i18n.navContact);
   document.getElementById('availableText').textContent = t(D.hero.available);
@@ -106,6 +107,19 @@ function render() {
       <div class="skill-chips">${g.items.map(i => `<span>${t(i)}</span>`).join('')}</div>
     </div>
   `).join('');
+
+  // Zertifizierungen
+  document.getElementById('certsLabel').textContent = t(D.certifications.label);
+  document.getElementById('certsTitle').textContent = t(D.certifications.title);
+  document.getElementById('certsContainer').innerHTML = D.certifications.items.length === 0
+    ? `<p class="certs-empty reveal">${t(D.certifications.empty)}</p>`
+    : D.certifications.items.map(cert => `
+      <a href="${cert.verifyUrl}" target="_blank" rel="noopener" class="cert-card reveal" style="border-top-color:${cert.accentColor}">
+        <h3>${cert.name}</h3>
+        <p class="cert-issuer">${cert.issuer} · ${t(cert.date)}</p>
+        <span class="cert-status">${t(cert.status)}</span>
+      </a>
+    `).join('');
 
   // Tools
   document.getElementById('toolsLabel').textContent = t(D.tools.label);
