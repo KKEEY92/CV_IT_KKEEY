@@ -48,10 +48,10 @@ window.KKIT_DATA = {
         company: 'Johanniter Bundes-IT-Services',
         active: false,
         desc: {
-          de: 'Administration einer bundesweiten KRITIS-Infrastrukturumgebung: Active Directory, Microsoft Entra ID, Citrix, Omnitracker, Innovaphone PBX. Windows-11-Rollouts und Automatisierung wiederkehrender Abläufe per PowerShell. Eigenentwicklungen: ein Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard für reproduzierbare Fehlerdiagnose.',
-          en: 'Administration of a nationwide critical-infrastructure environment: Active Directory, Microsoft Entra ID, Citrix, Omnitracker, Innovaphone PBX. Windows 11 rollouts and PowerShell automation of recurring tasks. Own developments: a tool for automated ticket assignment and the KKEEY Standard for reproducible fault diagnosis.',
+          de: 'Administration einer bundesweiten KRITIS-Infrastrukturumgebung: Active Directory, Microsoft Entra ID, Citrix (inkl. NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Migration via Deskcenter Studio und modifiziertem PowerShell-Skript (Pausierung der 46%-Update-Funktion zur Speed-Optimierung). Endpoint-Security mit FortiClient & Sophos. Eigenentwicklungen: Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard.',
+          en: 'Administration of a nationwide critical-infrastructure environment: Active Directory, Microsoft Entra ID, Citrix (incl. NetScaler), Omnitracker, Innovaphone PBX. Windows 11 migration via Deskcenter Studio and modified PowerShell script (pausing the 46% update function for speed optimization). Endpoint security via FortiClient & Sophos. Own developments: automated ticket assignment tool and the KKEEY Standard.',
         },
-        tags: ['Active Directory', 'Entra ID', 'Citrix', 'PowerShell', 'Windows 11', 'KRITIS'],
+        tags: ['Active Directory', 'Entra ID', 'Citrix', 'NetScaler', 'Deskcenter Studio', 'PowerShell', 'Windows 11', 'KRITIS', 'FortiClient', 'Sophos'],
       },
       {
         period: { de: '2010 – 2024 · 14 Jahre', en: '2010 – 2024 · 14 years' },
@@ -89,7 +89,11 @@ window.KKIT_DATA = {
       },
       {
         label: { de: 'Client & Infrastruktur', en: 'Client & Infrastructure' },
-        items: [{ de: 'Windows-11-Rollouts', en: 'Windows 11 rollouts' }, 'Citrix', 'Omnitracker', 'Innovaphone PBX', { de: 'Hardware-Betreuung', en: 'Hardware support' }],
+        items: [{ de: 'Windows-11-Migrationen', en: 'Windows 11 migrations' }, 'Deskcenter Studio', 'Citrix (NetScaler)', 'Omnitracker', 'Innovaphone PBX', { de: 'Hardware-Betreuung', en: 'Hardware support' }],
+      },
+      {
+        label: { de: 'Security & Netzwerk', en: 'Security & Network' },
+        items: ['FortiClient', 'Sophos', { de: 'Endpoint Security', en: 'Endpoint Security' }, { de: 'KRITIS-Infrastruktur', en: 'Critical Infrastructure' }],
       },
       {
         label: { de: 'Automatisierung & Scripting', en: 'Automation & Scripting' },
