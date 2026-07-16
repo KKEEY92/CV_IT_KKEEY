@@ -148,6 +148,10 @@ window.KKIT_DATA = {
     },
     items: [
       {
+        name: 'AI Virtual Calling',
+        desc: { de: 'WebRTC Voice UI · React, Python FastAPI, Gemini Live API', en: 'WebRTC Voice UI · React, Python FastAPI, Gemini Live API' },
+      },
+      {
         name: 'AuraTone AI',
         desc: { de: 'Audio-Mastering-Engine · TypeScript, Python DSP, Google Gemini', en: 'Audio mastering engine · TypeScript, Python DSP, Google Gemini' },
       },
