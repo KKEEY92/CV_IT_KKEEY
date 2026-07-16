@@ -1,33 +1,33 @@
 /* Fonts werden im <head> via preconnect + <link> geladen */
 
 :root {
-  --it-bg: #f7f9fb;
-  --it-surface: #ffffff;
-  --it-heading: #0f172a;
-  --it-text: #334155;
-  --it-muted: #5b6b7f;
-  --it-border: #dde5ed;
-  --it-accent: #1a5fa8;
-  --it-accent-soft: #e8f0f9;
+  --it-bg: #0B0D0F;
+  --it-surface: rgba(28, 31, 36, 0.45);
+  --it-heading: #ffffff;
+  --it-text: #e2e8f0;
+  --it-muted: #94a3b8;
+  --it-border: rgba(255, 122, 0, 0.2);
+  --it-accent: #FF7A00;
+  --it-accent-soft: rgba(255, 122, 0, 0.1);
   --it-accent-text: #ffffff;
-  --it-nav: rgba(247,249,251,0.92);
-  --it-shadow: 0 1px 3px rgba(15,23,42,0.06), 0 4px 16px rgba(15,23,42,0.05);
-  --it-green: #1a7f4e;
+  --it-nav: rgba(11, 13, 15, 0.6);
+  --it-shadow: 0 8px 32px 0 rgba(255, 122, 0, 0.15);
+  --it-green: #00E5FF;
 }
 
 [data-theme="dark"] {
-  --it-bg: #0f1620;
-  --it-surface: #16202e;
-  --it-heading: #eef3f9;
-  --it-text: #c3cedb;
-  --it-muted: #8fa1b5;
-  --it-border: #26344a;
-  --it-accent: #5b9bd9;
-  --it-accent-soft: #1c2c42;
-  --it-accent-text: #0f1620;
-  --it-nav: rgba(15,22,32,0.92);
-  --it-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.25);
-  --it-green: #4ecb8d;
+  --it-bg: #0B0D0F;
+  --it-surface: rgba(28, 31, 36, 0.45);
+  --it-heading: #ffffff;
+  --it-text: #e2e8f0;
+  --it-muted: #94a3b8;
+  --it-border: rgba(255, 122, 0, 0.2);
+  --it-accent: #FF7A00;
+  --it-accent-soft: rgba(255, 122, 0, 0.1);
+  --it-accent-text: #ffffff;
+  --it-nav: rgba(11, 13, 15, 0.6);
+  --it-shadow: 0 8px 32px 0 rgba(255, 122, 0, 0.15);
+  --it-green: #00E5FF;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -129,8 +129,9 @@ section { padding: 72px 0; }
 /* WERDEGANG */
 .career-list { display: flex; flex-direction: column; gap: 18px; }
 .career-item {
-  background: var(--it-bg); border: 1px solid var(--it-border); border-radius: 12px;
+  background: var(--it-surface); border: 1px solid var(--it-border); border-radius: 12px;
   padding: 24px 26px; box-shadow: var(--it-shadow);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
 }
 .section-alt .career-item { background: var(--it-surface); }
 .career-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 8px; }
@@ -153,6 +154,7 @@ section { padding: 72px 0; }
 .skill-card {
   background: var(--it-surface); border: 1px solid var(--it-border); border-radius: 12px;
   padding: 22px 24px; box-shadow: var(--it-shadow);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
 }
 .skill-card h3 { font-size: 15px; font-weight: 700; color: var(--it-heading); margin-bottom: 14px; }
 .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -167,6 +169,7 @@ section { padding: 72px 0; }
   background: var(--it-surface); border: 1px solid var(--it-border); border-radius: 12px;
   padding: 24px 26px; box-shadow: var(--it-shadow);
   border-top: 3px solid var(--it-accent);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
 }
 .tool-card h3 { font-size: 17px; font-weight: 700; color: var(--it-heading); }
 .tool-sub { font-size: 13px; font-weight: 600; color: var(--it-accent); margin: 3px 0 10px; }
@@ -178,6 +181,7 @@ section { padding: 72px 0; }
 .side-card {
   background: var(--it-surface); border: 1px solid var(--it-border); border-radius: 10px;
   padding: 16px 18px;
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
 }
 .side-card h3 { font-size: 15px; font-weight: 700; color: var(--it-heading); margin-bottom: 3px; }
 .side-card p { font-size: 13.5px; color: var(--it-muted); }
@@ -187,9 +191,10 @@ section { padding: 72px 0; }
 .contact-inner { max-width: 640px; }
 .contact-form { display: flex; flex-direction: column; gap: 14px; margin: 8px 0 28px; }
 .contact-input {
-  background: var(--it-bg); border: 1px solid var(--it-border); border-radius: 10px;
+  background: var(--it-surface); border: 1px solid var(--it-border); border-radius: 10px;
   color: var(--it-heading); font-family: inherit; font-size: 15px;
   padding: 12px 16px; width: 100%;
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
 }
 .section-alt .contact-input { background: var(--it-surface); }
 .contact-input:focus { outline: 2px solid var(--it-accent); outline-offset: -1px; border-color: transparent; }
