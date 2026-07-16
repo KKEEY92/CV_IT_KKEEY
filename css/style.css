@@ -79,9 +79,8 @@ section { padding: 72px 0; }
   max-width: 920px; margin: 0 auto; padding: 0 24px;
   display: flex; align-items: center; justify-content: space-between; height: 60px;
 }
-.nav-logo {
-  font-weight: 800; font-size: 15px; color: var(--it-accent-text);
-  background: var(--it-accent); border-radius: 8px; padding: 4px 9px;
+.nav-logo-img {
+  height: 38px; width: auto; border-radius: 4px; display: block;
 }
 .nav-links { display: flex; gap: 22px; list-style: none; }
 .nav-links a { color: var(--it-text); font-size: 14px; font-weight: 500; }
@@ -109,7 +108,7 @@ section { padding: 72px 0; }
   display: flex; align-items: center; gap: 40px;
 }
 .hero-avatar img {
-  width: 132px; height: 132px; max-width: 100%; border-radius: 50%;
+  width: 180px; height: 180px; max-width: 100%; border-radius: 50%;
   object-fit: cover; border: 3px solid var(--it-surface);
   box-shadow: 0 0 0 2px var(--it-accent), var(--it-shadow);
   display: block;
