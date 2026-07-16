@@ -1,18 +1,18 @@
 /* Fonts werden im <head> via preconnect + <link> geladen */
 
 :root {
-  --it-bg: #0B0D0F;
-  --it-surface: rgba(28, 31, 36, 0.45);
-  --it-heading: #ffffff;
-  --it-text: #e2e8f0;
-  --it-muted: #94a3b8;
-  --it-border: rgba(255, 122, 0, 0.2);
-  --it-accent: #FF7A00;
-  --it-accent-soft: rgba(255, 122, 0, 0.1);
+  --it-bg: #f7f9fb;
+  --it-surface: #ffffff;
+  --it-heading: #0f172a;
+  --it-text: #334155;
+  --it-muted: #5b6b7f;
+  --it-border: #dde5ed;
+  --it-accent: #1a5fa8;
+  --it-accent-soft: #e8f0f9;
   --it-accent-text: #ffffff;
-  --it-nav: rgba(11, 13, 15, 0.6);
-  --it-shadow: 0 8px 32px 0 rgba(255, 122, 0, 0.15);
-  --it-green: #00E5FF;
+  --it-nav: rgba(247,249,251,0.92);
+  --it-shadow: 0 1px 3px rgba(15,23,42,0.06), 0 4px 16px rgba(15,23,42,0.05);
+  --it-green: #1a7f4e;
 }
 
 [data-theme="dark"] {
@@ -21,12 +21,25 @@
   --it-heading: #ffffff;
   --it-text: #e2e8f0;
   --it-muted: #94a3b8;
-  --it-border: rgba(255, 122, 0, 0.2);
+  --it-border: rgba(255, 255, 255, 0.08);
+  --it-accent: #5b9bd9;
+  --it-accent-soft: rgba(91, 155, 217, 0.1);
+  --it-accent-text: #ffffff;
+  --it-nav: rgba(11, 13, 15, 0.85);
+  --it-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --it-green: #29b876;
+}
+
+[data-color-theme="orange"] {
   --it-accent: #FF7A00;
   --it-accent-soft: rgba(255, 122, 0, 0.1);
-  --it-accent-text: #ffffff;
-  --it-nav: rgba(11, 13, 15, 0.6);
-  --it-shadow: 0 8px 32px 0 rgba(255, 122, 0, 0.15);
+  --it-green: #00E5FF;
+}
+
+[data-theme="dark"][data-color-theme="orange"] {
+  --it-accent: #FF7A00;
+  --it-accent-soft: rgba(255, 122, 0, 0.15);
+  --it-border: rgba(255, 122, 0, 0.2);
   --it-green: #00E5FF;
 }
 

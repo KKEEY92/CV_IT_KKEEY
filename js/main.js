@@ -2,6 +2,7 @@ const D = window.KKIT_DATA;
 // Eigene Storage-Keys (kkit_*) — gleiche Origin wie das AI-Portfolio (kk_*), andere Defaults
 let lang = localStorage.getItem('kkit_lang') || 'de';
 let darkMode = localStorage.getItem('kkit_dark') === 'true'; // hell ist Standard
+let colorTheme = localStorage.getItem('kkit_color') || 'default';
 
 document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
@@ -15,7 +16,9 @@ function t(obj) { return typeof obj === 'object' && obj !== null ? (obj[lang] ||
 // ─── THEME ────────────────────────────────────────────────────────────
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-color-theme', colorTheme);
   localStorage.setItem('kkit_dark', darkMode);
+  localStorage.setItem('kkit_color', colorTheme);
   const btn = document.getElementById('darkToggle');
   if (!btn) return;
   btn.setAttribute('aria-label', darkMode ? t(D.i18n.darkBtnLight) : t(D.i18n.darkBtnDark));
@@ -47,6 +50,14 @@ function initNav() {
     darkMode = !darkMode;
     applyTheme();
   });
+
+  const colorBtn = document.getElementById('colorToggle');
+  if (colorBtn) {
+    colorBtn.addEventListener('click', () => {
+      colorTheme = colorTheme === 'default' ? 'orange' : 'default';
+      applyTheme();
+    });
+  }
 
   document.getElementById('langToggle').addEventListener('click', () => {
     lang = lang === 'de' ? 'en' : 'de';
