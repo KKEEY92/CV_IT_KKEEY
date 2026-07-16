@@ -80,7 +80,8 @@ section { padding: 72px 0; }
   display: flex; align-items: center; justify-content: space-between; height: 60px;
 }
 .nav-logo-img {
-  height: 38px; width: auto; border-radius: 4px; display: block;
+  height: 38px; width: 38px; border-radius: 4px; display: block;
+  object-fit: cover; flex-shrink: 0;
 }
 .nav-links { display: flex; gap: 22px; list-style: none; }
 .nav-links a { color: var(--it-text); font-size: 14px; font-weight: 500; }
