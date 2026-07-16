@@ -259,3 +259,64 @@ section { padding: 72px 0; }
   html { scroll-behavior: auto; }
   .btn, .btn:hover { transform: none; transition: none; }
 }
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  [data-theme="dark"] {
+    --it-bg: #ffffff;
+    --it-surface: #ffffff;
+    --it-heading: #000000;
+    --it-text: #333333;
+    --it-muted: #666666;
+    --it-border: #cccccc;
+    --it-accent: #000000;
+  }
+
+  .nav, .hero-controls, .available-badge, .btn-primary, #darkToggle, #colorToggle, #langToggle, #hamburger {
+    display: none !important;
+  }
+
+  .section-alt {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  section {
+    padding: 20px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, .section-title {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+  
+  .hero-card, .timeline-item, .card {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    background: transparent !important;
+    page-break-inside: avoid;
+  }
+  
+  .glass-panel {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
