@@ -156,8 +156,8 @@ window.KKIT_DATA = {
         desc: { de: 'WebRTC Voice UI · React, Python FastAPI, Gemini Live API', en: 'WebRTC Voice UI · React, Python FastAPI, Gemini Live API' },
       },
       {
-        name: 'AuraTone AI',
-        desc: { de: 'Audio-Mastering-Engine · TypeScript, Python DSP, Google Gemini', en: 'Audio mastering engine · TypeScript, Python DSP, Google Gemini' },
+        name: 'AuraTone AI v2.0',
+        desc: { de: 'Native macOS Audio Workstation · Tauri 2.0 (Rust Core), Metal GPU 120Hz Waveform, 3-Way SQLite, Python DSP, Google Gemini', en: 'Native macOS Audio Workstation · Tauri 2.0 (Rust Core), Metal GPU 120Hz Waveform, 3-Way SQLite, Python DSP, Google Gemini' },
       },
       {
         name: 'Claire V2.5',
