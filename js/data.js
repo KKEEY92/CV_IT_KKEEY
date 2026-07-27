@@ -117,7 +117,7 @@ window.KKIT_DATA = {
     items: [
       {
         name: { de: 'Ticket-Routing-Automatisierung', en: 'Ticket routing automation' },
-        sub: { de: 'Eigenentwicklung · im Team-Einsatz', en: 'Own development · used in production' },
+        sub: { de: '● Im Team-Einsatz · Eigenentwicklung', en: '● Used in production · Internal tool' },
         desc: {
           de: 'Selbstentwickeltes Tool, das eingehende Support-Tickets regelbasiert dem passenden Bearbeiter zuweist. Ersetzt tägliche manuelle Verteilarbeit — direkt aus dem Support-Alltag heraus entstanden, weil der Prozess vorher Zeit gefressen hat.',
           en: 'Self-developed tool that assigns incoming support tickets to the right agent based on rules. Replaces daily manual triage work — built straight out of day-to-day support practice because the old process was eating time.',
@@ -125,7 +125,7 @@ window.KKIT_DATA = {
       },
       {
         name: 'KKEEY-Standard',
-        sub: { de: 'Reproduzierbare Fehlerdiagnose', en: 'Reproducible fault diagnosis' },
+        sub: { de: '● Standardisierte Methodik · Verifiziert', en: '● Standardized methodology · Verified' },
         desc: {
           de: 'Dokumentierte Methodik für strukturierte, reproduzierbare Fehlerdiagnose — damit Störungen nachvollziehbar gelöst werden statt per Trial-and-Error.',
           en: 'Documented methodology for structured, reproducible fault diagnosis — so incidents are resolved traceably instead of by trial and error.',
@@ -133,7 +133,7 @@ window.KKIT_DATA = {
       },
       {
         name: 'KKI Agent-Framework',
-        sub: { de: 'Persönliche Automatisierungs-Bibliothek', en: 'Personal automation library' },
+        sub: { de: '● Aktives Framework · In-House Library', en: '● Active framework · Internal library' },
         desc: {
           de: 'Privat entwickelte Agentenstruktur mit wiederverwendbaren Bausteinen für Automatisierungs-Workflows — die gemeinsame Grundlage meiner eigenen Tools und Nebenprojekte. Zeigt: keine Einzelskripte, sondern strukturierte, wartbare Systeme.',
           en: 'Privately developed agent structure with reusable building blocks for automation workflows — the shared foundation of my own tools and side projects. The point: not one-off scripts, but structured, maintainable systems.',
@@ -152,20 +152,20 @@ window.KKIT_DATA = {
     },
     items: [
       {
-        name: 'AI Virtual Calling',
-        desc: { de: 'WebRTC Voice UI · React, Python FastAPI, Gemini Live API', en: 'WebRTC Voice UI · React, Python FastAPI, Gemini Live API' },
+        name: 'Claire V2.5 Native Audio',
+        desc: { de: '● Produktiv v2.5 · Voice-AI-Agent · LiveKit 2.x, Python, ~200ms Latenz', en: '● Production v2.5 · Voice AI agent · LiveKit 2.x, Python, ~200ms latency' },
       },
       {
         name: 'AuraTone AI v2.0',
-        desc: { de: 'Native macOS Audio Workstation · Tauri 2.0 (Rust Core), Metal GPU 120Hz Waveform, 3-Way SQLite, Python DSP, Google Gemini', en: 'Native macOS Audio Workstation · Tauri 2.0 (Rust Core), Metal GPU 120Hz Waveform, 3-Way SQLite, Python DSP, Google Gemini' },
+        desc: { de: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz', en: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz' },
       },
       {
-        name: 'Claire V2.5',
-        desc: { de: 'Voice-AI-Agent · Python, Gemini Native Audio, ~200ms Latenz', en: 'Voice AI agent · Python, Gemini Native Audio, ~200ms latency' },
+        name: 'AI Virtual Calling',
+        desc: { de: '● Prototype / Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API', en: '● Prototype / Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API' },
       },
     ],
     moreLink: 'https://kkeey92.github.io/CV_KKEEY/',
-    moreLabel: { de: 'Mehr im AI-Portfolio \u2192', en: 'More in the AI portfolio \u2192' },
+    moreLabel: { de: 'Mehr im AI-Portfolio →', en: 'More in the AI portfolio →' },
   },
 
   // ─── KONTAKT ────────────────────────────────────────────────────────────────
