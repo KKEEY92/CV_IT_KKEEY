@@ -97,11 +97,15 @@ window.KKIT_DATA = {
       },
       {
         label: { de: 'Automatisierung & Scripting', en: 'Automation & Scripting' },
-        items: ['PowerShell', 'Python', { de: 'Prozessautomatisierung', en: 'Process automation' }, { de: 'Eigene Workflow-Tools', en: 'Custom workflow tools' }],
+        items: ['PowerShell', 'Python 3.12+', 'TypeScript', 'Docker & Cloud Run', { de: 'Prozessautomatisierung', en: 'Process automation' }, { de: 'Eigene Workflow-Tools', en: 'Custom workflow tools' }],
       },
       {
         label: { de: 'Support & Methodik', en: 'Support & Methodology' },
-        items: [{ de: '1st\u20133rd-Level-Support', en: 'Tier 1\u20133 support' }, { de: 'Ticketsysteme', en: 'Ticketing systems' }, { de: 'Warenwirtschaftssysteme', en: 'Merchandise management systems' }, { de: 'Reproduzierbare Fehlerdiagnose', en: 'Reproducible fault diagnosis' }],
+        items: [{ de: '1st–3rd-Level-Support', en: 'Tier 1–3 support' }, { de: 'Ticketsysteme', en: 'Ticketing systems' }, { de: 'Warenwirtschaftssysteme', en: 'Merchandise management systems' }, { de: 'Reproduzierbare Fehlerdiagnose (KKEEY-Standard)', en: 'Reproducible fault diagnosis (KKEEY Standard)' }],
+      },
+      {
+        label: { de: 'AI Engineering & Innovation', en: 'AI Engineering & Innovation' },
+        items: ['LiveKit 2.x Voice AI', 'Gemini API / Vertex AI', 'Local LLMs (LM Studio)', 'Rust / Tauri 2.0', 'Audio DSP & Metal GPU', { de: 'Agenten-Architekturen', en: 'Agentic Architectures' }],
       },
     ],
   },
