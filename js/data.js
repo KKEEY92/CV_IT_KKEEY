@@ -27,13 +27,13 @@ window.KKIT_DATA = {
     label: { de: 'Profil', en: 'Profile' },
     title: { de: 'Infrastruktur, auf die man sich verlassen kann.', en: 'Infrastructure people can rely on.' },
     text: {
-      de: 'Seit über 15 Jahren halte ich IT-Infrastruktur stabil, damit andere sich auf ihre Arbeit verlassen können. Zuletzt habe ich bei den Johanniter Bundes-IT-Services eine bundesweite KRITIS-Umgebung administriert — Active Directory, Microsoft Entra ID, Citrix, Windows-11-Rollouts und PowerShell-Automatisierung. Davor 14 Jahre BAUHAUS: Tier-1-bis-3-Support für über 200 Mitarbeitende und technische Betreuung der Warenwirtschaft. Wo ich Reibung sehe, baue ich Lösungen — vom selbstentwickelten Ticket-Zuweisungstool bis zur dokumentierten Diagnose-Methodik.',
-      en: 'For over 15 years I have kept IT infrastructure stable so others can rely on it for their work. Most recently I administered a nationwide critical-infrastructure (KRITIS) environment at Johanniter Bundes-IT-Services — Active Directory, Microsoft Entra ID, Citrix, Windows 11 rollouts, and PowerShell automation. Before that, 14 years at BAUHAUS: tier 1–3 support for 200+ employees and technical ownership of the merchandise management system. Wherever I see friction, I build solutions — from a self-developed ticket assignment tool to a documented diagnosis methodology.',
+      de: 'Seit über 15 Jahren halte ich IT-Infrastruktur stabil, damit andere sich auf ihre Arbeit verlassen können. Zuletzt habe ich bei den Johanniter Bundes-IT-Services eine bundesweite KRITIS-Umgebung administriert — Active Directory, Microsoft Entra ID, Citrix, Windows-11-Rollouts und PowerShell-Automatisierung für 90.000+ User und AD-Objekte der gesamten Organisation. Davor 14 Jahre BAUHAUS: Tier-1-bis-3-Support und technische Betreuung der Warenwirtschaft. Wo ich Reibung sehe, baue ich Lösungen — vom selbstentwickelten Ticket-Zuweisungstool bis zur dokumentierten Diagnose-Methodik.',
+      en: 'For over 15 years I have kept IT infrastructure stable so others can rely on it for their work. Most recently I administered a nationwide critical-infrastructure (KRITIS) environment at Johanniter Bundes-IT-Services — Active Directory, Microsoft Entra ID, Citrix, Windows 11 rollouts, and PowerShell automation for 90,000+ users and AD objects across the entire organization. Before that, 14 years at BAUHAUS: tier 1–3 support and technical ownership of the merchandise management system. Wherever I see friction, I build solutions — from a self-developed ticket assignment tool to a documented diagnosis methodology.',
     },
     facts: [
       { de: '15+ Jahre IT-Praxis', en: '15+ years of IT practice' },
       { de: 'KRITIS-Umgebung administriert', en: 'Administered KRITIS environment' },
-      { de: 'Tier-1–3-Support · 200+ Mitarbeitende', en: 'Tier 1–3 support · 200+ employees' },
+      { de: 'Systemadministration · 90.000+ User & AD-Objekte', en: 'System Administration · 90,000+ Users & AD Objects' },
     ],
   },
 
@@ -48,8 +48,8 @@ window.KKIT_DATA = {
         company: 'Johanniter Bundes-IT-Services',
         active: false,
         desc: {
-          de: 'Administration einer bundesweiten KRITIS-Infrastrukturumgebung: Active Directory, Microsoft Entra ID, Citrix (inkl. NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Migration via Deskcenter Studio und modifiziertem PowerShell-Skript (Pausierung der 46%-Update-Funktion zur Speed-Optimierung). Endpoint-Security mit FortiClient & Sophos. Eigenentwicklungen: Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard.',
-          en: 'Administration of a nationwide critical-infrastructure environment: Active Directory, Microsoft Entra ID, Citrix (incl. NetScaler), Omnitracker, Innovaphone PBX. Windows 11 migration via Deskcenter Studio and modified PowerShell script (pausing the 46% update function for speed optimization). Endpoint security via FortiClient & Sophos. Own developments: automated ticket assignment tool and the KKEEY Standard.',
+          de: 'Administration einer bundesweiten KRITIS-Infrastrukturumgebung für über 90.000+ User und AD-Objekte der gesamten Organisation: Active Directory, Microsoft Entra ID, Citrix (inkl. NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Migration via Deskcenter Studio und modifiziertem PowerShell-Skript (Pausierung der 46%-Update-Funktion zur Speed-Optimierung). Endpoint-Security mit FortiClient & Sophos. Eigenentwicklungen: Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard.',
+          en: 'Administration of a nationwide critical-infrastructure environment for over 90,000+ users and AD objects across the entire organization: Active Directory, Microsoft Entra ID, Citrix (incl. NetScaler), Omnitracker, Innovaphone PBX. Windows 11 migration via Deskcenter Studio and modified PowerShell script (pausing the 46% update function for speed optimization). Endpoint security via FortiClient & Sophos. Own developments: automated ticket assignment tool and the KKEEY Standard.',
         },
         tags: ['Active Directory', 'Entra ID', 'Citrix', 'NetScaler', 'Deskcenter Studio', 'PowerShell', 'Windows 11', 'KRITIS', 'FortiClient', 'Sophos'],
       },
@@ -59,8 +59,8 @@ window.KKIT_DATA = {
         company: 'BAUHAUS',
         active: false,
         desc: {
-          de: 'Tier-1-bis-3-Support für über 200 Mitarbeitende, technische Betreuung der Warenwirtschaft, Hardware- und Prozessverantwortung im laufenden Handelsbetrieb. 14 Jahre operative Praxis: Ich kenne den Arbeitsalltag der Anwender aus erster Hand — welche Prozesse funktionieren und wo Systeme im Betrieb brechen.',
-          en: 'Tier 1–3 support for 200+ employees, technical ownership of the merchandise management system, hardware and process responsibility in day-to-day retail operations. 14 years of hands-on practice: I know users\u2019 daily work first-hand \u2014 which processes work and where systems break in production.',
+          de: 'Tier-1-bis-3-Support, technische Betreuung der Warenwirtschaft, Hardware- und Prozessverantwortung im laufenden Handelsbetrieb. 14 Jahre operative Praxis: Ich kenne den Arbeitsalltag der Anwender aus erster Hand — welche Prozesse funktionieren und wo Systeme im Betrieb brechen.',
+          en: 'Tier 1–3 support, technical ownership of the merchandise management system, hardware and process responsibility in day-to-day retail operations. 14 years of hands-on practice: I know users\u2019 daily work first-hand \u2014 which processes work and where systems break in production.',
         },
         tags: ['1st\u20133rd-Level-Support', 'Warenwirtschaft', 'Prozessoptimierung', 'Anwenderbetreuung'],
       },
