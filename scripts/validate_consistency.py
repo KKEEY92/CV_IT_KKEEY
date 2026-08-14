@@ -168,7 +168,7 @@ def main() -> None:
         print(f"\nScan failed with {len(all_errors)} total error(s).", file=sys.stderr)
         sys.exit(1)
 
-    print("\n✓ ALL CONSISTENCY CHECKS PASSED (100% CANONICAL REVISION STATUS).")
+    print("\n✓ ALL CONFIGURED CONSISTENCY CHECKS PASSED (CANONICAL PROFILE & REGRESSION VALIDATION PASSED).")
     sys.exit(0)
 
 
