@@ -86,14 +86,14 @@ window.KKIT_DATA = {
       },
       {
         period: { de: 'seit 06/2026', en: 'since 06/2026' },
-        role: { de: 'IT-Beratung & Prozessautomatisierung', en: 'IT Consulting & Process Automation' },
-        company: { de: 'Selbstständig', en: 'Self-employed' },
+        role: { de: 'Independent IT & Automation Projects', en: 'Independent IT & Automation Projects' },
+        company: { de: 'Projektentwicklung & Neuorientierung', en: 'Project Engineering & Professional Focus' },
         active: true,
         desc: {
-          de: 'Beratung und Umsetzung rund um Systemadministration, Workflow-Automatisierung und Tool-Entwicklung für kleine und mittlere Unternehmen.',
-          en: 'Consulting and implementation around systems administration, workflow automation, and custom tool engineering for small and medium enterprises.',
+          de: 'Selbstständige Projektentwicklung, Konzeption modularer Systemarchitekturen und Entwicklung von Automatisierungs- und KI-Workflows.',
+          en: 'Independent project engineering, designing modular systems architectures, and implementing automation & AI workflows.',
         },
-        tags: ['Automatisierung', 'PowerShell', 'Python', 'KMU'],
+        tags: ['Automatisierung', 'PowerShell', 'Python', 'Systemarchitektur'],
       },
     ],
   },
@@ -242,29 +242,29 @@ window.KKIT_DATA = {
     label: { de: 'Zusatzkompetenz', en: 'Additional Qualification' },
     title: { de: 'Zusatzkompetenz: AI Engineering & Automation', en: 'Additional Qualification: AI Engineering & Automation' },
     text: {
-      de: 'Ergänzend zu meiner Enterprise-IT-Erfahrung entwickle ich eigenständig Automatisierungs- und KI-Systeme. Die Projekte erweitern mein Profil um Softwareentwicklung, Systemarchitektur, Local-First-Verarbeitung und moderne Mensch-Maschine-Interaktion.',
-      en: 'In addition to my Enterprise IT experience, I independently develop automation and AI systems. These projects expand my profile into software engineering, systems architecture, local-first processing, and modern human-machine interaction.',
+      de: 'Ergänzend zu meiner Enterprise-IT-Erfahrung entwickle ich eigenständig Automatisierungs- und KI-Systeme. Die Projekte erweitern mein Profil um Softwareentwicklung, Systemarchitektur, Local-First-Verarbeitung und moderne Mensch-Maschine-Interaktion. Verifikation auf Anfrage: Funktionsnachweis durch geführte Live-Demo, reproduzierbaren Testlauf oder Review ausgewählter, sicherheitsbereinigter Artefakte, ohne vollständige Offenlegung des proprietären Quellcodes.',
+      en: 'In addition to my Enterprise IT experience, I independently develop automation and AI systems. These projects expand my profile into software engineering, systems architecture, local-first processing, and modern human-machine interaction. Verification on request: proof of function via guided live demo, reproducible test run, or review of selected sanitized artifacts, without full disclosure of proprietary source code.',
     },
     items: [
       {
         name: 'Claire (Voice AI & Persona Architecture)',
         desc: {
-          de: '● PL2 Prototyp · E1 Architekturdokumentation · Voice-Pipeline, EmotionEngine, Memory-Layer (LiveKit 2.x, Python)',
-          en: '● PL2 Prototype · E1 Architecture Docs · Voice pipeline, EmotionEngine, memory layer (LiveKit 2.x, Python)',
+          de: '● Reifegrad: PL2 Funktionsfähiger Prototyp · Evidenz: E1 Architekturdokumentation · Code: Privat · LiveKit 2.x, Python, EmotionEngine',
+          en: '● Maturity: PL2 Functional Prototype · Evidence: E1 Architecture Docs · Code: Private · LiveKit 2.x, Python, EmotionEngine',
         },
       },
       {
         name: 'AuraTone AI',
         desc: {
-          de: '● PL2 Prototyp · E1 Architekturdokumentation · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz',
-          en: '● PL2 Prototype · E1 Architecture Docs · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz',
+          de: '● Reifegrad: PL2 Funktionsfähiger Prototyp · Evidenz: E1 Architekturdokumentation · Code: Privat · Tauri 2.0 (Rust), Metal GPU 120Hz',
+          en: '● Maturity: PL2 Functional Prototype · Evidence: E1 Architecture Docs · Code: Private · Tauri 2.0 (Rust), Metal GPU 120Hz',
         },
       },
       {
         name: 'AI Virtual Calling & Dialog-Systeme',
         desc: {
-          de: '● PL2 Prototyp · E1 Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API',
-          en: '● PL2 Prototype · E1 Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API',
+          de: '● Reifegrad: PL2 Funktionsfähiger Prototyp · Evidenz: E1 Demo-Artefakt · Code: Privat · React, Python FastAPI, Gemini Live API',
+          en: '● Maturity: PL2 Functional Prototype · Evidence: E1 Demo Artifact · Code: Private · React, Python FastAPI, Gemini Live API',
         },
       },
     ],
