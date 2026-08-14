@@ -1,39 +1,59 @@
 /**
- * KKEEY IT-Profil — Inhaltsdatei
- * Hier alle Texte, Stationen und Kompetenzen pflegen.
- * Kein Code-Wissen nötig. Einfach Werte ändern und speichern.
+ * KKEEY IT-Profil — Master-Datenbasis (Single Source of Truth)
+ * Konsolidierte Architektur: Enterprise IT · Microsoft-Infrastruktur · Automation
  */
 window.KKIT_DATA = {
 
   // ─── HERO ───────────────────────────────────────────────────────────────────
   hero: {
     name: 'Kevin Kuck',
+    tagline: {
+      de: 'Enterprise IT · Microsoft-Infrastruktur · Automation',
+      en: 'Enterprise IT · Microsoft Infrastructure · Automation',
+    },
     role: {
-      de: 'IT-Administrator · Systemadministration · Identity & Access Management',
-      en: 'IT Administrator · System Administration · Identity & Access Management',
+      de: 'IT-Systemadministrator · Identity & Access Management',
+      en: 'IT Systems Administrator · Identity & Access Management',
+    },
+    claim: {
+      de: 'Enterprise IT aus der Praxis. Automatisierung mit System.',
+      en: 'Hands-on Enterprise IT. Systematic automation.',
     },
     meta: {
-      de: '15 Jahre IT-Praxis · KRITIS-erfahren · Butzbach · Remote / Hybrid',
-      en: '15 years of IT practice · Critical-infrastructure experience · Butzbach, Germany · Remote / Hybrid',
+      de: '15 Jahre operative Erfahrung · KRITIS-relevant · Butzbach · Remote / Hybrid',
+      en: '15 years of operational experience · Critical infrastructure · Butzbach · Remote / Hybrid',
     },
     cta1: { de: 'Bewerbungsmappe (PDF)', en: 'Application portfolio (PDF)' },
     cta2: { de: 'Kontakt aufnehmen', en: 'Get in touch' },
     cta3: 'LinkedIn',
     available: { de: 'Verfügbar ab sofort', en: 'Available now' },
+    primaryChips: [
+      'Active Directory',
+      'Microsoft Entra ID',
+      'Gruppenrichtlinien',
+      'Exchange',
+      'PowerShell',
+      'Endpoint Deployment',
+      'Citrix',
+      'ITIL',
+    ],
   },
 
-  // ─── PROFIL ─────────────────────────────────────────────────────────────────
+  // ─── PROFIL (MASTERFASSUNG) ────────────────────────────────────────────────
   profile: {
     label: { de: 'Profil', en: 'Profile' },
-    title: { de: 'Infrastruktur, auf die man sich verlassen kann.', en: 'Infrastructure people can rely on.' },
+    title: {
+      de: 'Enterprise IT aus der Praxis. Automatisierung mit System.',
+      en: 'Hands-on Enterprise IT. Systematic automation.',
+    },
     text: {
-      de: 'Seit über 15 Jahren halte ich IT-Infrastruktur stabil, damit andere sich auf ihre Arbeit verlassen können. Zuletzt habe ich bei den Johanniter Bundes-IT-Services eine bundesweite KRITIS-Umgebung administriert — Active Directory, Microsoft Entra ID, Citrix, Windows-11-Rollouts und PowerShell-Automatisierung. Davor 14 Jahre BAUHAUS: Tier-1-bis-3-Support für über 200 Mitarbeitende und technische Betreuung der Warenwirtschaft. Wo ich Reibung sehe, baue ich Lösungen — vom selbstentwickelten Ticket-Zuweisungstool bis zur dokumentierten Diagnose-Methodik.',
-      en: 'For over 15 years I have kept IT infrastructure stable so others can rely on it for their work. Most recently I administered a nationwide critical-infrastructure (KRITIS) environment at Johanniter Bundes-IT-Services — Active Directory, Microsoft Entra ID, Citrix, Windows 11 rollouts, and PowerShell automation. Before that, 14 years at BAUHAUS: tier 1–3 support for 200+ employees and technical ownership of the merchandise management system. Wherever I see friction, I build solutions — from a self-developed ticket assignment tool to a documented diagnosis methodology.',
+      de: 'Ich verbinde langjährige operative Erfahrung mit IT-gestützten Geschäftsprozessen und nachgewiesener Enterprise-Systemadministration. Zuletzt war ich bei den Johanniter Bundes-IT Services in einem KRITIS-relevanten Umfeld tätig. Mein Aufgabenbereich umfasste Active Directory, Gruppenrichtlinien, Kerberos, Exchange, Software-Deployment, Lizenzmanagement, Citrix, Incident Management sowie Automatisierungen mit PowerShell und Python. Ergänzend entwickle ich eigenständig Automatisierungs-, Voice-, RAG- und KI-Systeme mit Python, TypeScript und modernen LLM-Plattformen. Die Verbindung aus operativer Praxis, stabilem Systembetrieb und moderner Automatisierung bildet den Kern meines beruflichen Profils.',
+      en: 'I combine extensive hands-on experience with IT-supported business processes and verified enterprise systems administration. Most recently, I worked with Johanniter Bundes-IT Services in a critical-infrastructure (KRITIS) environment. My scope covered Active Directory, Group Policies, Kerberos, Exchange, software deployment, license management, Citrix, incident management, and automation using PowerShell and Python. In addition, I independently engineer automation, voice, RAG, and AI systems with Python, TypeScript, and modern LLM platforms.',
     },
     facts: [
-      { de: '15+ Jahre IT-Praxis', en: '15+ years of IT practice' },
-      { de: 'KRITIS-Umgebung administriert', en: 'Administered KRITIS environment' },
-      { de: 'Tier-1–3-Support · 200+ Mitarbeitende', en: 'Tier 1–3 support · 200+ employees' },
+      { de: '15 Jahre operative Erfahrung', en: '15 years of operational experience' },
+      { de: 'KRITIS-relevantes Umfeld', en: 'Critical infrastructure environment' },
+      { de: 'Enterprise-Systemadministration', en: 'Enterprise systems administration' },
     ],
   },
 
@@ -43,79 +63,108 @@ window.KKIT_DATA = {
     title: { de: 'Berufserfahrung', en: 'Work experience' },
     items: [
       {
-        period: { de: 'Dez 2025 – Mai 2026', en: 'Dec 2025 – May 2026' },
-        role: { de: 'IT-Administrator', en: 'IT Administrator' },
-        company: 'Johanniter Bundes-IT-Services',
+        period: { de: '12/2025 – 05/2026', en: '12/2025 – 05/2026' },
+        role: { de: 'IT-Organisation-Spezialist / Junior IT-Support Agent', en: 'IT Organization Specialist / Junior IT Support Agent' },
+        company: 'Johanniter Bundes-IT Services',
         active: false,
         desc: {
-          de: 'Administration einer bundesweiten KRITIS-Infrastrukturumgebung: Active Directory, Microsoft Entra ID, Citrix (inkl. NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Migration via Deskcenter Studio und modifiziertem PowerShell-Skript (Pausierung der 46%-Update-Funktion zur Speed-Optimierung). Endpoint-Security mit FortiClient & Sophos. Eigenentwicklungen: Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard.',
-          en: 'Administration of a nationwide critical-infrastructure environment: Active Directory, Microsoft Entra ID, Citrix (incl. NetScaler), Omnitracker, Innovaphone PBX. Windows 11 migration via Deskcenter Studio and modified PowerShell script (pausing the 46% update function for speed optimization). Endpoint security via FortiClient & Sophos. Own developments: automated ticket assignment tool and the KKEEY Standard.',
+          de: 'Administration und Betrieb von Enterprise-Systemen in einem KRITIS-relevanten Umfeld. Aufgabenbereich: Active Directory, Gruppenrichtlinien, Kerberos, Exchange, Software-Deployment (DeskCenter Studio), Lizenzmanagement, Citrix, OmniTracker Incident Management sowie PowerShell- und Python-Automatisierung.',
+          en: 'Administration and operations of enterprise systems in a critical-infrastructure environment. Scope: Active Directory, Group Policies, Kerberos, Exchange, software deployment (DeskCenter Studio), license management, Citrix, OmniTracker incident management, and PowerShell/Python automation.',
         },
-        tags: ['Active Directory', 'Entra ID', 'Citrix', 'NetScaler', 'Deskcenter Studio', 'PowerShell', 'Windows 11', 'KRITIS', 'FortiClient', 'Sophos'],
+        tags: ['Active Directory', 'Entra ID', 'Gruppenrichtlinien', 'Kerberos', 'Exchange', 'DeskCenter', 'Citrix', 'OmniTracker', 'PowerShell', 'Python', 'KRITIS'],
       },
       {
-        period: { de: '2010 – 2024 · 14 Jahre', en: '2010 – 2024 · 14 years' },
-        role: { de: 'IT-Beauftragter & Inventory Management', en: 'IT Officer & Inventory Management' },
+        period: { de: '09/2010 – 12/2024 · 14 Jahre', en: '09/2010 – 12/2024 · 14 years' },
+        role: { de: 'Mitarbeiter Warenwirtschaft (Schwerpunkt: IT-gestützte Prozesse)', en: 'Merchandise Management Specialist (Focus: IT Business Processes)' },
         company: 'BAUHAUS',
         active: false,
         desc: {
-          de: 'Tier-1-bis-3-Support für über 200 Mitarbeitende, technische Betreuung der Warenwirtschaft, Hardware- und Prozessverantwortung im laufenden Handelsbetrieb. 14 Jahre operative Praxis: Ich kenne den Arbeitsalltag der Anwender aus erster Hand — welche Prozesse funktionieren und wo Systeme im Betrieb brechen.',
-          en: 'Tier 1–3 support for 200+ employees, technical ownership of the merchandise management system, hardware and process responsibility in day-to-day retail operations. 14 years of hands-on practice: I know users\u2019 daily work first-hand \u2014 which processes work and where systems break in production.',
+          de: 'Verantwortung für warenwirtschaftliche Abläufe, Bestandsqualität, Disposition, Warenverfügbarkeit und die zuverlässige Ausführung IT-gestützter Geschäftsprozesse. Langjährige operative Erfahrung mit Prozessanalyse, Fehlererkennung und systemgestützter Bestandsführung.',
+          en: 'Responsibility for merchandise management workflows, inventory quality, replenishment planning, goods availability, and reliable execution of IT-supported business processes. Longstanding operational experience in process analysis, anomaly detection, and ERP inventory control.',
         },
-        tags: ['1st\u20133rd-Level-Support', 'Warenwirtschaft', 'Prozessoptimierung', 'Anwenderbetreuung'],
+        tags: ['Warenwirtschaft', 'IT-Geschäftsprozesse', 'Prozessqualität', 'Bestandsführung', 'Disposition'],
       },
       {
-        period: { de: 'seit Juni 2026', en: 'since June 2026' },
+        period: { de: 'seit 06/2026', en: 'since 06/2026' },
         role: { de: 'IT-Beratung & Prozessautomatisierung', en: 'IT Consulting & Process Automation' },
         company: { de: 'Selbstständig', en: 'Self-employed' },
         active: true,
         desc: {
           de: 'Beratung und Umsetzung rund um Systemadministration, Workflow-Automatisierung und Tool-Entwicklung für kleine und mittlere Unternehmen.',
-          en: 'Consulting and implementation around system administration, workflow automation, and tool development for small and medium-sized businesses.',
+          en: 'Consulting and implementation around systems administration, workflow automation, and custom tool engineering for small and medium enterprises.',
         },
         tags: ['Automatisierung', 'PowerShell', 'Python', 'KMU'],
       },
     ],
   },
 
-  // ─── KERNKOMPETENZEN ────────────────────────────────────────────────────────
+  // ─── ENTERPRISE CORE SKILLS ─────────────────────────────────────────────────
   skills: {
     label: { de: 'Kompetenzen', en: 'Skills' },
-    title: { de: 'Kernkompetenzen', en: 'Core competencies' },
+    title: { de: 'Enterprise Core Skills', en: 'Enterprise Core Skills' },
     groups: [
       {
         label: { de: 'Identity & Access Management', en: 'Identity & Access Management' },
-        items: ['Active Directory', 'Microsoft Entra ID', { de: 'Benutzer- & Berechtigungsverwaltung', en: 'User & permissions management' }, { de: 'IAM in KRITIS-Umgebungen', en: 'IAM in critical infrastructure' }],
+        items: [
+          'Active Directory (AD DS)',
+          { de: 'Objekt- & Sicherheitsgruppenverwaltung', en: 'Object & Security Group Management' },
+          { de: 'Gruppenrichtlinien (GPO)', en: 'Group Policy Objects (GPO)' },
+          { de: 'Kerberos-Authentifizierung', en: 'Kerberos Authentication' },
+          { de: 'Domänenweite Berechtigungsverwaltung', en: 'Domain-wide Permission Management' },
+          'Microsoft Entra ID',
+          { de: 'Benutzer- & Rechteverwaltung (RBAC)', en: 'User & Permission Management (RBAC)' },
+        ],
       },
       {
-        label: { de: 'Client & Infrastruktur', en: 'Client & Infrastructure' },
-        items: [{ de: 'Windows-11-Migrationen', en: 'Windows 11 migrations' }, 'Deskcenter Studio', 'Citrix (NetScaler)', 'Omnitracker', 'Innovaphone PBX', { de: 'Hardware-Betreuung', en: 'Hardware support' }],
+        label: { de: 'Microsoft & Messaging', en: 'Microsoft & Messaging' },
+        items: [
+          'Exchange Admin Center',
+          { de: 'Postfachverwaltung', en: 'Mailbox Administration' },
+          { de: 'Verteilerlisten & Ressourcen', en: 'Distribution Lists & Resources' },
+          { de: 'Berechtigungsstrukturen', en: 'Permission Structures' },
+          { de: 'Mail-Flow-Regeln', en: 'Mail Flow Rules' },
+          { de: 'Transportbezogene Fehleranalyse', en: 'Transport Troubleshooting' },
+        ],
       },
       {
-        label: { de: 'Security & Netzwerk', en: 'Security & Network' },
-        items: ['FortiClient', 'Sophos', { de: 'Endpoint Security', en: 'Endpoint Security' }, { de: 'KRITIS-Infrastruktur', en: 'Critical Infrastructure' }],
+        label: { de: 'Endpoint & Deployment', en: 'Endpoint & Deployment' },
+        items: [
+          'DeskCenter Studio',
+          { de: 'Softwarepaketierung', en: 'Software Packaging' },
+          { de: 'Deployment-Steuerung', en: 'Deployment Management' },
+          { de: 'Lizenzmanagement', en: 'License Management' },
+          { de: 'Windows-11-Rollouts', en: 'Windows 11 Rollouts' },
+          { de: 'Endpoint Lifecycle', en: 'Endpoint Lifecycle' },
+        ],
       },
       {
-        label: { de: 'Automatisierung & Scripting', en: 'Automation & Scripting' },
-        items: ['PowerShell', 'Python 3.12+', 'TypeScript', 'Docker & Cloud Run', { de: 'Prozessautomatisierung', en: 'Process automation' }, { de: 'Eigene Workflow-Tools', en: 'Custom workflow tools' }],
+        label: { de: 'IT Operations & Service Management', en: 'IT Operations & Service Management' },
+        items: [
+          { de: 'Citrix-Terminalserver (NetScaler)', en: 'Citrix Terminal Server (NetScaler)' },
+          { de: 'Performance Monitoring & Troubleshooting', en: 'Performance Monitoring & Troubleshooting' },
+          'OmniTracker ITSM',
+          { de: 'Incident- & Request-Management', en: 'Incident & Request Management' },
+          { de: 'Knowledge-Base-Pflege', en: 'Knowledge Base Maintenance' },
+          { de: 'ITIL-orientierte Dokumentation', en: 'ITIL-aligned Documentation' },
+        ],
       },
       {
-        label: { de: 'Support & Methodik', en: 'Support & Methodology' },
-        items: [{ de: '1st–3rd-Level-Support', en: 'Tier 1–3 support' }, { de: 'Ticketsysteme', en: 'Ticketing systems' }, { de: 'Warenwirtschaftssysteme', en: 'Merchandise management systems' }, { de: 'Reproduzierbare Fehlerdiagnose (KKEEY-Standard)', en: 'Reproducible fault diagnosis (KKEEY Standard)' }],
-      },
-      {
-        label: { de: 'AI Engineering & Innovation', en: 'AI Engineering & Innovation' },
-        items: ['LiveKit 2.x Voice AI', 'Gemini API / Vertex AI', 'Local LLMs (LM Studio)', 'Rust / Tauri 2.0', 'Audio DSP & Metal GPU', { de: 'Agenten-Architekturen', en: 'Agentic Architectures' }],
+        label: { de: 'Automation & Methodik', en: 'Automation & Methodology' },
+        items: [
+          'PowerShell Scripting',
+          'Python 3.12+',
+          { de: 'Workflow-Automatisierung', en: 'Workflow Automation' },
+          'JoBIT Tracker',
+          { de: 'Reproduzierbare Fehlerdiagnose (KKEEY-Standard)', en: 'Reproducible Diagnosis (KKEEY Standard)' },
+        ],
       },
     ],
   },
 
-  // ─── ZERTIFIZIERUNGEN ───────────────────────────────────────────────────────
-  // Fallback-Zustand: noch keine echten Einträge. Sobald Zertifikate/Badges
-  // vorliegen, hier Objekte ergänzen: { name, issuer, date, status, verifyUrl, accentColor }.
+  // ─── ZERTIFIZIERUNGEN & WEITERBILDUNG ──────────────────────────────────────
   certifications: {
     label: { de: 'Verifiziert', en: 'Verified' },
-    title: { de: 'Zertifizierungen', en: 'Certifications' },
+    title: { de: 'Zertifizierungen & Nachweise', en: 'Certifications & Credentials' },
     empty: { de: 'Zertifizierungen werden aktuell ergänzt — schau bald wieder vorbei.', en: 'Certifications are being added soon — check back shortly.' },
     items: [
       {
@@ -137,25 +186,18 @@ window.KKIT_DATA = {
     ],
   },
 
-  // ─── WEITERBILDUNG ──────────────────────────────────────────────────────────
-  // Kursabschlüsse ohne formale Prüfung — kompakte Liste statt Karten, um sie
-  // von den geprüften Zertifizierungen oben abzugrenzen.
   education: {
     label: { de: 'Weiterbildung', en: 'Further education' },
     linkedinLink: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
     linkedinLabel: { de: 'Alle Nachweise auf LinkedIn ansehen →', en: 'View all credentials on LinkedIn →' },
     items: [
-      { de: 'Windows 11: Administration & Troubleshooting · 3 Kurse (Administration, Hardware & Benutzerkonten, Software & Ressourcen) — LinkedIn Learning, Dez 2025 – Feb 2026', en: 'Windows 11: Administration & Troubleshooting · 3 courses (Administration, Hardware & User Accounts, Software & Resources) — LinkedIn Learning, Dec 2025 – Feb 2026' },
-      { de: 'Microsoft 365 für Administrator:innen · 3 Kurse (Benutzersupport, Grundkurs für Admins, Neue Funktionen 1. HJ 2025) — LinkedIn Learning, Dez 2025 – 2026', en: 'Microsoft 365 for Administrators · 3 courses (User Support, Admin Fundamentals, New Features H1 2025) — LinkedIn Learning, Dec 2025 – 2026' },
-      { de: 'Microsoft Entra ID Grundkurs · LinkedIn Learning — Feb 2026', en: 'Microsoft Entra ID Fundamentals · LinkedIn Learning — Feb 2026' },
-      { de: 'Microsoft Azure Fundamentals (AZ-900) · LinkedIn Learning — Feb 2026', en: 'Microsoft Azure Fundamentals (AZ-900) · LinkedIn Learning — Feb 2026' },
-      { de: 'Microsoft 365 Fundamentals (MS-900) · Teil 1 & 2 · LinkedIn Learning — Feb 2026', en: 'Microsoft 365 Fundamentals (MS-900) · Part 1 & 2 · LinkedIn Learning — Feb 2026' },
-      { de: 'Active Directory-Verwaltung automatisieren mit PowerShell · LinkedIn Learning — Mai 2026', en: 'Automating Active Directory Management with PowerShell · LinkedIn Learning — May 2026' },
-      { de: 'Introduction to Secure Networking · Microsoft — Feb 2026', en: 'Introduction to Secure Networking · Microsoft — Feb 2026' },
-      { de: 'IT-Support für hybride Arbeitsplätze — Feb 2026', en: 'IT Support for Hybrid Workplaces — Feb 2026' },
-      { de: 'ITIL 4 vs. ITIL 2011 — Feb 2026', en: 'ITIL 4 vs. ITIL 2011 — Feb 2026' },
-      { de: 'Outlook Grundlagen · Kursleitung: Microsoft Certified Trainer (JoBITS) — Dez 2025', en: 'Outlook Fundamentals · Taught by a Microsoft Certified Trainer (JoBITS) — Dec 2025' },
-      { de: 'Cisco Networking Academy: CCST IT Support (100-140) · Kursreihe, alle 10 Units — Feb 2026', en: 'Cisco Networking Academy: CCST IT Support (100-140) · Full course track, all 10 units — Feb 2026' },
+      { de: 'Windows 11: Administration & Troubleshooting (3 Kurse) — LinkedIn Learning', en: 'Windows 11: Administration & Troubleshooting (3 courses) — LinkedIn Learning' },
+      { de: 'Microsoft 365 für Administrator:innen (3 Kurse) — LinkedIn Learning', en: 'Microsoft 365 for Administrators (3 courses) — LinkedIn Learning' },
+      { de: 'Microsoft Entra ID Grundkurs — LinkedIn Learning', en: 'Microsoft Entra ID Fundamentals — LinkedIn Learning' },
+      { de: 'Microsoft Azure Fundamentals (AZ-900) — LinkedIn Learning', en: 'Microsoft Azure Fundamentals (AZ-900) — LinkedIn Learning' },
+      { de: 'Microsoft 365 Fundamentals (MS-900) — LinkedIn Learning', en: 'Microsoft 365 Fundamentals (MS-900) — LinkedIn Learning' },
+      { de: 'Active Directory-Verwaltung automatisieren mit PowerShell — LinkedIn Learning', en: 'Automating Active Directory Management with PowerShell — LinkedIn Learning' },
+      { de: 'Cisco Networking Academy: CCST IT Support (100-140) · Kursreihe, alle 10 Units', en: 'Cisco Networking Academy: CCST IT Support (100-140) · Full course track' },
     ],
   },
 
@@ -169,11 +211,11 @@ window.KKIT_DATA = {
     },
     items: [
       {
-        name: { de: 'Ticket-Routing-Automatisierung', en: 'Ticket routing automation' },
+        name: { de: 'JoBIT Tracker / Routing-Automatisierung', en: 'JoBIT Tracker / Routing Automation' },
         sub: { de: '● Im Team-Einsatz · Eigenentwicklung', en: '● Used in production · Internal tool' },
         desc: {
-          de: 'Selbstentwickeltes Tool, das eingehende Support-Tickets regelbasiert dem passenden Bearbeiter zuweist. Ersetzt tägliche manuelle Verteilarbeit — direkt aus dem Support-Alltag heraus entstanden, weil der Prozess vorher Zeit gefressen hat.',
-          en: 'Self-developed tool that assigns incoming support tickets to the right agent based on rules. Replaces daily manual triage work — built straight out of day-to-day support practice because the old process was eating time.',
+          de: 'Zur Reduktion manueller Ticketzuweisungen und wiederkehrender Bearbeitungsschritte entwickelt. Weist Support-Tickets regelbasiert dem passenden Bearbeiter zu.',
+          en: 'Developed to reduce manual ticket assignments and repetitive triage steps. Assigns support tickets based on rules straight to the right resolver.',
         },
       },
       {
@@ -181,40 +223,49 @@ window.KKIT_DATA = {
         sub: { de: '● Standardisierte Methodik · Verifiziert', en: '● Standardized methodology · Verified' },
         desc: {
           de: 'Dokumentierte Methodik für strukturierte, reproduzierbare Fehlerdiagnose — damit Störungen nachvollziehbar gelöst werden statt per Trial-and-Error.',
-          en: 'Documented methodology for structured, reproducible fault diagnosis — so incidents are resolved traceably instead of by trial and error.',
+          en: 'Documented methodology for structured, reproducible fault diagnosis — ensuring incidents are resolved traceably instead of trial-and-error.',
         },
       },
       {
         name: 'KKI Agent-Framework',
-        sub: { de: '● Aktives Framework · In-House Library', en: '● Active framework · Internal library' },
+        sub: { de: '● In-House Library · Reusable Architecture', en: '● In-House Library · Reusable Architecture' },
         desc: {
-          de: 'Privat entwickelte Agentenstruktur mit wiederverwendbaren Bausteinen für Automatisierungs-Workflows — die gemeinsame Grundlage meiner eigenen Tools und Nebenprojekte. Zeigt: keine Einzelskripte, sondern strukturierte, wartbare Systeme.',
-          en: 'Privately developed agent structure with reusable building blocks for automation workflows — the shared foundation of my own tools and side projects. The point: not one-off scripts, but structured, maintainable systems.',
+          de: 'Wartbare Systembausteine für Automatisierungs-Workflows — zeigt: keine Einzelskripte, sondern strukturierte, modulare Systeme.',
+          en: 'Maintainable system components for automation workflows — demonstrating structured, modular system engineering over one-off scripts.',
         },
       },
     ],
   },
 
-  // ─── NEBENPROJEKTE (AI, bewusst zurückhaltend) ──────────────────────────────
+  // ─── ZUSATZKOMPETENZ: AI ENGINEERING & AUTOMATION ───────────────────────────
   side: {
-    label: { de: 'Zusatzqualifikation', en: 'Additional qualification' },
-    title: { de: 'Nebenprojekte: KI-Entwicklung', en: 'Side projects: AI development' },
+    label: { de: 'Zusatzkompetenz', en: 'Additional Qualification' },
+    title: { de: 'Zusatzkompetenz: AI Engineering & Automation', en: 'Additional Qualification: AI Engineering & Automation' },
     text: {
-      de: 'Neben der Administration entwickle ich KI-gestützte Anwendungen — ein zusätzliches Werkzeug, um Automatisierung weiterzudenken und Probleme aus neuen Blickwinkeln zu lösen.',
-      en: 'Alongside administration I build AI-assisted applications — an additional tool for taking automation further and solving problems from new angles.',
+      de: 'Ergänzend zu meiner Enterprise-IT-Erfahrung entwickle ich eigenständig Automatisierungs- und KI-Systeme. Die Projekte erweitern mein Profil um Softwareentwicklung, Systemarchitektur, Local-First-Verarbeitung und moderne Mensch-Maschine-Interaktion.',
+      en: 'In addition to my Enterprise IT experience, I independently develop automation and AI systems. These projects expand my profile into software engineering, systems architecture, local-first processing, and modern human-machine interaction.',
     },
     items: [
       {
-        name: 'Claire V2.5 Native Audio',
-        desc: { de: '● Produktiv v2.5 · Voice-AI-Agent · LiveKit 2.x, Python, ~200ms Latenz', en: '● Production v2.5 · Voice AI agent · LiveKit 2.x, Python, ~200ms latency' },
+        name: 'Claire (Voice AI & Persona Architecture)',
+        desc: {
+          de: '● PL2 Prototyp · E1 Architekturdokumentation · Voice-Pipeline, EmotionEngine, Memory-Layer (LiveKit 2.x, Python)',
+          en: '● PL2 Prototype · E1 Architecture Docs · Voice pipeline, EmotionEngine, memory layer (LiveKit 2.x, Python)',
+        },
       },
       {
-        name: 'AuraTone AI v2.0',
-        desc: { de: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz', en: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz' },
+        name: 'AuraTone AI',
+        desc: {
+          de: '● PL2 Prototyp · E1 Architekturdokumentation · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz',
+          en: '● PL2 Prototype · E1 Architecture Docs · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz',
+        },
       },
       {
-        name: 'AI Virtual Calling',
-        desc: { de: '● Prototype / Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API', en: '● Prototype / Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API' },
+        name: 'AI Virtual Calling & Dialog-Systeme',
+        desc: {
+          de: '● PL2 Prototyp · E1 Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API',
+          en: '● PL2 Prototype · E1 Demo · WebRTC Voice UI · React, Python FastAPI, Gemini Live API',
+        },
       },
     ],
     moreLink: 'https://kkeey92.github.io/CV_KKEEY/',
@@ -224,10 +275,10 @@ window.KKIT_DATA = {
   // ─── KONTAKT ────────────────────────────────────────────────────────────────
   contact: {
     label: { de: 'Kontakt', en: 'Contact' },
-    title: { de: 'Lassen Sie uns sprechen.', en: 'Let\u2019s talk.' },
+    title: { de: 'Lassen Sie uns sprechen.', en: 'Let’s talk.' },
     desc: {
-      de: 'Offen für Festanstellungen als IT-Administrator, Systemadministrator oder IAM-Specialist. Remote · Hybrid · DE & EN.',
-      en: 'Open to full-time roles as IT administrator, system administrator, or IAM specialist. Remote · Hybrid · DE & EN.',
+      de: 'Offen für Festanstellungen als IT-Systemadministrator oder IAM-Specialist. Remote · Hybrid · DE & EN.',
+      en: 'Open to full-time roles as IT Systems Administrator or IAM Specialist. Remote · Hybrid · DE & EN.',
     },
   },
 
@@ -241,14 +292,14 @@ window.KKIT_DATA = {
     navContact:  { de: 'Kontakt',         en: 'Contact' },
     namePH:      { de: 'Ihr Name',        en: 'Your name' },
     emailPH:     { de: 'Ihre E-Mail',     en: 'Your email' },
-    msgPH:       { de: 'Ihre Nachricht\u2026', en: 'Your message\u2026' },
-    submitLabel: { de: 'Nachricht senden \u2192', en: 'Send message \u2192' },
-    sentMsg:     { de: '\u2713 Nachricht gesendet \u2014 ich melde mich.', en: '\u2713 Message sent \u2014 I\u2019ll get back to you.' },
-    sendingLabel:{ de: 'Wird gesendet\u2026',  en: 'Sending\u2026' },
-    sendErr:     { de: 'Fehler \u2014 bitte direkt mailen', en: 'Error \u2014 please email directly' },
+    msgPH:       { de: 'Ihre Nachricht…', en: 'Your message…' },
+    submitLabel: { de: 'Nachricht senden →', en: 'Send message →' },
+    sentMsg:     { de: '✓ Nachricht gesendet — ich melde mich.', en: '✓ Message sent — I’ll get back to you.' },
+    sendingLabel:{ de: 'Wird gesendet…',  en: 'Sending…' },
+    sendErr:     { de: 'Fehler — bitte direkt mailen', en: 'Error — please email directly' },
     darkBtnLight:{ de: 'Hellmodus aktivieren', en: 'Switch to light mode' },
     darkBtnDark: { de: 'Dunkelmodus aktivieren', en: 'Switch to dark mode' },
-    footerCross: { de: 'Auch von mir: AI-Engineering-Portfolio \u2192', en: 'Also by me: AI engineering portfolio \u2192' },
+    footerCross: { de: 'Auch von mir: AI-Engineering-Portfolio →', en: 'Also by me: AI engineering portfolio →' },
     downloadNote:{ de: 'Bewerbungsmappe: Anschreiben, Lebenslauf & Tech-Profil (PDF, 4 Seiten)', en: 'Application portfolio: cover letter, CV & tech profile (PDF, 4 pages)' },
   },
 
