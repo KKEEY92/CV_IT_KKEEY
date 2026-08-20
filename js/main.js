@@ -446,16 +446,17 @@ function initBg() {
   // Vertex shader — full-screen quad
   const VS = `attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}`;
 
-  // Fragment shader — KKEEY Liquid Orange Node-Graph
+  // Fragment shader — KKEEY Liquid Orange Node-Graph (Bright Ambient & Transparent Glow)
   const FS = [
     'precision mediump float;',
     'uniform float u_t, u_i, u_s;',
     'uniform vec2 u_r;',
 
-    'const vec3 GRAPHITE = vec3(0.047,0.051,0.059);',
-    'const vec3 ANTHRACITE = vec3(0.063,0.067,0.080);',
-    'const vec3 ORANGE = vec3(1.0,0.478,0.0);',
-    'const vec3 ORANGE_DIM = vec3(0.8,0.38,0.0);',
+    'const vec3 GRAPHITE = vec3(0.062, 0.070, 0.088);',
+    'const vec3 ANTHRACITE = vec3(0.095, 0.108, 0.135);',
+    'const vec3 ORANGE = vec3(1.0, 0.48, 0.0);',
+    'const vec3 ORANGE_BRIGHT = vec3(1.0, 0.62, 0.24);',
+    'const vec3 ORANGE_DIM = vec3(0.85, 0.42, 0.05);',
 
     // Grid lines function
     'float gridLines(vec2 uv, float scale, float lw) {',
@@ -471,13 +472,13 @@ function initBg() {
     '  vec2 g = fract(uv * scale);',
     '  vec2 d = min(g, 1.0 - g);',
     // horizontal lines
-    '  float onH = 1.0 - smoothstep(0.0, 0.04, d.y);',
-    '  float hFlow = sin(uv.x * scale * 6.2832 - t * 1.8) * 0.5 + 0.5;',
-    '  hFlow = pow(hFlow, 7.0);',
+    '  float onH = 1.0 - smoothstep(0.0, 0.05, d.y);',
+    '  float hFlow = sin(uv.x * scale * 6.2832 - t * 2.0) * 0.5 + 0.5;',
+    '  hFlow = pow(hFlow, 5.0);',
     // vertical lines
-    '  float onV = 1.0 - smoothstep(0.0, 0.04, d.x);',
-    '  float vFlow = sin(uv.y * scale * 6.2832 - t * 1.3) * 0.5 + 0.5;',
-    '  vFlow = pow(vFlow, 7.0);',
+    '  float onV = 1.0 - smoothstep(0.0, 0.05, d.x);',
+    '  float vFlow = sin(uv.y * scale * 6.2832 - t * 1.5) * 0.5 + 0.5;',
+    '  vFlow = pow(vFlow, 5.0);',
     '  return onH * hFlow + onV * vFlow;',
     '}',
 
@@ -485,8 +486,8 @@ function initBg() {
     'float nodeGlow(vec2 uv, float t, float scale) {',
     '  vec2 g = fract(uv * scale) - 0.5;',
     '  float d = length(g);',
-    '  float activation = sin(floor(uv.x * scale) * 7.3 + floor(uv.y * scale) * 13.1 + t * 0.5) * 0.5 + 0.5;',
-    '  return smoothstep(0.12, 0.0, d) * activation;',
+    '  float activation = sin(floor(uv.x * scale) * 7.3 + floor(uv.y * scale) * 13.1 + t * 0.7) * 0.5 + 0.5;',
+    '  return smoothstep(0.16, 0.0, d) * activation;',
     '}',
 
     'void main() {',
@@ -496,33 +497,33 @@ function initBg() {
 
     '  float t = u_t;',
 
-    // Base: graphite gradient with subtle vertical depth shift from scroll
-    '  float depth = 0.04 * sin(t * 0.08 + u_s * 0.5);',
-    '  vec3 col = mix(GRAPHITE, ANTHRACITE, uv.y * 0.7 + depth);',
+    // Base: elevated graphite gradient with vertical depth shift
+    '  float depth = 0.05 * sin(t * 0.1 + u_s * 0.6);',
+    '  vec3 col = mix(GRAPHITE, ANTHRACITE, uv.y * 0.8 + depth);',
 
-    // Large background grid (very subtle steel)
-    '  float bgGrid = gridLines(uvR, 5.0, 0.015);',
-    '  col += vec3(0.06, 0.065, 0.08) * bgGrid * 0.35;',
+    // Large background grid (steel / tech grid)
+    '  float bgGrid = gridLines(uvR, 5.0, 0.018);',
+    '  col += vec3(0.09, 0.10, 0.13) * bgGrid * 0.5;',
 
-    // Foreground grid (orange-tinted, more prominent)
-    '  float fgGrid = gridLines(uvR, 9.0, 0.008);',
-    '  col += ORANGE_DIM * fgGrid * 0.18 * u_i;',
+    // Foreground grid (orange-tinted, clear visibility)
+    '  float fgGrid = gridLines(uvR, 9.0, 0.010);',
+    '  col += ORANGE_DIM * fgGrid * 0.28 * u_i;',
 
-    // Energy pulses (orange flowing along lines)
-    '  float ep = energyPulse(uvR, t * 0.4, 9.0);',
-    '  col += ORANGE * ep * 0.55 * u_i;',
+    // Energy pulses (liquid orange flowing along lines)
+    '  float ep = energyPulse(uvR, t * 0.45, 9.0);',
+    '  col += ORANGE_BRIGHT * ep * 0.85 * u_i;',
 
-    // Node pulses at intersections
-    '  float ng = nodeGlow(uvR, t * 0.3, 9.0);',
-    '  col += ORANGE * ng * 0.9 * u_i;',
+    // Node pulses at intersections (strong glowing hubs)
+    '  float ng = nodeGlow(uvR, t * 0.35, 9.0);',
+    '  col += ORANGE_BRIGHT * ng * 1.3 * u_i;',
 
-    // Secondary slow-moving large-grid energy
-    '  float ep2 = energyPulse(uvR, t * 0.15 + 1.5, 4.0);',
-    '  col += ORANGE_DIM * ep2 * 0.22 * u_i;',
+    // Secondary slow-moving energy waves
+    '  float ep2 = energyPulse(uvR, t * 0.2 + 1.5, 4.5);',
+    '  col += ORANGE * ep2 * 0.35 * u_i;',
 
-    // Vignette (stronger at edges)
+    // Soft subtle vignette (not too dark)
     '  vec2 vig = uv * 2.0 - 1.0;',
-    '  float vignette = 1.0 - dot(vig * vec2(0.7, 0.9), vig * vec2(0.7, 0.9)) * 0.5;',
+    '  float vignette = 1.0 - dot(vig * vec2(0.5, 0.7), vig * vec2(0.5, 0.7)) * 0.28;',
     '  col *= clamp(vignette, 0.0, 1.0);',
 
     '  gl_FragColor = vec4(clamp(col, 0.0, 1.0), 1.0);',
