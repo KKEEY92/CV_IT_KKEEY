@@ -1,17 +1,6 @@
 /**
- * KKEEY Future Orchestrator Interface — main.js v3.1
- * CV_IT_KKEEY · Liquid Glass & Fluid Wave Shader
- *
- * Color Palettes:
- *  - Cyber Violet / Vibrant Blue (Master / Default)
- *  - Liquid Neon Orange & Metallic Steel
- *
- * Themes:
- *  - Dark Mode (#07070F Cyber Deep)
- *  - Light Mode (#EEF2F8 Frost Glass)
- *
- * Multilingual: DE / EN / FR / UK
- * Ticker: Typewriter Role Scramble
+ * KKEEY Future Orchestrator Interface — main.js v3.2
+ * CV_IT_KKEEY · Exact Master Fluid Wave Engine
  */
 
 const D = window.KKIT_DATA;
@@ -20,9 +9,8 @@ let lang = localStorage.getItem('kkit_lang') || 'de';
 if (!LANGUAGES.includes(lang)) lang = 'de';
 
 let darkMode = localStorage.getItem('kkit_dark') !== 'false';
-let colorTheme = localStorage.getItem('kkit_color') || 'purple'; // 'purple' (Cyber Violet) is default, 'orange' is Liquid Neon Orange
+let colorTheme = localStorage.getItem('kkit_color') || 'purple';
 
-// ─── DOM READY ───────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
   render();
@@ -33,13 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-// ─── TRANSLATION HELPER ───────────────────────────────────────────────────────
 function t(obj) {
   if (typeof obj !== 'object' || obj === null) return String(obj ?? '');
   return obj[lang] || obj.de || obj.en || '';
 }
 
-// ─── THEME & COLOR PALETTE ───────────────────────────────────────────────────
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   document.documentElement.setAttribute('data-color-theme', colorTheme === 'orange' ? 'orange' : '');
@@ -69,7 +55,6 @@ function applyTheme() {
   updateBgLight();
 }
 
-// ─── NAV ──────────────────────────────────────────────────────────────────────
 function initNav() {
   const nav = document.querySelector('.nav');
   const hamburger = document.getElementById('hamburger');
@@ -136,7 +121,6 @@ function initNav() {
   sections.forEach(s => sectionObs.observe(s));
 }
 
-// ─── TYPEWRITER SCHRIFTLAUF-EFFEKT ──────────────────────────────────────────
 let typedTimer, typedIdx = 0, typedDeleting = false, typedText = '';
 
 function initTyped() {
@@ -179,12 +163,10 @@ function nextChar() {
   }
 }
 
-// ─── RENDER ───────────────────────────────────────────────────────────────────
 function render() {
   const langBtn = document.getElementById('langToggle');
   if (langBtn) langBtn.textContent = lang.toUpperCase();
 
-  // Nav links
   setEl('navOverview',   t(D.i18n.navOverview));
   setEl('navSystems',    t(D.i18n.navSystems));
   setEl('navAutomation', t(D.i18n.navAutomation));
@@ -194,7 +176,6 @@ function render() {
   setEl('availableText', t(D.hero.available));
   setEl('availableText2', t(D.hero.available));
 
-  // Hero
   setEl('heroGreeting', t(D.hero.greeting));
   setEl('heroMeta', t(D.hero.meta));
   setEl('heroCta1Label', t(D.hero.cta1));
@@ -203,7 +184,6 @@ function render() {
   setEl('downloadNote',  t(D.i18n.downloadNote));
   setEl('systemBadgeLabel', t(D.i18n.systemBadge));
 
-  // Capabilities
   const caps = D.hero.caps[lang] || D.hero.caps.de;
   setHTML('heroCaps', caps.map(c => `
     <span class="cap-pill">
@@ -212,7 +192,6 @@ function render() {
     </span>
   `).join(''));
 
-  // Sections
   renderOverview();
   renderSystems();
   renderAutomation();
@@ -224,7 +203,6 @@ function render() {
   renderSide();
   renderContact();
 
-  // Footer
   setEl('footerCross', t(D.i18n.footerCross));
 
   initReveal();
@@ -469,7 +447,7 @@ function initContactForm() {
   });
 }
 
-// ─── MASTER FLUID WAVE SHADER (from CV_KKEEY) ────────────────────────────────
+// ─── EXACT MASTER SHADER ENGINE (from CV_KKEEY) ──────────────────────────────
 let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, rafId;
 
 function initBg() {
@@ -480,46 +458,39 @@ function initBg() {
   c.width = W; c.height = H;
   c.style.width = W + 'px'; c.style.height = H + 'px';
 
-  gl = c.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'high-performance' });
+  gl = c.getContext('webgl');
   if (!gl) return;
 
   const VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0,1);}';
   const FS = [
     'precision mediump float;',
-    'uniform float u_t, u_i, u_l;',
-    'uniform vec3 u_c1, u_c2;',
+    'uniform float u_t,u_i,u_l;',
+    'uniform vec3 u_c1,u_c2;',
     'uniform vec2 u_r;',
     'void main(){',
-    '  vec2 uv = gl_FragCoord.xy / u_r;',
-    '  vec2 p = uv * 2.0 - 1.0;',
-    '  p.x *= u_r.x / u_r.y;',
-    '  float t = u_t * 0.22;',
-    '  float w1 = sin(p.x * 2.5 + t) * cos(p.y * 1.8 - t * 0.6);',
-    '  float w2 = cos(p.x * 1.5 - t * 0.4) * sin(p.y * 2.2 + t);',
-    '  float w3 = sin(length(p) * 3.0 - t * 1.2) * 0.5 + 0.5;',
-    '  float m1 = w1 * 0.5 + 0.5;',
-    '  float m2 = w2 * 0.5 + 0.5;',
-    '  vec3 dark = vec3(0.027, 0.027, 0.059);',
-    '  vec3 lite = vec3(0.933, 0.933, 0.973);',
-    '  vec3 base = mix(dark, lite, u_l);',
-    '  vec3 pur = u_c1;',
-    '  vec3 teal = u_c2;',
-    '  float db = 1.0 - u_l;',
-    '  vec3 col = base;',
-    '  col += pur * m1 * w3 * (0.34 + 0.22 * db) * u_i;',
-    '  col += teal * m2 * w3 * (0.22 + 0.14 * db) * u_i;',
-    '  col += vec3(0.08, 0.05, 0.22) * m1 * m2 * 0.35 * u_i * db;',
-    '  gl_FragColor = vec4(clamp(col, 0.0, 1.0), 1.0);',
+    '  vec2 uv=gl_FragCoord.xy/u_r;',
+    '  vec2 p=uv*2.-1.;',
+    '  p.x*=u_r.x/u_r.y;',
+    '  float t=u_t*.2;',
+    '  float w1=sin(p.x*2.5+t)*cos(p.y*1.8-t*.6);',
+    '  float w2=cos(p.x*1.5-t*.4)*sin(p.y*2.2+t);',
+    '  float w3=sin(length(p)*3.-t*1.2)*.5+.5;',
+    '  float m1=w1*.5+.5,m2=w2*.5+.5;',
+    '  vec3 dark=vec3(.027,.027,.059);',
+    '  vec3 lite=vec3(.933,.933,.973);',
+    '  vec3 base=mix(dark,lite,u_l);',
+    '  vec3 pur=u_c1;',
+    '  vec3 teal=u_c2;',
+    '  float db=1.-u_l;',
+    '  vec3 col=base;',
+    '  col+=pur*m1*w3*(.28+.18*db)*u_i;',
+    '  col+=teal*m2*w3*(.16+.1*db)*u_i;',
+    '  col+=vec3(.08,.05,.22)*m1*m2*.35*u_i*db;',
+    '  gl_FragColor=vec4(clamp(col,0.,1.),1.);',
     '}'
   ].join('\n');
 
-  const mk = (type, src) => {
-    const s = gl.createShader(type);
-    gl.shaderSource(s, src);
-    gl.compileShader(s);
-    return s;
-  };
-
+  const mk = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
   const prog = gl.createProgram();
   gl.attachShader(prog, mk(gl.VERTEX_SHADER, VS));
   gl.attachShader(prog, mk(gl.FRAGMENT_SHADER, FS));
@@ -528,7 +499,7 @@ function initBg() {
 
   const buf = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
   const loc = gl.getAttribLocation(prog, 'a');
   gl.enableVertexAttribArray(loc);
   gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
@@ -567,11 +538,9 @@ function updateBgLight() {
   if (uLight !== null) gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
   if (uC1 !== null && uC2 !== null) {
     if (colorTheme === 'orange') {
-      // Liquid Neon Orange + Electric Cyan
       gl.uniform3f(uC1, 1.0, 0.478, 0.0);
       gl.uniform3f(uC2, 0.0, 0.898, 1.0);
     } else {
-      // Cyber Violet + Vibrant Azure / Cyan (Master Palette)
       gl.uniform3f(uC1, 0.486, 0.416, 0.969);
       gl.uniform3f(uC2, 0.0, 0.831, 0.667);
     }
