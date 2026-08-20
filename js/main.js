@@ -1,27 +1,30 @@
 /**
- * KKEEY Future Orchestrator Interface — main.js v2.0
- * CV_IT_KKEEY · KKEEY Liquid Orange · Dark-First
+ * KKEEY Future Orchestrator Interface — main.js v3.0
+ * CV_IT_KKEEY · Liquid Glass
  *
- * Modules:
- *  - Theme / Lang persistence
- *  - Nav (sticky, active section, hamburger)
- *  - WebGL Node-Graph Background Shader
- *  - Scroll-responsive shader intensity
- *  - All section renderers (overview, systems, automation, compliance, impact, career, skills, tools, side, contact)
- *  - IntersectionObserver reveal
- *  - Contact form (Web3Forms)
+ * Features:
+ *  - Dual Theme: Dark / Light Mode
+ *  - Dual Palette: Liquid Orange / Liquid Azure
+ *  - Multilingual: DE / EN / FR / UK (Ukrainisch)
+ *  - Typewriter Scramble / Schriftlauf-Effekt
+ *  - WebGL Dual-Palette Ambient Shader mit Scroll-Reaktivität
+ *  - E-Mail-Handling: kuck_kevin@icloud.com · Kkeey_IT@iCloud.com
  */
 
 const D = window.KKIT_DATA;
-let lang      = localStorage.getItem('kkit_lang')  || 'de';
-let darkMode  = localStorage.getItem('kkit_dark')  !== 'false'; // dark is default
-let colorTheme = 'orange'; // KKEEY Liquid Orange — non-negotiable
+const LANGUAGES = ['de', 'en', 'fr', 'uk'];
+let lang = localStorage.getItem('kkit_lang') || 'de';
+if (!LANGUAGES.includes(lang)) lang = 'de';
+
+let darkMode = localStorage.getItem('kkit_dark') !== 'false'; // Dark is default
+let colorTheme = localStorage.getItem('kkit_color') || 'orange'; // Orange is default
 
 // ─── DOM READY ───────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
   render();
   initNav();
+  initTyped();
   initReveal();
   initBg();
   initScrollShader();
@@ -31,42 +34,46 @@ document.addEventListener('DOMContentLoaded', () => {
 // ─── TRANSLATION HELPER ───────────────────────────────────────────────────────
 function t(obj) {
   if (typeof obj !== 'object' || obj === null) return String(obj ?? '');
-  return obj[lang] || obj.de || '';
+  return obj[lang] || obj.de || obj.en || '';
 }
 
-// ─── THEME ────────────────────────────────────────────────────────────────────
+// ─── THEME & COLOR PALETTE ───────────────────────────────────────────────────
 function applyTheme() {
-  // Always dark, always orange — brand lock
-  document.documentElement.setAttribute('data-theme', 'dark');
-  document.documentElement.setAttribute('data-color-theme', 'orange');
+  document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-color-theme', colorTheme);
   document.documentElement.setAttribute('lang', lang);
-  localStorage.setItem('kkit_dark',  'true');
-  localStorage.setItem('kkit_color', 'orange');
-  localStorage.setItem('kkit_lang',  lang);
+
+  localStorage.setItem('kkit_dark', String(darkMode));
+  localStorage.setItem('kkit_color', colorTheme);
+  localStorage.setItem('kkit_lang', lang);
 
   const darkBtn = document.getElementById('darkToggle');
   if (darkBtn) {
-    darkBtn.setAttribute('aria-label', t(D.i18n.darkBtnLight));
-    darkBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+    darkBtn.setAttribute('aria-label', darkMode ? t(D.i18n.darkBtnLight) : t(D.i18n.darkBtnDark));
+    darkBtn.innerHTML = darkMode
+      ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`
+      : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
   }
 
   const langBtn = document.getElementById('langToggle');
-  if (langBtn) langBtn.textContent = lang === 'de' ? 'EN' : 'DE';
+  if (langBtn) langBtn.textContent = lang.toUpperCase();
 
-  // Update color toggle dot display (always orange)
-  const colorBtn = document.getElementById('colorToggle');
-  if (colorBtn) {
-    colorBtn.innerHTML = `<span style="font-family:var(--lo-font-code);font-size:10px;font-weight:700;color:var(--lo-orange);letter-spacing:0.5px;">ORANGE</span>`;
+  const colorDot = document.getElementById('colorDot');
+  if (colorDot) {
+    colorDot.style.background = colorTheme === 'orange' ? '#FF7A00' : '#00D4FF';
+    colorDot.style.boxShadow = colorTheme === 'orange' ? '0 0 8px #FF7A00' : '0 0 8px #00D4FF';
   }
+
+  updateShaderUniforms();
 }
 
 // ─── NAV ──────────────────────────────────────────────────────────────────────
 function initNav() {
-  const nav       = document.querySelector('.nav');
+  const nav = document.querySelector('.nav');
   const hamburger = document.getElementById('hamburger');
-  const links     = document.getElementById('navLinks');
+  const links = document.getElementById('navLinks');
 
-  // Scroll → sticky style
+  // Scroll -> sticky style
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   }, { passive: true });
@@ -86,18 +93,33 @@ function initNav() {
     });
   });
 
-  // Dark toggle (no-op visually — brand lock — but persists user intent)
+  // Dark / Light Toggle
   const darkBtn = document.getElementById('darkToggle');
-  if (darkBtn) darkBtn.addEventListener('click', () => { /* dark-first brand lock */ });
+  if (darkBtn) {
+    darkBtn.addEventListener('click', () => {
+      darkMode = !darkMode;
+      applyTheme();
+    });
+  }
 
-  // Lang toggle
+  // Color Theme Toggle (Liquid Orange <-> Liquid Azure)
+  const colorBtn = document.getElementById('colorToggle');
+  if (colorBtn) {
+    colorBtn.addEventListener('click', () => {
+      colorTheme = colorTheme === 'orange' ? 'azure' : 'orange';
+      applyTheme();
+    });
+  }
+
+  // Multilingual Toggle: DE -> EN -> FR -> UK -> DE
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
     langBtn.addEventListener('click', () => {
-      lang = lang === 'de' ? 'en' : 'de';
-      localStorage.setItem('kkit_lang', lang);
-      document.documentElement.setAttribute('lang', lang);
+      const idx = LANGUAGES.indexOf(lang);
+      lang = LANGUAGES[(idx + 1) % LANGUAGES.length];
+      applyTheme();
       render();
+      restartTyped();
     });
   }
 
@@ -118,11 +140,53 @@ function initNav() {
   sections.forEach(s => sectionObs.observe(s));
 }
 
+// ─── TYPEWRITER SCHRIFTLAUF-EFFEKT ──────────────────────────────────────────
+let typedTimer, typedIdx = 0, typedDeleting = false, typedText = '';
+
+function initTyped() {
+  typedTimer = setTimeout(nextChar, 800);
+}
+
+function restartTyped() {
+  clearTimeout(typedTimer);
+  typedIdx = 0; typedDeleting = false; typedText = '';
+  const el = document.getElementById('typedOutput');
+  if (el) el.textContent = '';
+  typedTimer = setTimeout(nextChar, 350);
+}
+
+function nextChar() {
+  const roles = D.hero.roles[lang] || D.hero.roles.de;
+  const target = roles[typedIdx % roles.length];
+  const el = document.getElementById('typedOutput');
+  if (!el) return;
+
+  if (!typedDeleting) {
+    if (typedText.length < target.length) {
+      typedText = target.slice(0, typedText.length + 1);
+      el.textContent = typedText;
+      typedTimer = setTimeout(nextChar, 55);
+    } else {
+      typedTimer = setTimeout(() => { typedDeleting = true; nextChar(); }, 2800);
+    }
+  } else {
+    if (typedText.length > 0) {
+      typedText = typedText.slice(0, -1);
+      el.textContent = typedText;
+      typedTimer = setTimeout(nextChar, 24);
+    } else {
+      typedDeleting = false;
+      typedIdx++;
+      el.classList.add('glitch');
+      typedTimer = setTimeout(() => { el.classList.remove('glitch'); nextChar(); }, 350);
+    }
+  }
+}
+
 // ─── RENDER ───────────────────────────────────────────────────────────────────
 function render() {
-  // Lang button
   const langBtn = document.getElementById('langToggle');
-  if (langBtn) langBtn.textContent = lang === 'de' ? 'EN' : 'DE';
+  if (langBtn) langBtn.textContent = lang.toUpperCase();
 
   // Nav links
   setEl('navOverview',   t(D.i18n.navOverview));
@@ -132,9 +196,10 @@ function render() {
   setEl('navSkills',     t(D.i18n.navSkills));
   setEl('navContact',    t(D.i18n.navContact));
   setEl('availableText', t(D.hero.available));
+  setEl('availableText2', t(D.hero.available));
 
   // Hero
-  setEl('heroRole', t(D.hero.role));
+  setEl('heroGreeting', t(D.hero.greeting));
   setEl('heroMeta', t(D.hero.meta));
   setEl('heroCta1Label', t(D.hero.cta1));
   setEl('heroCta2Label', t(D.hero.cta2));
@@ -240,9 +305,9 @@ function renderAutomation() {
 
   setHTML('pipelineContainer', D.automation.pipeline.map(stage => {
     const statusMap = {
-      running: { label: { de: 'AKTIV', en: 'RUNNING' },   cls: 'status--running' },
-      done:    { label: { de: 'FERTIG', en: 'DONE' },     cls: 'status--done' },
-      queued:  { label: { de: 'WARTEND', en: 'QUEUED' },  cls: 'status--queued' },
+      running: { label: { de: 'AKTIV', en: 'RUNNING', fr: 'ACTIF', uk: 'АКТИВНО' }, cls: 'status--running' },
+      done:    { label: { de: 'FERTIG', en: 'DONE', fr: 'TERMINÉ', uk: 'ГОТОВО' }, cls: 'status--done' },
+      queued:  { label: { de: 'WARTEND', en: 'QUEUED', fr: 'EN ATTENTE', uk: 'В ОЧІКУВАННІ' }, cls: 'status--queued' },
     };
     const s = statusMap[stage.status] || statusMap.queued;
     return `
@@ -398,7 +463,7 @@ function initReveal() {
   document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
 }
 
-// ─── CONTACT FORM ─────────────────────────────────────────────────────────────
+// ─── CONTACT FORM (Web3Forms) ─────────────────────────────────────────────────
 function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -422,9 +487,26 @@ function initContactForm() {
   });
 }
 
-// ─── WEBGL NODE-GRAPH BACKGROUND SHADER ──────────────────────────────────────
-let gl, loUTime, loURes, loUIntensity, loUScroll, loRafId;
+// ─── WEBGL DUAL-PALETTE BACKGROUND SHADER ───────────────────────────────────
+let gl, loUTime, loURes, loUIntensity, loULight, loUC1, loUC2, loUScroll, loRafId;
 let scrollRatio = 0;
+
+function updateShaderUniforms() {
+  if (!gl) return;
+  const isLight = !darkMode ? 1.0 : 0.0;
+  if (loULight) gl.uniform1f(loULight, isLight);
+
+  // Colors: Orange vs Azure
+  if (colorTheme === 'azure') {
+    // Azure & Neon Violet
+    if (loUC1) gl.uniform3f(loUC1, 0.0, 0.83, 1.0);
+    if (loUC2) gl.uniform3f(loUC2, 0.48, 0.41, 0.97);
+  } else {
+    // Liquid Orange & Cyan
+    if (loUC1) gl.uniform3f(loUC1, 1.0, 0.48, 0.0);
+    if (loUC2) gl.uniform3f(loUC2, 0.0, 0.90, 1.0);
+  }
+}
 
 function initBg() {
   const canvas = document.getElementById('lo-bg');
@@ -437,28 +519,16 @@ function initBg() {
   canvas.style.height = H + 'px';
 
   gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'high-performance' });
-  if (!gl) {
-    // Graceful fallback: solid dark bg
-    canvas.style.background = '#0C0D0F';
-    return;
-  }
+  if (!gl) return;
 
-  // Vertex shader — full-screen quad
   const VS = `attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}`;
 
-  // Fragment shader — KKEEY Liquid Orange Node-Graph (Bright Ambient & Transparent Glow)
   const FS = [
     'precision mediump float;',
-    'uniform float u_t, u_i, u_s;',
+    'uniform float u_t, u_i, u_s, u_l;',
+    'uniform vec3 u_c1, u_c2;',
     'uniform vec2 u_r;',
 
-    'const vec3 GRAPHITE = vec3(0.062, 0.070, 0.088);',
-    'const vec3 ANTHRACITE = vec3(0.095, 0.108, 0.135);',
-    'const vec3 ORANGE = vec3(1.0, 0.48, 0.0);',
-    'const vec3 ORANGE_BRIGHT = vec3(1.0, 0.62, 0.24);',
-    'const vec3 ORANGE_DIM = vec3(0.85, 0.42, 0.05);',
-
-    // Grid lines function
     'float gridLines(vec2 uv, float scale, float lw) {',
     '  vec2 g = fract(uv * scale);',
     '  vec2 d = min(g, 1.0 - g);',
@@ -467,22 +537,18 @@ function initBg() {
     '  return max(lx, ly);',
     '}',
 
-    // Animated energy pulse along grid lines
     'float energyPulse(vec2 uv, float t, float scale) {',
     '  vec2 g = fract(uv * scale);',
     '  vec2 d = min(g, 1.0 - g);',
-    // horizontal lines
     '  float onH = 1.0 - smoothstep(0.0, 0.05, d.y);',
     '  float hFlow = sin(uv.x * scale * 6.2832 - t * 2.0) * 0.5 + 0.5;',
     '  hFlow = pow(hFlow, 5.0);',
-    // vertical lines
     '  float onV = 1.0 - smoothstep(0.0, 0.05, d.x);',
     '  float vFlow = sin(uv.y * scale * 6.2832 - t * 1.5) * 0.5 + 0.5;',
     '  vFlow = pow(vFlow, 5.0);',
     '  return onH * hFlow + onV * vFlow;',
     '}',
 
-    // Node glow at intersections
     'float nodeGlow(vec2 uv, float t, float scale) {',
     '  vec2 g = fract(uv * scale) - 0.5;',
     '  float d = length(g);',
@@ -493,44 +559,43 @@ function initBg() {
     'void main() {',
     '  vec2 uv = gl_FragCoord.xy / u_r;',
     '  float ar = u_r.x / u_r.y;',
-    '  vec2 uvR = vec2(uv.x * ar, uv.y);', // aspect-corrected
+    '  vec2 uvR = vec2(uv.x * ar, uv.y);',
 
     '  float t = u_t;',
 
-    // Base: elevated graphite gradient with vertical depth shift
-    '  float depth = 0.05 * sin(t * 0.1 + u_s * 0.6);',
-    '  vec3 col = mix(GRAPHITE, ANTHRACITE, uv.y * 0.8 + depth);',
+    // Dark base vs Light base
+    '  vec3 darkBase = mix(vec3(0.052, 0.060, 0.075), vec3(0.085, 0.098, 0.125), uv.y * 0.8);',
+    '  vec3 lightBase = mix(vec3(0.93, 0.945, 0.97), vec3(0.88, 0.905, 0.94), uv.y * 0.8);',
+    '  vec3 baseCol = mix(darkBase, lightBase, u_l);',
 
-    // Large background grid (steel / tech grid)
+    // Grid overlays
     '  float bgGrid = gridLines(uvR, 5.0, 0.018);',
-    '  col += vec3(0.09, 0.10, 0.13) * bgGrid * 0.5;',
+    '  vec3 gridTint = mix(vec3(0.08, 0.095, 0.12), vec3(0.80, 0.83, 0.88), u_l);',
+    '  baseCol += gridTint * bgGrid * 0.4;',
 
-    // Foreground grid (orange-tinted, clear visibility)
     '  float fgGrid = gridLines(uvR, 9.0, 0.010);',
-    '  col += ORANGE_DIM * fgGrid * 0.28 * u_i;',
+    '  baseCol += u_c1 * fgGrid * (0.28 - 0.12 * u_l) * u_i;',
 
-    // Energy pulses (liquid orange flowing along lines)
+    // Energy pulses & Node glowing hubs
     '  float ep = energyPulse(uvR, t * 0.45, 9.0);',
-    '  col += ORANGE_BRIGHT * ep * 0.85 * u_i;',
+    '  baseCol += u_c1 * ep * (0.85 - 0.3 * u_l) * u_i;',
 
-    // Node pulses at intersections (strong glowing hubs)
     '  float ng = nodeGlow(uvR, t * 0.35, 9.0);',
-    '  col += ORANGE_BRIGHT * ng * 1.3 * u_i;',
+    '  baseCol += u_c1 * ng * (1.3 - 0.5 * u_l) * u_i;',
 
-    // Secondary slow-moving energy waves
+    // Secondary color wave
     '  float ep2 = energyPulse(uvR, t * 0.2 + 1.5, 4.5);',
-    '  col += ORANGE * ep2 * 0.35 * u_i;',
+    '  baseCol += u_c2 * ep2 * (0.35 - 0.15 * u_l) * u_i;',
 
-    // Soft subtle vignette (not too dark)
+    // Vignette
     '  vec2 vig = uv * 2.0 - 1.0;',
-    '  float vignette = 1.0 - dot(vig * vec2(0.5, 0.7), vig * vec2(0.5, 0.7)) * 0.28;',
-    '  col *= clamp(vignette, 0.0, 1.0);',
+    '  float vignette = 1.0 - dot(vig * vec2(0.5, 0.7), vig * vec2(0.5, 0.7)) * (0.28 - 0.15 * u_l);',
+    '  baseCol *= clamp(vignette, 0.0, 1.0);',
 
-    '  gl_FragColor = vec4(clamp(col, 0.0, 1.0), 1.0);',
+    '  gl_FragColor = vec4(clamp(baseCol, 0.0, 1.0), 1.0);',
     '}',
   ].join('\n');
 
-  // Compile shaders
   function mkShader(type, src) {
     const s = gl.createShader(type);
     gl.shaderSource(s, src);
@@ -557,7 +622,6 @@ function initBg() {
   }
   gl.useProgram(prog);
 
-  // Full-screen quad
   const buf = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, buf);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
@@ -565,17 +629,20 @@ function initBg() {
   gl.enableVertexAttribArray(aLoc);
   gl.vertexAttribPointer(aLoc, 2, gl.FLOAT, false, 0, 0);
 
-  // Uniforms
   loUTime      = gl.getUniformLocation(prog, 'u_t');
   loURes       = gl.getUniformLocation(prog, 'u_r');
   loUIntensity = gl.getUniformLocation(prog, 'u_i');
+  loULight     = gl.getUniformLocation(prog, 'u_l');
+  loUC1        = gl.getUniformLocation(prog, 'u_c1');
+  loUC2        = gl.getUniformLocation(prog, 'u_c2');
   loUScroll    = gl.getUniformLocation(prog, 'u_s');
 
   gl.uniform2f(loURes, W, H);
   gl.uniform1f(loUIntensity, 1.0);
   gl.uniform1f(loUScroll, 0.0);
 
-  // Render loop
+  updateShaderUniforms();
+
   let t0 = null;
   const loop = ts => {
     if (!gl) return;
@@ -587,7 +654,6 @@ function initBg() {
   };
   loRafId = requestAnimationFrame(loop);
 
-  // Resize
   window.addEventListener('resize', () => {
     const W2 = window.innerWidth, H2 = window.innerHeight;
     canvas.width  = W2; canvas.height = H2;
@@ -605,8 +671,7 @@ function initScrollShader() {
   window.addEventListener('scroll', () => {
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     scrollRatio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-    // Intensity subtly increases toward mid-page then recedes
-    const intensity = 0.85 + 0.3 * Math.sin(scrollRatio * Math.PI);
+    const intensity = 0.90 + 0.3 * Math.sin(scrollRatio * Math.PI);
     if (gl && loUIntensity) gl.uniform1f(loUIntensity, intensity);
   }, { passive: true });
 }

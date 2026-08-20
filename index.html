@@ -9,8 +9,7 @@
   <meta name="description" content="Kevin Kuck — IT-Administrator mit 15+ Jahren Praxis. Spezialisiert auf Active Directory, Microsoft Entra ID, KRITIS-Infrastruktur, Citrix, PowerShell-Automatisierung und Identity & Access Management." />
   <meta name="keywords"    content="IT Administrator, Systemadministration, Active Directory, Microsoft Entra ID, KRITIS, IAM, PowerShell, Citrix, Kevin Kuck" />
   <meta name="author"      content="Kevin Kuck" />
-  <meta name="theme-color" content="#0C0D0F" />
-  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0D0F13" />
   <link rel="canonical" href="https://kkeey92.github.io/CV_IT_KKEEY/" />
 
   <!-- Open Graph -->
@@ -18,6 +17,7 @@
   <meta property="og:description" content="15+ Jahre IT-Praxis. KRITIS-erfahren. Spezialisiert auf Active Directory, Entra ID, IAM und Prozessautomatisierung." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://kkeey92.github.io/CV_IT_KKEEY/" />
+  <meta property="og:image"       content="https://kkeey92.github.io/CV_IT_KKEEY/assets/og-image.jpg" />
 
   <!-- ── FONTS ─────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,7 +46,7 @@
       <!-- Logo / Name -->
       <a href="#hero" class="nav-logo" aria-label="Kevin Kuck — Zurück zur Startseite">
         <img src="assets/kkeey-logo.jpg" alt="KKEEY Logo" class="nav-logo-img" width="36" height="36" />
-        <span class="nav-logo-mark" style="display:inline-block;">KKEEY</span>
+        <span class="nav-logo-mark">KKEEY</span>
       </a>
 
       <!-- Nav Links -->
@@ -65,8 +65,14 @@
           <span class="available-dot" aria-hidden="true"></span>
           <span id="availableText">Verfügbar ab sofort</span>
         </div>
-        <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln">EN</button>
-        <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Dunkelmodus aktivieren" title="Dark Mode (Brand Default)">
+
+        <!-- Color Theme Toggle (Liquid Orange <-> Liquid Azure) -->
+        <button class="nav-btn nav-btn-icon" id="colorToggle" aria-label="Farbthema wechseln (Liquid Orange / Azure)" title="Color Palette: Liquid Orange / Liquid Azure">
+          <span class="color-dot" id="colorDot" aria-hidden="true"></span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme umschalten" title="Theme Toggle (Dark / Light)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
             <circle cx="12" cy="12" r="5"/>
             <line x1="12" y1="1" x2="12" y2="3"/>
@@ -79,6 +85,11 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
         </button>
+
+        <!-- Multilingual Toggle (DE / EN / FR / UK) -->
+        <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln (DE, EN, FR, UK)" title="Sprache wechseln / Switch Language">DE</button>
+
+        <!-- Mobile Hamburger -->
         <button class="hamburger" id="hamburger" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="navLinks">☰</button>
       </div>
 
@@ -112,15 +123,17 @@
         <span class="hero-avatar-status" title="System Status: Online" aria-label="Online"></span>
       </div>
 
-      <!-- Name -->
+      <!-- Greeting & Name -->
+      <p class="section-label" style="justify-content:center;margin-bottom:8px;" aria-hidden="true">
+        <span id="heroGreeting">System Interface · Future Orchestrator</span>
+      </p>
       <h1 id="heroHeading" class="hero-name">Kevin Kuck</h1>
 
-      <!-- Role -->
-      <p class="hero-role" id="heroRole">
-        IT-Administrator ·
-        <span>Systemadministration</span> ·
-        Identity &amp; Access Management
-      </p>
+      <!-- Typewriter Schriftlauf-Effekt -->
+      <div class="hero-typed-wrap" aria-live="polite">
+        <span class="hero-typed-text" id="typedOutput">IT-Administrator · Systemadministration</span>
+        <span class="hero-cursor" aria-hidden="true"></span>
+      </div>
 
       <!-- Capabilities strip -->
       <div class="hero-caps" id="heroCaps" role="list" aria-label="Kernkompetenzen">
@@ -271,7 +284,7 @@
         <!-- rendered by JS -->
       </div>
       <p class="side-more">
-        <a href="#" id="sideMore" aria-label="AI-Engineering-Portfolio ansehen">Mehr im AI-Portfolio →</a>
+        <a href="https://kkeey92.github.io/CV_KKEEY/" target="_blank" rel="noopener noreferrer" id="sideMore" aria-label="AI-Engineering-Portfolio ansehen">Mehr im AI-Portfolio →</a>
       </p>
     </div>
   </section>
@@ -287,7 +300,7 @@
         <!-- Contact form (Web3Forms) -->
         <form id="contactForm" class="contact-form" novalidate aria-label="Kontaktformular">
           <input type="hidden" name="access_key" value="ef6edbe7-dc30-456c-b3c9-df5a77ee2dc9" />
-          <input type="hidden" name="subject" value="Neue Nachricht von kkeey92.github.io/CV_IT_KKEEY" />
+          <input type="hidden" name="subject" value="Neue Nachricht von CV_IT_KKEEY (kuck_kevin@icloud.com)" />
 
           <input
             type="text"
@@ -322,12 +335,20 @@
             Nachricht senden →
           </button>
           <p class="contact-sent" id="formSent" role="status" aria-live="polite">
-            ✓ Nachricht gesendet — ich melde mich.
+            ✓ Nachricht gesendet — ich melde mich zeitnah.
           </p>
         </form>
 
-        <!-- Alternative contact links -->
+        <!-- Alternative contact links with verified emails -->
         <div class="contact-links">
+          <a href="mailto:kuck_kevin@icloud.com" aria-label="E-Mail an kuck_kevin@icloud.com senden">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            kuck_kevin@icloud.com
+          </a>
+          <a href="mailto:Kkeey_IT@iCloud.com" aria-label="E-Mail an Kkeey_IT@iCloud.com senden">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Kkeey_IT@iCloud.com
+          </a>
           <a href="https://www.linkedin.com/in/kevin-kuck-8a5b69175/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profil öffnen">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
@@ -356,11 +377,13 @@
     </a>
   </p>
   <p class="footer-legal">
+    <a href="mailto:kuck_kevin@icloud.com" aria-label="E-Mail an kuck_kevin@icloud.com">kuck_kevin@icloud.com</a>
+    <a href="mailto:Kkeey_IT@iCloud.com" aria-label="E-Mail an Kkeey_IT@iCloud.com">Kkeey_IT@iCloud.com</a>
     <a href="https://github.com/KKEEY92" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profil von Kevin Kuck">GitHub</a>
-    <a href="mailto:kuck.kevin@icloud.com" aria-label="E-Mail an Kevin Kuck senden">kuck.kevin@icloud.com</a>
+    <a href="https://www.linkedin.com/in/kevin-kuck-8a5b69175/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profil">LinkedIn</a>
   </p>
-  <p style="font-family:var(--lo-font-code);font-size:9px;color:rgba(107,114,128,0.5);margin-top:12px;letter-spacing:1px;">
-    KKEEY LIQUID ORANGE BRAND STANDARD V1.0 · FUTURE ORCHESTRATOR INTERFACE
+  <p style="font-family:var(--lo-font-code);font-size:9px;color:rgba(142,150,165,0.6);margin-top:12px;letter-spacing:1px;">
+    KKEEY LIQUID GLASS SYSTEM V3.0 · FUTURE ORCHESTRATOR INTERFACE · BUTZBACH
   </p>
 </footer>
 
