@@ -1,196 +1,363 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang="de" data-theme="dark" data-color-theme="orange">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Kuck — IT-Administrator | IAM · Active Directory · Systemadministration | Butzbach / Remote</title>
-  <meta name="description" content="Kevin Kuck — IT-Administrator und Systemadministrator mit 15 Jahren Praxis. Identity & Access Management (Active Directory, Microsoft Entra ID), Citrix, Windows-11-Rollouts, PowerShell-Automatisierung, KRITIS-Erfahrung. Butzbach · Remote · Hybrid.">
-  <meta name="theme-color" content="#f7f9fb">
-  <link rel="canonical" href="https://kkeey92.github.io/CV_IT_KKEEY/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a5fa8'/%3E%3Ctext x='32' y='43' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Kevin Kuck — IT-Administrator | IAM · Active Directory · Systemadministration">
-  <meta property="og:description" content="15 Jahre IT-Praxis. Active Directory, Microsoft Entra ID, Citrix, PowerShell, KRITIS-Erfahrung. Verfügbar ab sofort — Remote / Hybrid.">
-  <meta property="og:image" content="https://kkeey92.github.io/CV_IT_KKEEY/assets/og-image.jpg">
-  <meta property="og:url" content="https://kkeey92.github.io/CV_IT_KKEEY/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css?v=20260727_2">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kevin Kuck",
-    "jobTitle": "IT-Administrator & Systemadministrator",
-    "url": "https://kkeey92.github.io/CV_IT_KKEEY/",
-    "email": "kuck_kevin@icloud.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Butzbach", "addressCountry": "DE" },
-    "knowsAbout": ["Identity & Access Management", "Active Directory", "Microsoft Entra ID", "Citrix", "Windows 11", "PowerShell", "KRITIS-Infrastruktur", "1st/2nd/3rd Level Support", "Omnitracker", "Innovaphone", "Prozessautomatisierung"],
-    "sameAs": ["https://github.com/KKEEY92", "https://www.linkedin.com/in/kevin-kuck-it/", "https://www.freelancermap.de/profil/kevin-kuck"]
-  }
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ──────────────────────────────────────────────────────── -->
+  <title>Kevin Kuck — IT Administrator · Systemadministration · IAM</title>
+  <meta name="description" content="Kevin Kuck — IT-Administrator mit 15+ Jahren Praxis. Spezialisiert auf Active Directory, Microsoft Entra ID, KRITIS-Infrastruktur, Citrix, PowerShell-Automatisierung und Identity & Access Management." />
+  <meta name="keywords"    content="IT Administrator, Systemadministration, Active Directory, Microsoft Entra ID, KRITIS, IAM, PowerShell, Citrix, Kevin Kuck" />
+  <meta name="author"      content="Kevin Kuck" />
+  <meta name="theme-color" content="#0C0D0F" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://kkeey92.github.io/CV_IT_KKEEY/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Kevin Kuck — IT Administrator · Systemadministration" />
+  <meta property="og:description" content="15+ Jahre IT-Praxis. KRITIS-erfahren. Spezialisiert auf Active Directory, Entra ID, IAM und Prozessautomatisierung." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://kkeey92.github.io/CV_IT_KKEEY/" />
+
+  <!-- ── FONTS ─────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ── STYLES ────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <img src="assets/kkeey-logo.jpg" class="nav-logo-img" alt="KKEEY Logo">
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#profil" id="navProfile">Profil</a></li>
-      <li><a href="#werdegang" id="navCareer">Werdegang</a></li>
-      <li><a href="#kompetenzen" id="navSkills">Kompetenzen</a></li>
-      <li><a href="#tools" id="navTools">Tools</a></li>
-      <li><a href="#kontakt" id="navContact">Kontakt</a></li>
-    </ul>
-    <div class="nav-controls">
-      <div class="available-badge">
-        <span class="available-dot"></span>
-        <span id="availableText">Verfügbar ab sofort</span>
-      </div>
-      <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme"></button>
-      <button class="nav-btn" id="colorToggle" aria-label="Farbthema wechseln" style="display:flex;align-items:center;justify-content:center;">
-        <span style="width:10px;height:10px;border-radius:50%;background:var(--it-accent);display:block;box-shadow:0 0 5px var(--it-accent);"></span>
-      </button>
-      <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln / Switch language">EN</button>
-      <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="navLinks">☰</button>
-    </div>
-  </div>
-</nav>
+<!-- Skip to content (a11y) -->
+<a href="#main" class="skip-link">Zum Hauptinhalt springen</a>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-inner">
-    <div class="hero-avatar">
-      <img src="assets/avatar.jpg" alt="Kevin Kuck" width="800" height="800" decoding="async" fetchpriority="high">
-    </div>
-    <div class="hero-text">
-      <h1 class="hero-name">Kevin Kuck</h1>
-      <p class="hero-role" id="heroRole">IT-Administrator · Systemadministration · Identity &amp; Access Management</p>
-      <p class="hero-meta" id="heroMeta">15 Jahre IT-Praxis · KRITIS-erfahren · Butzbach · Remote / Hybrid</p>
-      <div class="hero-ctas">
-        <a href="assets/Kevin_Kuck_Bewerbungsmappe_IT.pdf" download class="btn btn-primary" id="heroCta1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span id="heroCta1Label">Bewerbungsmappe (PDF)</span>
-        </a>
-        <a href="#kontakt" class="btn btn-outline" id="heroCta2">Kontakt aufnehmen</a>
-        <a href="https://www.linkedin.com/in/kevin-kuck-it/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
-        <a href="https://www.freelancermap.de/profil/kevin-kuck" target="_blank" rel="noopener" title="Profil von Kevin Kuck auf www.freelancermap.de" class="btn btn-freelancermap">
-          <img loading="eager" src="https://www.freelancermap.de/assets/logo/logo-black.svg" alt="freelancermap" class="fm-logo-img" width="118" height="24">
-          <span class="fm-text">freelancermap</span>
-        </a>
+<!-- ═══ WEBGL BACKGROUND ════════════════════════════════════════════ -->
+<canvas id="lo-bg" aria-hidden="true" role="presentation" title="Dynamischer Hintergrund"></canvas>
+
+<!-- Scanlines overlay -->
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- ═══ NAV ═════════════════════════════════════════════════════════ -->
+<header role="banner">
+  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav-inner">
+
+      <!-- Logo / Name -->
+      <a href="#hero" class="nav-logo" aria-label="Kevin Kuck — Zurück zur Startseite">
+        <span class="nav-logo-mark">KK</span>
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#overview"   id="navOverview">Überblick</a></li>
+        <li><a href="#systems"    id="navSystems">Systeme</a></li>
+        <li><a href="#automation" id="navAutomation">Automation</a></li>
+        <li><a href="#career"     id="navCareer">Werdegang</a></li>
+        <li><a href="#skills"     id="navSkills">Skills</a></li>
+        <li><a href="#contact"    id="navContact">Kontakt</a></li>
+      </ul>
+
+      <!-- Controls -->
+      <div class="nav-controls">
+        <div class="available-badge" aria-live="polite" aria-atomic="true">
+          <span class="available-dot" aria-hidden="true"></span>
+          <span id="availableText">Verfügbar ab sofort</span>
+        </div>
+        <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln">EN</button>
+        <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Dunkelmodus aktivieren" title="Dark Mode (Brand Default)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="navLinks">☰</button>
       </div>
-      <p class="hero-note" id="downloadNote">Bewerbungsmappe: Anschreiben, Lebenslauf &amp; Tech-Profil (PDF, 4 Seiten)</p>
+
     </div>
-  </div>
+  </nav>
 </header>
 
-<main>
-  <!-- PROFIL -->
-  <section id="profil">
-    <div class="container">
-      <p class="section-label" id="profileLabel">Profil</p>
-      <h2 class="section-title" id="profileTitle">Infrastruktur, auf die man sich verlassen kann.</h2>
-      <p class="profile-text" id="profileText"></p>
-      <div class="fact-chips" id="factChips"></div>
+<!-- ═══ MAIN ═════════════════════════════════════════════════════════ -->
+<main id="main" role="main">
+
+  <!-- ─── HERO ──────────────────────────────────────────────────── -->
+  <section id="hero" class="hero" aria-labelledby="heroHeading">
+    <div class="hero-inner">
+
+      <!-- Status badges -->
+      <div class="hero-status-row" role="status" aria-live="polite">
+        <span class="hero-status-badge badge--online">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span id="availableText2">Verfügbar ab sofort</span>
+        </span>
+        <span class="hero-status-badge badge--system">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span id="systemBadgeLabel">ORCHESTRATOR AKTIV</span>
+        </span>
+      </div>
+
+      <!-- Name -->
+      <h1 id="heroHeading" class="hero-name">Kevin Kuck</h1>
+
+      <!-- Role -->
+      <p class="hero-role" id="heroRole">
+        IT-Administrator ·
+        <span>Systemadministration</span> ·
+        Identity &amp; Access Management
+      </p>
+
+      <!-- Capabilities strip -->
+      <div class="hero-caps" id="heroCaps" role="list" aria-label="Kernkompetenzen">
+        <!-- rendered by JS -->
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-ctas">
+        <a href="#overview" class="btn btn-primary" id="heroCta1Link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span id="heroCta1Label">IT-Portfolio ansehen</span>
+        </a>
+        <a href="#" class="btn btn-outline" id="heroCta2Link" aria-label="Bewerbungsmappe als PDF herunterladen">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span id="heroCta2Label">Bewerbungsmappe (PDF)</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost" id="heroCta3Link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span id="heroCta3Label">Kontakt aufnehmen</span>
+        </a>
+      </div>
+
+      <p class="hero-note" id="downloadNote" aria-describedby="heroCta2Link">Bewerbungsmappe: Anschreiben, Lebenslauf &amp; Tech-Profil (PDF)</p>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- WERDEGANG -->
-  <section id="werdegang" class="section-alt">
+  <!-- ─── OVERVIEW / IT DOMAINS ─────────────────────────────────── -->
+  <section id="overview" aria-labelledby="overviewHeading">
     <div class="container">
-      <p class="section-label" id="careerLabel">Werdegang</p>
-      <h2 class="section-title" id="careerTitle">Berufserfahrung</h2>
-      <div class="career-list" id="careerContainer"></div>
-    </div>
-  </section>
-
-  <!-- KOMPETENZEN -->
-  <section id="kompetenzen">
-    <div class="container">
-      <p class="section-label" id="skillsLabel">Kompetenzen</p>
-      <h2 class="section-title" id="skillsTitle">Kernkompetenzen</h2>
-      <div class="skills-grid" id="skillsContainer"></div>
-    </div>
-  </section>
-
-  <!-- TOOLS -->
-  <section id="tools" class="section-alt">
-    <div class="container">
-      <p class="section-label" id="toolsLabel">Proof of Work</p>
-      <h2 class="section-title" id="toolsTitle">Eigene Tools &amp; Methodik</h2>
-      <p class="section-sub" id="toolsSub"></p>
-      <div class="tools-grid" id="toolsContainer"></div>
-    </div>
-  </section>
-
-  <!-- NEBENPROJEKTE -->
-  <section id="nebenprojekte">
-    <div class="container">
-      <p class="section-label" id="sideLabel">Zusatzqualifikation</p>
-      <h2 class="section-title" id="sideTitle">Nebenprojekte: KI-Entwicklung</h2>
-      <p class="section-sub" id="sideText"></p>
-      <div class="side-row" id="sideContainer"></div>
-      <p class="side-more"><a href="https://kkeey92.github.io/CV_KKEEY/" id="sideMore" target="_blank" rel="noopener">Mehr im AI-Portfolio →</a></p>
-    </div>
-  </section>
-
-  <!-- KONTAKT -->
-  <section id="kontakt" class="section-alt">
-    <div class="container contact-inner">
-      <p class="section-label" id="contactLabel">Kontakt</p>
-      <h2 class="section-title" id="contactTitle">Lassen Sie uns sprechen.</h2>
-      <p class="section-sub" id="contactDesc"></p>
-      <!-- Web3Forms → sendet an kuck_kevin@icloud.com -->
-      <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="ee6d8111-b3db-4684-8460-4d57384ff3fc">
-        <input type="hidden" name="subject" value="Kontaktanfrage — Kevin Kuck IT-Profil">
-        <input type="hidden" name="redirect" value="false">
-        <input type="text" name="name" required class="contact-input" id="formName" placeholder="Ihr Name">
-        <input type="email" name="email" required class="contact-input" id="formEmail" placeholder="Ihre E-Mail">
-        <textarea name="message" required class="contact-input" id="formMsg" rows="5" placeholder="Ihre Nachricht…"></textarea>
-        <button type="submit" class="contact-submit" id="formSubmit">Nachricht senden →</button>
-        <p class="contact-sent" id="formSent" role="status">✓ Nachricht gesendet — ich melde mich.</p>
-      </form>
-      <div class="contact-links">
-        <a href="mailto:kuck_kevin@icloud.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          kuck_kevin@icloud.com
-        </a>
-        <a href="https://github.com/KKEEY92" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          github.com/KKEEY92
-        </a>
-        <a href="https://gitlab.com/KKEEY92" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true" focusable="false"><path d="m22 13.29-1.32-4.06a.7.7 0 0 0-.25-.34.7.7 0 0 0-.42-.11.7.7 0 0 0-.41.13.7.7 0 0 0-.24.33L17.5 15H6.5l-1.86-5.76a.7.7 0 0 0-.24-.33.7.7 0 0 0-.41-.13.7.7 0 0 0-.42.11.7.7 0 0 0-.25.34L2 13.29a.74.74 0 0 0 .27.83l9.33 6.78a.74.74 0 0 0 .8 0l9.33-6.78a.74.74 0 0 0 .27-.83Z"/></svg>
-          gitlab.com/KKEEY92
-        </a>
-        <a href="https://www.linkedin.com/in/kevin-kuck-it/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://www.freelancermap.de/profil/kevin-kuck" target="_blank" rel="noopener" title="Profil von Kevin Kuck auf www.freelancermap.de" class="btn-freelancermap-contact">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <img loading="eager" src="https://www.freelancermap.de/assets/logo/logo-black.svg" alt="freelancermap" class="fm-logo-img" width="100" height="20">
-          <span class="fm-text">freelancermap</span>
-        </a>
+      <p class="section-label" aria-hidden="true"><span id="overviewLabel">Enterprise IT</span></p>
+      <h2 class="section-title" id="overviewHeading"><span id="overviewTitle">Sechs Domänen. Eine Verantwortung.</span></h2>
+      <p class="section-sub" id="overviewSub"></p>
+      <div class="domain-grid" id="overviewGrid" role="list">
+        <!-- rendered by JS -->
       </div>
     </div>
   </section>
+
+  <!-- ─── SYSTEMS / ARCHITECTURE ────────────────────────────────── -->
+  <section id="systems" class="section-alt" aria-labelledby="systemsHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="systemsLabel">Architektur</span></p>
+      <h2 class="section-title" id="systemsHeading"><span id="systemsTitle">Stack &amp; Systemlandschaft</span></h2>
+      <p class="section-sub" id="systemsSub"></p>
+      <div class="systems-layout">
+        <div>
+          <p class="section-label" style="margin-bottom:18px;" aria-label="System-Tiers">
+            <span>System Tiers</span>
+          </p>
+          <div class="tier-stack reveal" id="tierStack" role="list">
+            <!-- rendered by JS -->
+          </div>
+        </div>
+        <div class="systems-cards" id="systemsCards" role="list">
+          <!-- rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── AUTOMATION / AGENTS ───────────────────────────────────── -->
+  <section id="automation" aria-labelledby="automationHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="automationLabel">Automation</span></p>
+      <h2 class="section-title" id="automationHeading"><span id="automationTitle">Orchestrierung &amp; Automatisierung</span></h2>
+      <p class="section-sub" id="automationSub"></p>
+      <div class="pipeline-container reveal" id="pipelineContainer" role="list" aria-label="Automation-Pipeline">
+        <!-- rendered by JS -->
+      </div>
+      <div class="agent-grid" id="agentGrid" role="list">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── COMPLIANCE / GOVERNANCE ───────────────────────────────── -->
+  <section id="compliance" class="section-alt" aria-labelledby="complianceHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="complianceLabel">Governance</span></p>
+      <h2 class="section-title" id="complianceHeading"><span id="complianceTitle">Compliance &amp; Betriebssicherheit</span></h2>
+      <p class="section-sub" id="complianceSub"></p>
+      <div class="compliance-grid" id="complianceGrid" role="list">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── IMPACT / CASE STORIES ─────────────────────────────────── -->
+  <section id="impact" aria-labelledby="impactHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="impactLabel">Impact</span></p>
+      <h2 class="section-title" id="impactHeading"><span id="impactTitle">Messbare Ergebnisse.</span></h2>
+      <p class="section-sub" id="impactSub"></p>
+      <div class="impact-grid" id="impactGrid" role="list">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CAREER / WERDEGANG ────────────────────────────────────── -->
+  <section id="career" class="section-alt" aria-labelledby="careerHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="careerLabel">Werdegang</span></p>
+      <h2 class="section-title" id="careerHeading"><span id="careerTitle">Berufserfahrung</span></h2>
+      <div class="career-list" id="careerContainer" role="list">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS / KOMPETENZEN ─────────────────────────────────── -->
+  <section id="skills" aria-labelledby="skillsHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="skillsLabel">Kompetenzen</span></p>
+      <h2 class="section-title" id="skillsHeading"><span id="skillsTitle">Kernkompetenzen</span></h2>
+      <div class="skills-grid" id="skillsContainer" role="list">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TOOLS / PROOF OF WORK ─────────────────────────────────── -->
+  <section id="tools" class="section-alt" aria-labelledby="toolsHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="toolsLabel">Proof of Work</span></p>
+      <h2 class="section-title" id="toolsHeading"><span id="toolsTitle">Eigene Tools &amp; Methodik</span></h2>
+      <p class="section-sub" id="toolsSub"></p>
+      <div class="tools-grid" id="toolsContainer" role="list">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SIDE PROJECTS ────────────────────────────────────────── -->
+  <section id="side" aria-labelledby="sideHeading">
+    <div class="container">
+      <p class="section-label" aria-hidden="true"><span id="sideLabel">Zusatzqualifikation</span></p>
+      <h2 class="section-title" id="sideHeading"><span id="sideTitle">Nebenprojekte: KI-Entwicklung</span></h2>
+      <p class="section-sub" id="sideText"></p>
+      <div class="side-row" id="sideContainer" role="list">
+        <!-- rendered by JS -->
+      </div>
+      <p class="side-more">
+        <a href="#" id="sideMore" aria-label="AI-Engineering-Portfolio ansehen">Mehr im AI-Portfolio →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─────────────────────────────────────────────── -->
+  <section id="contact" class="section-alt" aria-labelledby="contactHeading">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label" aria-hidden="true"><span id="contactLabel">Kontakt</span></p>
+        <h2 class="section-title" id="contactHeading"><span id="contactTitle">Lassen Sie uns sprechen.</span></h2>
+        <p class="section-sub" id="contactDesc"></p>
+
+        <!-- Contact form (Web3Forms) -->
+        <form id="contactForm" class="contact-form" novalidate aria-label="Kontaktformular">
+          <input type="hidden" name="access_key" value="ef6edbe7-dc30-456c-b3c9-df5a77ee2dc9" />
+          <input type="hidden" name="subject" value="Neue Nachricht von kkeey92.github.io/CV_IT_KKEEY" />
+
+          <input
+            type="text"
+            id="formName"
+            name="name"
+            class="contact-input"
+            placeholder="Ihr Name"
+            required
+            autocomplete="name"
+            aria-required="true"
+          />
+          <input
+            type="email"
+            id="formEmail"
+            name="email"
+            class="contact-input"
+            placeholder="Ihre E-Mail"
+            required
+            autocomplete="email"
+            aria-required="true"
+          />
+          <textarea
+            id="formMsg"
+            name="message"
+            class="contact-input"
+            placeholder="Ihre Nachricht…"
+            required
+            aria-required="true"
+          ></textarea>
+
+          <button type="submit" id="formSubmit" class="contact-submit">
+            Nachricht senden →
+          </button>
+          <p class="contact-sent" id="formSent" role="status" aria-live="polite">
+            ✓ Nachricht gesendet — ich melde mich.
+          </p>
+        </form>
+
+        <!-- Alternative contact links -->
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/kevin-kuck-8a5b69175/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profil öffnen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.freelancermap.de/freelancer-verzeichnis/profile/it-infrastruktur/413628-profil-kevin-kuck.html" target="_blank" rel="noopener noreferrer" aria-label="Freelancermap Profil öffnen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Freelancermap
+          </a>
+          <a href="https://kkeey92.github.io/CV_KKEEY/" target="_blank" rel="noopener noreferrer" aria-label="AI-Portfolio ansehen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            AI-Portfolio →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer class="footer">
-  <p>&copy; 2026 Kevin Kuck · kkeey92.github.io/CV_IT_KKEEY</p>
-  <p class="footer-legal">
-    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutzerklärung</a>
+<!-- ═══ FOOTER ═══════════════════════════════════════════════════════ -->
+<footer role="contentinfo" class="footer">
+  <p>Kevin Kuck &mdash; IT Administrator &middot; IAM &middot; Butzbach, Germany</p>
+  <p class="footer-cross">
+    <a href="https://kkeey92.github.io/CV_KKEEY/" target="_blank" rel="noopener noreferrer" id="footerCross" aria-label="AI-Engineering-Portfolio von Kevin Kuck ansehen">
+      AI-Engineering-Portfolio ansehen →
+    </a>
   </p>
-  <p class="footer-cross"><a href="https://kkeey92.github.io/CV_KKEEY/" id="footerCross">Auch von mir: AI-Engineering-Portfolio →</a></p>
+  <p class="footer-legal">
+    <a href="https://github.com/KKEEY92" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profil von Kevin Kuck">GitHub</a>
+    <a href="mailto:kuck.kevin@icloud.com" aria-label="E-Mail an Kevin Kuck senden">kuck.kevin@icloud.com</a>
+  </p>
+  <p style="font-family:var(--lo-font-code);font-size:9px;color:rgba(107,114,128,0.5);margin-top:12px;letter-spacing:1px;">
+    KKEEY LIQUID ORANGE BRAND STANDARD V1.0 · FUTURE ORCHESTRATOR INTERFACE
+  </p>
 </footer>
 
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
+<!-- ═══ SCRIPTS ══════════════════════════════════════════════════════ -->
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
