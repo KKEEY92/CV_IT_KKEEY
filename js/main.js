@@ -1,14 +1,17 @@
 /**
- * KKEEY Future Orchestrator Interface — main.js v3.0
- * CV_IT_KKEEY · Liquid Glass
+ * KKEEY Future Orchestrator Interface — main.js v3.1
+ * CV_IT_KKEEY · Liquid Glass & Fluid Wave Shader
  *
- * Features:
- *  - Dual Theme: Dark / Light Mode
- *  - Dual Palette: Liquid Orange / Liquid Azure
- *  - Multilingual: DE / EN / FR / UK (Ukrainisch)
- *  - Typewriter Scramble / Schriftlauf-Effekt
- *  - WebGL Dual-Palette Ambient Shader mit Scroll-Reaktivität
- *  - E-Mail-Handling: kuck_kevin@icloud.com · Kkeey_IT@iCloud.com
+ * Color Palettes:
+ *  - Cyber Violet / Vibrant Blue (Master / Default)
+ *  - Liquid Neon Orange & Metallic Steel
+ *
+ * Themes:
+ *  - Dark Mode (#07070F Cyber Deep)
+ *  - Light Mode (#EEF2F8 Frost Glass)
+ *
+ * Multilingual: DE / EN / FR / UK
+ * Ticker: Typewriter Role Scramble
  */
 
 const D = window.KKIT_DATA;
@@ -16,8 +19,8 @@ const LANGUAGES = ['de', 'en', 'fr', 'uk'];
 let lang = localStorage.getItem('kkit_lang') || 'de';
 if (!LANGUAGES.includes(lang)) lang = 'de';
 
-let darkMode = localStorage.getItem('kkit_dark') !== 'false'; // Dark is default
-let colorTheme = localStorage.getItem('kkit_color') || 'orange'; // Orange is default
+let darkMode = localStorage.getItem('kkit_dark') !== 'false';
+let colorTheme = localStorage.getItem('kkit_color') || 'purple'; // 'purple' (Cyber Violet) is default, 'orange' is Liquid Neon Orange
 
 // ─── DOM READY ───────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTyped();
   initReveal();
   initBg();
-  initScrollShader();
   initContactForm();
 });
 
@@ -40,7 +42,7 @@ function t(obj) {
 // ─── THEME & COLOR PALETTE ───────────────────────────────────────────────────
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-color-theme', colorTheme);
+  document.documentElement.setAttribute('data-color-theme', colorTheme === 'orange' ? 'orange' : '');
   document.documentElement.setAttribute('lang', lang);
 
   localStorage.setItem('kkit_dark', String(darkMode));
@@ -51,8 +53,8 @@ function applyTheme() {
   if (darkBtn) {
     darkBtn.setAttribute('aria-label', darkMode ? t(D.i18n.darkBtnLight) : t(D.i18n.darkBtnDark));
     darkBtn.innerHTML = darkMode
-      ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`
-      : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+      ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`
+      : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
   }
 
   const langBtn = document.getElementById('langToggle');
@@ -60,11 +62,11 @@ function applyTheme() {
 
   const colorDot = document.getElementById('colorDot');
   if (colorDot) {
-    colorDot.style.background = colorTheme === 'orange' ? '#FF7A00' : '#00D4FF';
-    colorDot.style.boxShadow = colorTheme === 'orange' ? '0 0 8px #FF7A00' : '0 0 8px #00D4FF';
+    colorDot.style.background = colorTheme === 'orange' ? '#FF7A00' : '#7C6AF7';
+    colorDot.style.boxShadow = colorTheme === 'orange' ? '0 0 8px #FF7A00' : '0 0 8px #7C6AF7';
   }
 
-  updateShaderUniforms();
+  updateBgLight();
 }
 
 // ─── NAV ──────────────────────────────────────────────────────────────────────
@@ -73,12 +75,10 @@ function initNav() {
   const hamburger = document.getElementById('hamburger');
   const links = document.getElementById('navLinks');
 
-  // Scroll -> sticky style
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   }, { passive: true });
 
-  // Hamburger
   if (hamburger) {
     hamburger.addEventListener('click', () => {
       const open = links.classList.toggle('open');
@@ -93,7 +93,6 @@ function initNav() {
     });
   });
 
-  // Dark / Light Toggle
   const darkBtn = document.getElementById('darkToggle');
   if (darkBtn) {
     darkBtn.addEventListener('click', () => {
@@ -102,16 +101,14 @@ function initNav() {
     });
   }
 
-  // Color Theme Toggle (Liquid Orange <-> Liquid Azure)
   const colorBtn = document.getElementById('colorToggle');
   if (colorBtn) {
     colorBtn.addEventListener('click', () => {
-      colorTheme = colorTheme === 'orange' ? 'azure' : 'orange';
+      colorTheme = colorTheme === 'purple' ? 'orange' : 'purple';
       applyTheme();
     });
   }
 
-  // Multilingual Toggle: DE -> EN -> FR -> UK -> DE
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
     langBtn.addEventListener('click', () => {
@@ -123,7 +120,6 @@ function initNav() {
     });
   }
 
-  // Active nav link via IntersectionObserver
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('#navLinks a[href^="#"]');
 
@@ -234,7 +230,6 @@ function render() {
   initReveal();
 }
 
-// ─── HELPERS ──────────────────────────────────────────────────────────────────
 function setEl(id, txt) {
   const el = document.getElementById(id);
   if (el) el.textContent = txt;
@@ -244,7 +239,6 @@ function setHTML(id, html) {
   if (el) el.innerHTML = html;
 }
 
-// SVG Icons for domain cards
 const ICONS = {
   cloud:    `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>`,
   server:   `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>`,
@@ -254,7 +248,6 @@ const ICONS = {
   layout:   `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>`,
 };
 
-// ─── OVERVIEW ─────────────────────────────────────────────────────────────────
 function renderOverview() {
   setEl('overviewLabel', t(D.overview.label));
   setEl('overviewTitle', t(D.overview.title));
@@ -271,7 +264,6 @@ function renderOverview() {
   `).join(''));
 }
 
-// ─── SYSTEMS ──────────────────────────────────────────────────────────────────
 function renderSystems() {
   setEl('systemsLabel', t(D.systems.label));
   setEl('systemsTitle', t(D.systems.title));
@@ -297,7 +289,6 @@ function renderSystems() {
   `).join(''));
 }
 
-// ─── AUTOMATION ───────────────────────────────────────────────────────────────
 function renderAutomation() {
   setEl('automationLabel', t(D.automation.label));
   setEl('automationTitle', t(D.automation.title));
@@ -332,7 +323,6 @@ function renderAutomation() {
   `).join(''));
 }
 
-// ─── COMPLIANCE ───────────────────────────────────────────────────────────────
 function renderCompliance() {
   setEl('complianceLabel', t(D.compliance.label));
   setEl('complianceTitle', t(D.compliance.title));
@@ -352,7 +342,6 @@ function renderCompliance() {
   `).join(''));
 }
 
-// ─── IMPACT ───────────────────────────────────────────────────────────────────
 function renderImpact() {
   setEl('impactLabel', t(D.impact.label));
   setEl('impactTitle', t(D.impact.title));
@@ -372,7 +361,6 @@ function renderImpact() {
   `).join(''));
 }
 
-// ─── CAREER ───────────────────────────────────────────────────────────────────
 function renderCareer() {
   setEl('careerLabel', t(D.career.label));
   setEl('careerTitle', t(D.career.title));
@@ -393,7 +381,6 @@ function renderCareer() {
   `).join(''));
 }
 
-// ─── SKILLS ───────────────────────────────────────────────────────────────────
 function renderSkills() {
   setEl('skillsLabel', t(D.skills.label));
   setEl('skillsTitle', t(D.skills.title));
@@ -409,7 +396,6 @@ function renderSkills() {
   `).join(''));
 }
 
-// ─── TOOLS ────────────────────────────────────────────────────────────────────
 function renderTools() {
   setEl('toolsLabel', t(D.tools.label));
   setEl('toolsTitle', t(D.tools.title));
@@ -425,7 +411,6 @@ function renderTools() {
   `).join(''));
 }
 
-// ─── SIDE PROJECTS ────────────────────────────────────────────────────────────
 function renderSide() {
   setEl('sideLabel', t(D.side.label));
   setEl('sideTitle', t(D.side.title));
@@ -443,7 +428,6 @@ function renderSide() {
   if (more) { more.href = D.side.moreLink; more.textContent = t(D.side.moreLabel); }
 }
 
-// ─── CONTACT ──────────────────────────────────────────────────────────────────
 function renderContact() {
   setEl('contactLabel', t(D.contact.label));
   setEl('contactTitle', t(D.contact.title));
@@ -455,7 +439,6 @@ function renderContact() {
   setEl('formSent',   t(D.i18n.sentMsg));
 }
 
-// ─── REVEAL ───────────────────────────────────────────────────────────────────
 function initReveal() {
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -463,7 +446,6 @@ function initReveal() {
   document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
 }
 
-// ─── CONTACT FORM (Web3Forms) ─────────────────────────────────────────────────
 function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -487,191 +469,111 @@ function initContactForm() {
   });
 }
 
-// ─── WEBGL DUAL-PALETTE BACKGROUND SHADER ───────────────────────────────────
-let gl, loUTime, loURes, loUIntensity, loULight, loUC1, loUC2, loUScroll, loRafId;
-let scrollRatio = 0;
-
-function updateShaderUniforms() {
-  if (!gl) return;
-  const isLight = !darkMode ? 1.0 : 0.0;
-  if (loULight) gl.uniform1f(loULight, isLight);
-
-  // Colors: Orange vs Azure
-  if (colorTheme === 'azure') {
-    // Azure & Neon Violet
-    if (loUC1) gl.uniform3f(loUC1, 0.0, 0.83, 1.0);
-    if (loUC2) gl.uniform3f(loUC2, 0.48, 0.41, 0.97);
-  } else {
-    // Liquid Orange & Cyan
-    if (loUC1) gl.uniform3f(loUC1, 1.0, 0.48, 0.0);
-    if (loUC2) gl.uniform3f(loUC2, 0.0, 0.90, 1.0);
-  }
-}
+// ─── MASTER FLUID WAVE SHADER (from CV_KKEEY) ────────────────────────────────
+let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, rafId;
 
 function initBg() {
-  const canvas = document.getElementById('lo-bg');
-  if (!canvas) return;
+  const c = document.getElementById('lo-bg');
+  if (!c) return;
 
   const W = window.innerWidth, H = window.innerHeight;
-  canvas.width  = W;
-  canvas.height = H;
-  canvas.style.width  = W + 'px';
-  canvas.style.height = H + 'px';
+  c.width = W; c.height = H;
+  c.style.width = W + 'px'; c.style.height = H + 'px';
 
-  gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'high-performance' });
+  gl = c.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'high-performance' });
   if (!gl) return;
 
-  const VS = `attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}`;
-
+  const VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0,1);}';
   const FS = [
     'precision mediump float;',
-    'uniform float u_t, u_i, u_s, u_l;',
+    'uniform float u_t, u_i, u_l;',
     'uniform vec3 u_c1, u_c2;',
     'uniform vec2 u_r;',
-
-    'float gridLines(vec2 uv, float scale, float lw) {',
-    '  vec2 g = fract(uv * scale);',
-    '  vec2 d = min(g, 1.0 - g);',
-    '  float lx = 1.0 - smoothstep(0.0, lw, d.x);',
-    '  float ly = 1.0 - smoothstep(0.0, lw, d.y);',
-    '  return max(lx, ly);',
-    '}',
-
-    'float energyPulse(vec2 uv, float t, float scale) {',
-    '  vec2 g = fract(uv * scale);',
-    '  vec2 d = min(g, 1.0 - g);',
-    '  float onH = 1.0 - smoothstep(0.0, 0.05, d.y);',
-    '  float hFlow = sin(uv.x * scale * 6.2832 - t * 2.0) * 0.5 + 0.5;',
-    '  hFlow = pow(hFlow, 5.0);',
-    '  float onV = 1.0 - smoothstep(0.0, 0.05, d.x);',
-    '  float vFlow = sin(uv.y * scale * 6.2832 - t * 1.5) * 0.5 + 0.5;',
-    '  vFlow = pow(vFlow, 5.0);',
-    '  return onH * hFlow + onV * vFlow;',
-    '}',
-
-    'float nodeGlow(vec2 uv, float t, float scale) {',
-    '  vec2 g = fract(uv * scale) - 0.5;',
-    '  float d = length(g);',
-    '  float activation = sin(floor(uv.x * scale) * 7.3 + floor(uv.y * scale) * 13.1 + t * 0.7) * 0.5 + 0.5;',
-    '  return smoothstep(0.16, 0.0, d) * activation;',
-    '}',
-
-    'void main() {',
+    'void main(){',
     '  vec2 uv = gl_FragCoord.xy / u_r;',
-    '  float ar = u_r.x / u_r.y;',
-    '  vec2 uvR = vec2(uv.x * ar, uv.y);',
-
-    '  float t = u_t;',
-
-    // Dark base vs Light base
-    '  vec3 darkBase = mix(vec3(0.052, 0.060, 0.075), vec3(0.085, 0.098, 0.125), uv.y * 0.8);',
-    '  vec3 lightBase = mix(vec3(0.93, 0.945, 0.97), vec3(0.88, 0.905, 0.94), uv.y * 0.8);',
-    '  vec3 baseCol = mix(darkBase, lightBase, u_l);',
-
-    // Grid overlays
-    '  float bgGrid = gridLines(uvR, 5.0, 0.018);',
-    '  vec3 gridTint = mix(vec3(0.08, 0.095, 0.12), vec3(0.80, 0.83, 0.88), u_l);',
-    '  baseCol += gridTint * bgGrid * 0.4;',
-
-    '  float fgGrid = gridLines(uvR, 9.0, 0.010);',
-    '  baseCol += u_c1 * fgGrid * (0.28 - 0.12 * u_l) * u_i;',
-
-    // Energy pulses & Node glowing hubs
-    '  float ep = energyPulse(uvR, t * 0.45, 9.0);',
-    '  baseCol += u_c1 * ep * (0.85 - 0.3 * u_l) * u_i;',
-
-    '  float ng = nodeGlow(uvR, t * 0.35, 9.0);',
-    '  baseCol += u_c1 * ng * (1.3 - 0.5 * u_l) * u_i;',
-
-    // Secondary color wave
-    '  float ep2 = energyPulse(uvR, t * 0.2 + 1.5, 4.5);',
-    '  baseCol += u_c2 * ep2 * (0.35 - 0.15 * u_l) * u_i;',
-
-    // Vignette
-    '  vec2 vig = uv * 2.0 - 1.0;',
-    '  float vignette = 1.0 - dot(vig * vec2(0.5, 0.7), vig * vec2(0.5, 0.7)) * (0.28 - 0.15 * u_l);',
-    '  baseCol *= clamp(vignette, 0.0, 1.0);',
-
-    '  gl_FragColor = vec4(clamp(baseCol, 0.0, 1.0), 1.0);',
-    '}',
+    '  vec2 p = uv * 2.0 - 1.0;',
+    '  p.x *= u_r.x / u_r.y;',
+    '  float t = u_t * 0.22;',
+    '  float w1 = sin(p.x * 2.5 + t) * cos(p.y * 1.8 - t * 0.6);',
+    '  float w2 = cos(p.x * 1.5 - t * 0.4) * sin(p.y * 2.2 + t);',
+    '  float w3 = sin(length(p) * 3.0 - t * 1.2) * 0.5 + 0.5;',
+    '  float m1 = w1 * 0.5 + 0.5;',
+    '  float m2 = w2 * 0.5 + 0.5;',
+    '  vec3 dark = vec3(0.027, 0.027, 0.059);',
+    '  vec3 lite = vec3(0.933, 0.933, 0.973);',
+    '  vec3 base = mix(dark, lite, u_l);',
+    '  vec3 pur = u_c1;',
+    '  vec3 teal = u_c2;',
+    '  float db = 1.0 - u_l;',
+    '  vec3 col = base;',
+    '  col += pur * m1 * w3 * (0.34 + 0.22 * db) * u_i;',
+    '  col += teal * m2 * w3 * (0.22 + 0.14 * db) * u_i;',
+    '  col += vec3(0.08, 0.05, 0.22) * m1 * m2 * 0.35 * u_i * db;',
+    '  gl_FragColor = vec4(clamp(col, 0.0, 1.0), 1.0);',
+    '}'
   ].join('\n');
 
-  function mkShader(type, src) {
+  const mk = (type, src) => {
     const s = gl.createShader(type);
     gl.shaderSource(s, src);
     gl.compileShader(s);
-    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
-      console.warn('[lo-bg] Shader compile error:', gl.getShaderInfoLog(s));
-      return null;
-    }
     return s;
-  }
-
-  const vs = mkShader(gl.VERTEX_SHADER, VS);
-  const fs = mkShader(gl.FRAGMENT_SHADER, FS);
-  if (!vs || !fs) { gl = null; return; }
+  };
 
   const prog = gl.createProgram();
-  gl.attachShader(prog, vs);
-  gl.attachShader(prog, fs);
+  gl.attachShader(prog, mk(gl.VERTEX_SHADER, VS));
+  gl.attachShader(prog, mk(gl.FRAGMENT_SHADER, FS));
   gl.linkProgram(prog);
-  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.warn('[lo-bg] Program link error:', gl.getProgramInfoLog(prog));
-    gl = null;
-    return;
-  }
   gl.useProgram(prog);
 
   const buf = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, buf);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
-  const aLoc = gl.getAttribLocation(prog, 'a');
-  gl.enableVertexAttribArray(aLoc);
-  gl.vertexAttribPointer(aLoc, 2, gl.FLOAT, false, 0, 0);
+  const loc = gl.getAttribLocation(prog, 'a');
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
 
-  loUTime      = gl.getUniformLocation(prog, 'u_t');
-  loURes       = gl.getUniformLocation(prog, 'u_r');
-  loUIntensity = gl.getUniformLocation(prog, 'u_i');
-  loULight     = gl.getUniformLocation(prog, 'u_l');
-  loUC1        = gl.getUniformLocation(prog, 'u_c1');
-  loUC2        = gl.getUniformLocation(prog, 'u_c2');
-  loUScroll    = gl.getUniformLocation(prog, 'u_s');
+  uTime = gl.getUniformLocation(prog, 'u_t');
+  uRes = gl.getUniformLocation(prog, 'u_r');
+  uIntensity = gl.getUniformLocation(prog, 'u_i');
+  uLight = gl.getUniformLocation(prog, 'u_l');
+  uC1 = gl.getUniformLocation(prog, 'u_c1');
+  uC2 = gl.getUniformLocation(prog, 'u_c2');
 
-  gl.uniform2f(loURes, W, H);
-  gl.uniform1f(loUIntensity, 1.0);
-  gl.uniform1f(loUScroll, 0.0);
+  gl.uniform2f(uRes, W, H);
+  gl.uniform1f(uIntensity, 1.0);
 
-  updateShaderUniforms();
+  updateBgLight();
 
   let t0 = null;
   const loop = ts => {
     if (!gl) return;
     if (!t0) t0 = ts;
-    gl.uniform1f(loUTime, (ts - t0) * 0.001);
-    gl.uniform1f(loUScroll, scrollRatio);
+    gl.uniform1f(uTime, (ts - t0) * 0.001);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    loRafId = requestAnimationFrame(loop);
+    rafId = requestAnimationFrame(loop);
   };
-  loRafId = requestAnimationFrame(loop);
+  rafId = requestAnimationFrame(loop);
 
   window.addEventListener('resize', () => {
     const W2 = window.innerWidth, H2 = window.innerHeight;
-    canvas.width  = W2; canvas.height = H2;
-    canvas.style.width  = W2 + 'px';
-    canvas.style.height = H2 + 'px';
-    if (gl && loURes) {
-      gl.viewport(0, 0, W2, H2);
-      gl.uniform2f(loURes, W2, H2);
-    }
+    c.style.width = W2 + 'px'; c.style.height = H2 + 'px';
+    if (gl && uRes) gl.uniform2f(uRes, W2, H2);
   }, { passive: true });
 }
 
-// ─── SCROLL-RESPONSIVE SHADER ─────────────────────────────────────────────────
-function initScrollShader() {
-  window.addEventListener('scroll', () => {
-    const maxScroll = document.body.scrollHeight - window.innerHeight;
-    scrollRatio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-    const intensity = 0.90 + 0.3 * Math.sin(scrollRatio * Math.PI);
-    if (gl && loUIntensity) gl.uniform1f(loUIntensity, intensity);
-  }, { passive: true });
+function updateBgLight() {
+  if (!gl) return;
+  if (uLight !== null) gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
+  if (uC1 !== null && uC2 !== null) {
+    if (colorTheme === 'orange') {
+      // Liquid Neon Orange + Electric Cyan
+      gl.uniform3f(uC1, 1.0, 0.478, 0.0);
+      gl.uniform3f(uC2, 0.0, 0.898, 1.0);
+    } else {
+      // Cyber Violet + Vibrant Azure / Cyan (Master Palette)
+      gl.uniform3f(uC1, 0.486, 0.416, 0.969);
+      gl.uniform3f(uC2, 0.0, 0.831, 0.667);
+    }
+  }
 }
