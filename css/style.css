@@ -70,8 +70,8 @@
 
 html {
   scroll-behavior: smooth;
-  text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
