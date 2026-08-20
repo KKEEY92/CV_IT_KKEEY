@@ -1,109 +1,139 @@
 <!DOCTYPE html>
-<html lang="de" class="dark">
+<html lang="de" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum | Kevin Kuck</title>
-  <meta name="description" content="Impressum und rechtliche Hinweise von Kevin Kuck.">
+  <title>Impressum | Kevin Kuck — IT Systems &amp; IAM</title>
+  <meta name="description" content="Impressum und rechtliche Angaben von Kevin Kuck.">
   <meta name="robots" content="noindex, nofollow">
-  
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='32' y='43' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%23ff5e00' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
-  
-  <link rel="stylesheet" href="css/fonts.css">
+  <meta name="theme-color" content="#07070F">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="css/style.css">
-  
+
   <style>
-    .legal-container {
-      max-width: 800px;
-      margin: 100px auto;
-      padding: 2rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    .legal-page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 24px;
+      position: relative;
+      z-index: 2;
     }
-    .legal-container h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      background: var(--primary-gradient);
+    .legal-card {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px;
+      background: var(--kk-card);
+      border: 1px solid var(--kk-border);
+      border-radius: var(--lo-radius-card);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 8px 32px var(--kk-shadow), inset 0 1px 1px var(--kk-inset);
+    }
+    .legal-card h1 {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 800;
+      color: var(--kk-text-bright);
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--kk-text-bright) 20%, var(--accent-bright) 70%, var(--accent-2) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .legal-container h2 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
+    .legal-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-1);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
     }
-    .legal-container p {
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 1rem;
+    .legal-card p {
+      color: var(--kk-text);
+      line-height: 1.7;
+      margin-bottom: 12px;
+      font-size: 14.5px;
     }
-    .back-link {
-      display: inline-block;
-      margin-bottom: 2rem;
-      color: var(--accent-primary);
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      font-family: var(--lo-font-code);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-1);
+      background: rgba(var(--accent-1-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-1-rgb), 0.25);
+      border-radius: var(--lo-radius-sm);
+      padding: 8px 14px;
+      transition: all 0.2s ease;
+    }
+    .back-btn:hover {
+      background: rgba(var(--accent-1-rgb), 0.18);
+      color: var(--accent-bright);
       text-decoration: none;
-      font-weight: 500;
-    }
-    .back-link:hover {
-      text-decoration: underline;
+      transform: translateX(-2px);
     }
   </style>
 </head>
 <body>
 
-  <!-- Animated Background -->
-  <div class="glass-bg">
-    <div class="glass-orb orb-1"></div>
-    <div class="glass-orb orb-2"></div>
-    <div class="glass-orb orb-3"></div>
+  <!-- WebGL Fluid Background -->
+  <canvas id="lo-bg" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="legal-page-wrapper">
+    <div class="legal-card">
+      <a href="index.html" class="back-btn">← Zurück zum IT-Portfolio</a>
+
+      <h1>Impressum</h1>
+
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>
+        Kevin Kuck<br>
+        Marktplatz 5<br>
+        35510 Butzbach<br>
+        Deutschland
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>
+        Telefon: +49 170 4130592<br>
+        E-Mail: <a href="mailto:kuck_kevin@icloud.com">kuck_kevin@icloud.com</a><br>
+        E-Mail (Alternativ): <a href="mailto:Kkeey_IT@iCloud.com">Kkeey_IT@iCloud.com</a>
+      </p>
+
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>
+        Kevin Kuck<br>
+        Marktplatz 5<br>
+        35510 Butzbach
+      </p>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>
+        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+      </p>
+
+      <h2>Haftung für Links</h2>
+      <p>
+        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+      </p>
+
+      <h2>Urheberrecht</h2>
+      <p>
+        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+      </p>
+    </div>
   </div>
 
-  <div class="legal-container">
-    <a href="index.html" class="back-link">← Zurück zum Portfolio</a>
-    
-    <h1>Impressum</h1>
-
-    <h2>Angaben gemäß § 5 DDG</h2>
-    <p>
-      Kevin Kuck<br>
-      Marktplatz 5<br>
-      35510 Butzbach
-    </p>
-
-    <h2>Kontakt</h2>
-    <p>
-      Telefon: +49 170 4130592<br>
-      E-Mail: sunrisekk199228@googlemail.com
-    </p>
-
-    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-    <p>
-      Kevin Kuck<br>
-      Marktplatz 5<br>
-      35510 Butzbach
-    </p>
-
-    <h2>Haftung für Links</h2>
-    <p>
-      Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
-    </p>
-    <p>
-      Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung unzumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-    </p>
-
-    <h2>Urheberrecht</h2>
-    <p>
-      Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
-    </p>
-    <p>
-      Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-    </p>
-  </div>
-
+  <script src="js/main.js" defer></script>
 </body>
 </html>
