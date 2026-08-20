@@ -172,7 +172,7 @@ window.KKIT_DATA = {
     ],
     cards: [
       {
-        title: { de: 'KRITIS-Infrastruktur bei JBS', en: 'Critical Infrastructure at JBS', fr: 'Infrastructure Critique chez JBS', uk: 'Критична інфраструктура в JBS' },
+        title: { de: 'KRITIS-Infrastruktur bei JoBITS', en: 'Critical Infrastructure at JoBITS', fr: 'Infrastructure Critique chez JoBITS', uk: 'Критична інфраструктура в JoBITS' },
         desc: {
           de: 'Bundesweite Verwaltung von 90.000+ AD-Objekten und Nutzerkonten bei den Johanniter Bundes-IT-Services. Citrix-Umgebung, Hybrid Azure AD Join, Windows-11-Migration, FortiClient/Sophos Endpoint Security.',
           en: 'Nationwide management of 90,000+ AD objects and user accounts at Johanniter Bundes-IT-Services. Citrix environment, Hybrid Azure AD Join, Windows 11 migration, FortiClient/Sophos endpoint security.',
@@ -234,7 +234,7 @@ window.KKIT_DATA = {
         status: 'verified',
         statusLabel: { de: 'Verifiziert', en: 'Verified', fr: 'Vérifié', uk: 'Перевірено' },
         items: [
-          { de: 'Administration bundesweiter KRITIS-Infrastruktur bei JBS', en: 'Administration of nationwide KRITIS infrastructure at JBS', fr: 'Administration d\'infrastructure critique nationale chez JBS', uk: 'Адміністрування всенімецької KRITIS-інфраструктури в JBS' },
+          { de: 'Administration bundesweiter KRITIS-Infrastruktur bei JoBITS', en: 'Administration of nationwide KRITIS infrastructure at JoBITS', fr: 'Administration d\'infrastructure critique nationale chez JoBITS', uk: 'Адміністрування всенімецької KRITIS-інфраструктури в JoBITS' },
           { de: 'Strikte Trennung von Berechtigungen und Rollen (Least Privilege)', en: 'Strict separation of permissions and roles (Least Privilege)', fr: 'Séparation stricte des permissions et des rôles (Moindre Privilège)', uk: 'Суворий розподіл прав і ролей (Least Privilege)' },
           { de: 'Nachvollziehbare Änderungsdokumentation und Audit-Trails', en: 'Traceable change documentation and audit trails', fr: 'Traçabilité complète des modifications et pistes d\'audit', uk: 'Повне документування змін та аудит-трейли' },
         ],
@@ -293,7 +293,7 @@ window.KKIT_DATA = {
           fr: 'Administration nationale de l\'infrastructure AD chez Johanniter Bundes-IT-Services — comptes, groupes, GPO et permissions.',
           uk: 'Всенімецьке керування структурою AD в Johanniter Bundes-IT-Services — облікові записи, групи, політики та права доступу.',
         },
-        tag: { de: 'IAM · KRITIS · JBS', en: 'IAM · KRITIS · JBS', fr: 'IAM · KRITIS · JBS', uk: 'IAM · KRITIS · JBS' },
+        tag: { de: 'IAM · KRITIS · JoBITS', en: 'IAM · KRITIS · JoBITS', fr: 'IAM · KRITIS · JoBITS', uk: 'IAM · KRITIS · JoBITS' },
       },
       {
         metric: '14',
