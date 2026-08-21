@@ -4,7 +4,7 @@
  */
 
 const D = window.KKIT_DATA;
-const LANGUAGES = ['de', 'en', 'fr', 'uk'];
+const LANGUAGES = ['de', 'en', 'fr', 'uk', 'pl'];
 let lang = localStorage.getItem('kkit_lang') || 'de';
 if (!LANGUAGES.includes(lang)) lang = 'de';
 
