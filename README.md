@@ -1,10 +1,10 @@
 # CV_IT_KKEEY: Enterprise IT Administration & IAM Engineering
 
 <div align="center">
-  <img src="https://kkeey92.github.io/CV_IT_KKEEY/assets/avatar.jpg" alt="Kevin Kuck" width="140" style="border-radius:50%">
+  <img src="https://it.kkeey.dev/assets/avatar.jpg" alt="Kevin Kuck" width="140" style="border-radius:50%">
   <h3>Kevin Kuck — IT Administrator & System Engineer</h3>
   
-  [![Live Demo](https://img.shields.io/badge/Live_Portfolio-CV__IT__KKEEY-1a5fa8?style=for-the-badge&logo=github&logoColor=white)](https://kkeey92.github.io/CV_IT_KKEEY/)
+  [![Live Demo](https://img.shields.io/badge/Live_Portfolio-CV__IT__KKEEY-1a5fa8?style=for-the-badge&logo=github&logoColor=white)](https://it.kkeey.dev/)
   [![Language: DE/EN](https://img.shields.io/badge/Language-Bilingual_DE%2FEN-00E5FF?style=for-the-badge)]()
   [![Framework: KKI Glass](https://img.shields.io/badge/Framework-KKI_Liquid_Glass-FF7A00?style=for-the-badge)]()
   [![Compliance: DSGVO](https://img.shields.io/badge/Compliance-DSGVO_%2F_DDG-34A853?style=for-the-badge)]()
@@ -57,7 +57,7 @@ graph TD
 
     subgraph Service["⚡ Serverless Services"]
         W3F["Web3Forms API"]
-        MAIL["kuck_kevin@icloud.com"]
+        MAIL["hello@kkeey.dev"]
     end
 
     UI --> GH
@@ -89,7 +89,7 @@ python3 -m http.server 3000
 **Kevin Kuck** — *IT Administrator & System Engineer*  
 Available for IT administration contracts, IAM architecture, PowerShell automation, and infrastructure projects.
 
-- 🌐 **Live Portfolio:** [kkeey92.github.io/CV_IT_KKEEY/](https://kkeey92.github.io/CV_IT_KKEEY/)
+- 🌐 **Live Portfolio:** [it.kkeey.dev/](https://it.kkeey.dev/)
 - 👔 **LinkedIn:** [linkedin.com/in/kevin-kuck-it/](https://www.linkedin.com/in/kevin-kuck-it/)
 - 🦊 **GitLab:** [gitlab.com/KKEEY92](https://gitlab.com/KKEEY92)
 - 🐙 **GitHub:** [github.com/KKEEY92](https://github.com/KKEEY92)

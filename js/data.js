@@ -2,7 +2,7 @@
  * KKEEY IT-Profil — Inhaltsdatei v3.5
  * Future Orchestrator Interface — KKEEY Liquid Glass (Orange / Azure)
  * Multilingual: DE / EN / FR / UK / PL
- * E-Mails: kuck_kevin@icloud.com · Kkeey_IT@iCloud.com
+ * E-Mails: hello@kkeey.dev · office@kkeey.dev
  */
 window.KKIT_DATA = {
 
@@ -496,7 +496,7 @@ window.KKIT_DATA = {
       { name: 'AuraTone AI v2.0', desc: { de: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz', en: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz', fr: '● Application native v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU', uk: '● Нативний застосунок v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU', pl: '● Aplikacja natywna v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU' } },
       { name: 'KKI Agent-Framework', desc: { de: '● Aktives Framework · Wiederverwendbare Bausteine für Automation-Workflows', en: '● Active framework · Reusable building blocks for automation workflows', fr: '● Framework actif · Modules d\'automatisation réutilisables', uk: '● Активний фреймворк · Багаторазові модулі автоматизації', pl: '● Aktywny framework · Moduły automatyzacji wielokrotnego użytku' } },
     ],
-    moreLink: 'https://kkeey92.github.io/CV_KKEEY/',
+    moreLink: 'https://kkeey.dev/',
     moreLabel: { de: 'Mehr im AI-Portfolio →', en: 'More in the AI portfolio →', fr: 'Découvrir le portfolio IA →', uk: 'Більше в AI-портфоліо →', pl: 'Więcej w portfolio AI →' },
   },
 
@@ -511,7 +511,7 @@ window.KKIT_DATA = {
       uk: 'Відкритий до співпраці на посадах IT-адміністратора, системного адміністратора або спеціаліста з IAM. Віддалено / Гібрид · DE, EN, FR, UK & PL.',
       pl: 'Otwarty na stanowiska: Administrator IT, Administrator Systemowy lub Specjalista IAM. Remote · Hybrydowo · DE, EN, FR, UK & PL.',
     },
-    emails: ['kuck_kevin@icloud.com', 'Kkeey_IT@iCloud.com'],
+    emails: ['hello@kkeey.dev', 'office@kkeey.dev'],
   },
 
   // ─── I18N STRINGS ────────────────────────────────────────────────────────────
@@ -528,7 +528,7 @@ window.KKIT_DATA = {
     submitLabel:   { de: 'Nachricht senden →', en: 'Send message →', fr: 'Envoyer le message →', uk: 'Надіслати повідомлення →', pl: 'Wyślij wiadomość →' },
     sentMsg:       { de: '✓ Nachricht gesendet — ich melde mich zeitnah.', en: '✓ Message sent — I will reply promptly.', fr: '✓ Message envoyé — réponse rapide assurée.', uk: '✓ Повідомлення надіслано — відповім найближчим часом.', pl: '✓ Wiadomość wysłana — odpowiem wkrótce.' },
     sendingLabel:  { de: 'Wird gesendet…', en: 'Sending…', fr: 'Envoi en cours…', uk: 'Надсилається…', pl: 'Wysyłanie…' },
-    sendErr:       { de: 'Fehler — bitte direkt an kuck_kevin@icloud.com mailen', en: 'Error — please email kuck_kevin@icloud.com directly', fr: 'Erreur — écrivez directement à kuck_kevin@icloud.com', uk: 'Помилка — напишіть прямо на kuck_kevin@icloud.com', pl: 'Błąd — prosimy o bezpośredni kontakt na kuck_kevin@icloud.com' },
+    sendErr:       { de: 'Fehler — bitte direkt an hello@kkeey.dev mailen', en: 'Error — please email hello@kkeey.dev directly', fr: 'Erreur — écrivez directement à hello@kkeey.dev', uk: 'Помилка — напишіть прямо на hello@kkeey.dev', pl: 'Błąd — prosimy o bezpośredni kontakt na hello@kkeey.dev' },
     darkBtnLight:  { de: 'Hellmodus aktivieren', en: 'Switch to light mode', fr: 'Activer le mode clair', uk: 'Увімкнути світлу тему', pl: 'Włącz tryb jasny' },
     darkBtnDark:   { de: 'Dunkelmodus aktivieren', en: 'Switch to dark mode', fr: 'Activer le mode sombre', uk: 'Увімкнути темну тему', pl: 'Włącz tryb ciemny' },
     footerCross:   { de: 'AI-Engineering-Portfolio ansehen →', en: 'View AI Engineering Portfolio →', fr: 'Découvrir le portfolio IA →', uk: 'Переглянути портфоліо з AI-розробки →', pl: 'Zobacz Portfolio AI Engineering →' },
