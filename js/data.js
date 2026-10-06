@@ -385,12 +385,12 @@ window.KKIT_DATA = {
       },
       {
         period: { de: 'seit Juni 2026', en: 'since June 2026', fr: 'depuis Juin 2026', uk: 'з Червня 2026', pl: 'od Czerwca 2026' },
-        role: { de: 'IT-Beratung & Prozessautomatisierung', en: 'IT Consulting & Process Automation', fr: 'Conseil IT & Automatisation', uk: 'IT-Консалтинг & Автоматизація', pl: 'Doradztwo IT & Automatyzacja Procesów' },
-        company: { de: 'Selbstständig', en: 'Self-employed', fr: 'Indépendant', uk: 'Самозайнятий', pl: 'Działalność gospodarcza' },
+        role: { de: 'IT-Systementwicklung & Prozessautomatisierung', en: 'IT Systems Development & Process Automation', fr: 'Développement Systèmes IT & Automatisation', uk: 'Розробка IT-систем & Автоматизація', pl: 'Doradztwo IT & Automatyzacja Procesów' },
+        company: { de: 'Weiterbildung & Eigenprojekte · Gründungsvorbereitung', en: 'Professional Development & Independent Projects · Venture Preparation', fr: 'Formation & Projets Personnels · Préparation de Création', uk: 'Професійний розвиток та власні проєкти · Підготовка до запуску', pl: 'Rozwój zawodowy i projekty własne · Przygotowanie działalności' },
         active: true,
         desc: {
-          de: 'Beratung und Umsetzung rund um Systemadministration, Workflow-Automatisierung und Tool-Entwicklung für kleine und mittlere Unternehmen.',
-          en: 'Consulting and implementation around system administration, workflow automation, and tool development for small and medium-sized businesses.',
+          de: 'Eigenprojekte und fachliche Vertiefung in Systemadministration, IAM, Workflow-Automatisierung und Tool-Entwicklung. Vorbereitung eines künftigen B2B-Angebots für kleine und mittlere Unternehmen.'
+          en: 'Independent projects and professional development in system administration, IAM, workflow automation and tool development. Preparing a future B2B offering for small and medium-sized businesses.'
           fr: 'Conseil et implémentation en administration système, automatisation des workflows et développement d\'outils.',
           uk: 'Консалтинг та впровадження рішень із системного адміністрування, автоматизації процесів та розробки інструментів для бізнесу.',
           pl: 'Doradztwo i wdrażanie rozwiązań z zakresu administracji systemami, automatyzacji przepływów pracy i tworzenia narzędzi dla małych i średnich przedsiębiorstw.',
@@ -505,11 +505,11 @@ window.KKIT_DATA = {
     label: { de: 'Kontakt', en: 'Contact', fr: 'Contact', uk: 'Контакти', pl: 'Kontakt' },
     title: { de: 'Lassen Sie uns sprechen.', en: 'Let’s talk.', fr: 'Échangeons ensemble.', uk: 'Почнімо діалог.', pl: 'Porozmawiajmy.' },
     desc: {
-      de: 'Offen für Festanstellungen als IT-Administrator, Systemadministrator oder IAM-Specialist. Remote · Hybrid · DE, EN, FR, UK & PL.',
-      en: 'Open to full-time roles as IT administrator, system administrator, or IAM specialist. Remote · Hybrid · DE, EN, FR, UK & PL.',
-      fr: 'Ouvert aux opportunités en administration système, ingénierie IT ou spécialiste IAM. Télétravail / Hybride · DE, EN, FR, UK & PL.',
-      uk: 'Відкритий до співпраці на посадах IT-адміністратора, системного адміністратора або спеціаліста з IAM. Віддалено / Гібрид · DE, EN, FR, UK & PL.',
-      pl: 'Otwarty na stanowiska: Administrator IT, Administrator Systemowy lub Specjalista IAM. Remote · Hybrydowo · DE, EN, FR, UK & PL.',
+      de: 'Offen für Festanstellungen als IT-Administrator, Systemadministrator oder IAM-Specialist. Remote · Hybrid · Arbeitssprachen: Deutsch & Englisch.',
+      en: 'Open to full-time roles as IT administrator, system administrator, or IAM specialist. Remote · Hybrid · Working languages: German & English.',
+      fr: 'Ouvert aux opportunités en administration système, ingénierie IT ou IAM. Télétravail / Hybride · Langues de travail : allemand et anglais.',
+      uk: 'Відкритий до посад IT-адміністратора, системного адміністратора або спеціаліста з IAM. Віддалено / Гібрид · Робочі мови: німецька та англійська.',
+      pl: 'Otwarty na stanowiska: Administrator IT, Administrator Systemowy lub Specjalista IAM. Remote · Hybrydowo · Języki robocze: niemiecki i angielski.',
     },
     emails: ['hello@kkeey.dev', 'office@kkeey.dev'],
   },
