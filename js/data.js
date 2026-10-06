@@ -64,11 +64,11 @@ window.KKIT_DATA = {
     cta2: { de: 'Bewerbungsmappe (PDF)', en: 'Download CV (PDF)', fr: 'Dossier de candidature (PDF)', uk: 'Резюме / Портфоліо (PDF)', pl: 'Pobierz CV (PDF)' },
     cta3: { de: 'Kontakt aufnehmen', en: 'Get in touch', fr: 'Me contacter', uk: 'Зв\'язатися', pl: 'Skontaktuj się' },
     available: {
-      de: 'Verfügbar ab sofort',
-      en: 'Available now',
-      fr: 'Disponible immédiatement',
-      uk: 'Доступний зараз',
-      pl: 'Dostępny od zaraz',
+      de: 'Offen für berufliche Möglichkeiten',
+      en: 'Open to professional opportunities',
+      fr: 'Ouvert aux opportunités professionnelles',
+      uk: 'Відкритий до професійних можливостей',
+      pl: 'Otwarty na możliwości zawodowe',
     },
     caps: {
       de: ['Infrastruktur', 'Automatisierung', 'Compliance', 'Security', 'Monitoring', 'IAM'],
