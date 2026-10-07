@@ -389,8 +389,8 @@ window.KKIT_DATA = {
         company: { de: 'Weiterbildung & Eigenprojekte · Gründungsvorbereitung', en: 'Professional Development & Independent Projects · Venture Preparation', fr: 'Formation & Projets Personnels · Préparation de Création', uk: 'Професійний розвиток та власні проєкти · Підготовка до запуску', pl: 'Rozwój zawodowy i projekty własne · Przygotowanie działalności' },
         active: true,
         desc: {
-          de: 'Eigenprojekte und fachliche Vertiefung in Systemadministration, IAM, Workflow-Automatisierung und Tool-Entwicklung. Vorbereitung eines künftigen B2B-Angebots für kleine und mittlere Unternehmen.'
-          en: 'Independent projects and professional development in system administration, IAM, workflow automation and tool development. Preparing a future B2B offering for small and medium-sized businesses.'
+          de: 'Eigenprojekte und fachliche Vertiefung in Systemadministration, IAM, Workflow-Automatisierung und Tool-Entwicklung. Vorbereitung eines künftigen B2B-Angebots für kleine und mittlere Unternehmen.',
+          en: 'Independent projects and professional development in system administration, IAM, workflow automation and tool development. Preparing a future B2B offering for small and medium-sized businesses.',
           fr: 'Conseil et implémentation en administration système, automatisation des workflows et développement d\'outils.',
           uk: 'Консалтинг та впровадження рішень із системного адміністрування, автоматизації процесів та розробки інструментів для бізнесу.',
           pl: 'Doradztwo i wdrażanie rozwiązań z zakresu administracji systemami, automatyzacji przepływów pracy i tworzenia narzędzi dla małych i średnich przedsiębiorstw.',

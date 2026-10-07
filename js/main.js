@@ -12,13 +12,15 @@ let darkMode = localStorage.getItem('kkit_dark') !== 'false';
 let colorTheme = localStorage.getItem('kkit_color') || 'purple';
 
 document.addEventListener('DOMContentLoaded', () => {
-  applyTheme();
-  render();
-  initNav();
-  initTyped();
-  initReveal();
+  if (D) applyTheme();
+  if (D && document.getElementById('overviewGrid')) {
+    render();
+    initNav();
+    initTyped();
+    initReveal();
+    initContactForm();
+  }
   initBg();
-  initContactForm();
 });
 
 function t(obj) {
@@ -45,12 +47,6 @@ function applyTheme() {
 
   const langBtn = document.getElementById('langToggle');
   if (langBtn) langBtn.textContent = lang.toUpperCase();
-
-  const colorDot = document.getElementById('colorDot');
-  if (colorDot) {
-    colorDot.style.background = colorTheme === 'orange' ? '#FF7A00' : '#7C6AF7';
-    colorDot.style.boxShadow = colorTheme === 'orange' ? '0 0 8px #FF7A00' : '0 0 8px #7C6AF7';
-  }
 
   updateBgLight();
 }
