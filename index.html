@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="dark" data-color-theme="orange">
+<html lang="de" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,8 +26,7 @@
   <nav class="nav" role="navigation" aria-label="Hauptnavigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Kevin Kuck — Zurück zur Startseite">
-        <img src="assets/kkeey-logo.jpg" alt="KKEEY Logo" class="nav-logo-img" width="36" height="36" />
-        <span class="nav-logo-mark">KKEEY</span>
+        <img src="assets/kkeey-logo.jpg" alt="KKEEY Logo" class="nav-logo-img" width="38" height="38" />
       </a>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="#overview" id="navOverview">Überblick</a></li>
@@ -39,8 +38,8 @@
       </ul>
       <div class="nav-controls">
         <div class="available-badge" aria-live="polite"><span class="available-dot" aria-hidden="true"></span><span id="availableText">Offen für berufliche Möglichkeiten</span></div>
-        <button class="nav-btn nav-btn-icon" id="colorToggle" aria-label="Farbthema wechseln"><span class="color-dot" id="colorDot" aria-hidden="true"></span></button>
         <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme umschalten"></button>
+        <button class="nav-btn nav-btn-color" id="colorToggle" aria-label="Farbthema wechseln"><span class="nav-color-indicator" id="colorDot" aria-hidden="true"></span></button>
         <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln">DE</button>
         <button class="hamburger" id="hamburger" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="navLinks">☰</button>
       </div>
@@ -49,28 +48,21 @@
 </header>
 <main id="main" role="main">
   <section id="hero" class="hero" aria-labelledby="heroHeading">
-    <div class="hero-inner">
-      <div class="hero-status-row" role="status">
-        <span class="hero-status-badge badge--online"><span class="badge-dot" aria-hidden="true"></span><span id="availableText2">Offen für berufliche Möglichkeiten</span></span>
-        <span class="hero-status-badge badge--system"><span class="badge-dot" aria-hidden="true"></span><span id="systemBadgeLabel">ORCHESTRATOR AKTIV</span></span>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="assets/KKI_PORTRAIT_BUSINESS_KEVIN_KUCK_OFFICIAL.jpg" alt="Kevin Kuck — IT Administrator" width="800" height="800" decoding="async" />
       </div>
-      <div class="hero-avatar-wrapper">
-        <div class="hero-avatar-ring" aria-hidden="true"></div>
-        <img src="assets/KKI_PORTRAIT_BUSINESS_KEVIN_KUCK_OFFICIAL.jpg" alt="Kevin Kuck — IT Administrator" class="hero-avatar" width="120" height="120" />
-        <span class="hero-avatar-status" title="Online" aria-label="Online"></span>
-      </div>
-      <p class="section-label section-label--centered"><span id="heroGreeting">System Interface · Future Orchestrator</span></p>
+      <p class="hero-label" id="heroGreeting">System Interface · Future Orchestrator</p>
       <h1 id="heroHeading" class="hero-name">Kevin Kuck</h1>
       <div class="hero-typed-wrap" aria-live="polite"><span class="hero-typed-text" id="typedOutput">IT-Administrator · Systemadministration</span><span class="hero-cursor" aria-hidden="true"></span></div>
-      <div class="hero-caps" id="heroCaps" role="list" aria-label="Kernkompetenzen"></div>
+      <p class="hero-tagline" id="heroMeta">15 Jahre IT-Praxis · KRITIS-erfahren · Butzbach · Remote / Hybrid</p>
       <div class="hero-ctas">
-        <a href="#overview" class="btn btn-primary" id="heroCta1Link"><span id="heroCta1Label">IT-Portfolio ansehen</span></a>
-        <a href="assets/Kevin_Kuck_Bewerbungsmappe_IT.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="heroCta2Link"><span id="heroCta2Label">Bewerbungsmappe (PDF)</span></a>
-        <a href="#contact" class="btn btn-ghost" id="heroCta3Link"><span id="heroCta3Label">Kontakt aufnehmen</span></a>
+        <a href="#overview" class="btn-primary" id="heroCta1Link"><span id="heroCta1Label">IT-Portfolio ansehen</span></a>
+        <a href="#contact" class="btn-outline" id="heroCta3Link"><span id="heroCta3Label">Kontakt aufnehmen</span></a>
+        <a href="assets/Kevin_Kuck_Bewerbungsmappe_IT.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline btn-cv" id="heroCta2Link"><span id="heroCta2Label">Bewerbungsmappe (PDF)</span></a>
       </div>
-      <p class="hero-note" id="downloadNote">Bewerbungsmappe: Anschreiben, Lebenslauf & Tech-Profil (PDF)</p>
     </div>
-    <div class="hero-scroll-hint" aria-hidden="true"><span>scroll</span><div class="scroll-line"></div></div>
+    <div class="hero-arrow" aria-hidden="true">↓</div>
   </section>
   <section id="overview" aria-labelledby="overviewHeading"><div class="container">
     <p class="section-label"><span id="overviewLabel">Enterprise IT</span></p>
@@ -156,7 +148,6 @@
   <p>© 2026 Kevin Kuck · it.kkeey.dev</p>
   <p class="footer-legal"><a href="impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="datenschutz.html">Datenschutzerklärung</a></p>
   <p class="footer-cross"><a href="https://kkeey.dev/" target="_blank" rel="noopener noreferrer" id="footerCross">AI-Engineering-Portfolio ansehen →</a></p>
-  <p class="footer-system-tag">KKEEY LIQUID GLASS SYSTEM V3.2 · BUTZBACH</p>
 </footer>
 <script src="js/data.js" defer></script>
 <script src="js/main.js" defer></script>
