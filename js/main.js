@@ -12,15 +12,23 @@ let darkMode = localStorage.getItem('kkit_dark') !== 'false';
 let colorTheme = localStorage.getItem('kkit_color') || 'purple';
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (D) applyTheme();
-  if (D && document.getElementById('overviewGrid')) {
-    render();
-    initNav();
-    initTyped();
-    initReveal();
-    initContactForm();
+  try {
+    if (D) applyTheme();
+    if (D && document.getElementById('overviewGrid')) {
+      render();
+      initNav();
+      initTyped();
+      initReveal();
+      initContactForm();
+    }
+  } catch (err) {
+    console.error(err);
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
   }
   initBg();
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach((el) => el.classList.add('visible'));
+  }, 1200);
 });
 
 function t(obj) {

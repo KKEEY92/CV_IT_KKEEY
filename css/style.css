@@ -391,8 +391,12 @@ section {
   position: relative;
   width: 180px;
   height: 180px;
+  max-width: 180px;
+  max-height: 180px;
+  flex: none;
   border-radius: 50%;
   padding: 2.5px;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   box-shadow: 0 0 32px rgba(var(--accent-1-rgb), 0.35), 0 0 64px rgba(var(--accent-2-rgb), 0.15);
   margin: 0 auto 28px;
@@ -401,6 +405,10 @@ section {
 .hero-avatar img {
   width: 100%;
   height: 100%;
+  max-width: none;
+  max-height: 100%;
+  min-width: 0;
+  min-height: 0;
   border-radius: 50%;
   display: block;
   object-fit: cover;
@@ -550,6 +558,7 @@ section {
   position: absolute;
   bottom: 38px;
   left: 50%;
+  transform: translateX(-50%);
   animation: floatArrow 3s ease-in-out infinite;
   color: var(--kk-text-muted);
   font-size: 24px;
