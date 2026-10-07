@@ -40,12 +40,17 @@ jobs:
 
     steps:
       - name: Validate required secret
+        id: check_secret
         env:
           GITLAB_MIRROR_TOKEN: ${{ secrets.GITLAB_MIRROR_TOKEN }}
         run: |
-          set -euo pipefail
-          test -n "${GITLAB_MIRROR_TOKEN}"
+          if [ -z "${GITLAB_MIRROR_TOKEN}" ]; then
+            echo "::warning::GITLAB_MIRROR_TOKEN is missing. Skipping mirror gracefully to prevent spam."
+            echo "skip_mirror=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           echo "Mirror secret is available."
+          echo "skip_mirror=false" >> "$GITHUB_OUTPUT"
 
       - name: Checkout full main history
         uses: actions/checkout@v4
@@ -54,6 +59,7 @@ jobs:
           ref: main
 
       - name: Validate GitLab target access
+        if: steps.check_secret.outputs.skip_mirror != 'true'
         env:
           GITLAB_MIRROR_TOKEN: ${{ secrets.GITLAB_MIRROR_TOKEN }}
           TARGET_URL: https://oauth2:${{ secrets.GITLAB_MIRROR_TOKEN }}@gitlab.com/${{ github.repository }}.git
@@ -63,7 +69,7 @@ jobs:
           echo "GitLab target is reachable."
 
       - name: Push main to GitLab
-        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}
+        if: steps.check_secret.outputs.skip_mirror != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run == false)
         env:
           GITLAB_MIRROR_TOKEN: ${{ secrets.GITLAB_MIRROR_TOKEN }}
           TARGET_URL: https://oauth2:${{ secrets.GITLAB_MIRROR_TOKEN }}@gitlab.com/${{ github.repository }}.git
