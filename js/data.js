@@ -54,8 +54,8 @@ window.KKIT_DATA = {
       ],
     },
     meta: {
-      de: '15 Jahre IT-Praxis · KRITIS-erfahren · Butzbach · Remote / Hybrid',
-      en: '15 years of IT practice · Critical-infrastructure experience · Butzbach, Germany · Remote / Hybrid',
+      de: '15+ Jahre Berufspraxis · IT-Systemadministration · Butzbach · Remote / Hybrid',
+      en: '15+ years of professional practice · IT System Administration · Butzbach, Germany · Remote / Hybrid',
       fr: '15 ans d\'expérience IT · Infrastructures critiques · Butzbach · Distanciel / Hybride',
       uk: '15 років IT-практики · Досвід роботи з KRITIS · Буцбах · Remote / Hybrid',
       pl: '15 lat praktyki IT · Doświadczenie w KRITIS · Butzbach · Remote / Hybrydowo',
@@ -99,11 +99,11 @@ window.KKIT_DATA = {
     domains: [
       {
         icon: 'cloud',
-        title: { de: 'Cloud & Hybrid', en: 'Cloud & Hybrid', fr: 'Cloud & Hybride', uk: 'Cloud & Hybrid', pl: 'Cloud & Hybryda' },
-        sub: { de: 'Microsoft Azure · Entra ID', en: 'Microsoft Azure · Entra ID', fr: 'Microsoft Azure · Entra ID', uk: 'Microsoft Azure · Entra ID', pl: 'Microsoft Azure · Entra ID' },
+        title: { de: 'Cloud-Grundlagen', en: 'Cloud Basics', fr: 'Cloud & Hybride', uk: 'Cloud & Hybrid', pl: 'Cloud & Hybryda' },
+        sub: { de: 'Microsoft Azure · Kursnachweise', en: 'Microsoft Azure · Certificates', fr: 'Microsoft Azure · Entra ID', uk: 'Microsoft Azure · Entra ID', pl: 'Microsoft Azure · Entra ID' },
         desc: {
-          de: 'Azure AD Sync, Entra ID Administration, Hybrid-Join, Conditional Access Policies für bundesweite KRITIS-Umgebungen.',
-          en: 'Azure AD Sync, Entra ID administration, Hybrid Join, Conditional Access Policies for nationwide KRITIS environments.',
+          de: 'Azure- und Identity-Grundlagen aus Kursnachweisen (AZ-900, Entra ID Grundkurs), angewendet in eigenen Projekten mit Docker und Google Cloud Run.',
+          en: 'Azure and Identity basics from certificates (AZ-900, Entra ID basic course), applied in personal projects with Docker and Google Cloud Run.',
           fr: 'Synchronisation Azure AD, administration Entra ID, jonction hybride et stratégies d\'accès conditionnel.',
           uk: 'Синхронізація Azure AD, адміністрування Entra ID, Hybrid-Join, політики Conditional Access для KRITIS.',
           pl: 'Synchronizacja Azure AD, administracja Entra ID, Hybrid Join, zasady dostępu warunkowego dla środowisk KRITIS.',
@@ -114,8 +114,8 @@ window.KKIT_DATA = {
         title: { de: 'On-Prem Infrastructure', en: 'On-Prem Infrastructure', fr: 'Infrastructure Sur Site', uk: 'On-Prem Інфраструктура', pl: 'Infrastruktura On-Prem' },
         sub: { de: 'Active Directory · Windows Server', en: 'Active Directory · Windows Server', fr: 'Active Directory · Windows Server', uk: 'Active Directory · Windows Server', pl: 'Active Directory · Windows Server' },
         desc: {
-          de: 'Active Directory Administration, GPO-Management, Windows-11-Rollout via Deskcenter Studio für 90.000+ Objekte.',
-          en: 'Active Directory administration, GPO management, Windows 11 rollout via Deskcenter Studio for 90,000+ objects.',
+          de: 'Benutzer- und Gruppenverwaltung im Active Directory, Windows-11-Rollout mit Deskcenter Studio für rund 200 Endpoints. Laut Arbeitszeugnis: Gruppenrichtlinien und Kerberos-Authentifizierung.',
+          en: 'User and group management in Active Directory, Windows 11 rollout with Deskcenter Studio for around 200 endpoints. According to reference: Group Policies and Kerberos authentication.',
           fr: 'Administration Active Directory, GPO, déploiement de Windows 11 via Deskcenter Studio pour 90.000+ objets.',
           uk: 'Адміністрування Active Directory, керування GPO, розгортання Windows 11 через Deskcenter Studio для 90 000+ об\'єктів.',
           pl: 'Administracja Active Directory, zarządzanie GPO, wdrażanie Windows 11 przez Deskcenter Studio dla 90 000+ obiektów.',
@@ -136,10 +136,10 @@ window.KKIT_DATA = {
       {
         icon: 'shield',
         title: { de: 'Security & Endpoint', en: 'Security & Endpoint', fr: 'Sécurité & Endpoints', uk: 'Безпека & Endpoints', pl: 'Bezpieczeństwo & Endpoint' },
-        sub: { de: 'FortiClient · Sophos · KRITIS', en: 'FortiClient · Sophos · KRITIS', fr: 'FortiClient · Sophos · KRITIS', uk: 'FortiClient · Sophos · KRITIS', pl: 'FortiClient · Sophos · KRITIS' },
+        sub: { de: 'FortiClient · Sophos', en: 'FortiClient · Sophos', fr: 'FortiClient · Sophos · KRITIS', uk: 'FortiClient · Sophos · KRITIS', pl: 'FortiClient · Sophos · KRITIS' },
         desc: {
-          de: 'Endpoint Security in KRITIS-Infrastruktur, FortiClient/Sophos-Administration, sicherheitskonforme Konfiguration von 90.000+ Objekten.',
-          en: 'Endpoint security in critical infrastructure, FortiClient/Sophos administration, security-compliant configuration of 90,000+ objects.',
+          de: 'Endpoint-Security mit FortiClient und Sophos, Bearbeitung von Phishing- und Spam-Meldungen. In einem KRITIS-relevanten Umfeld.',
+          en: 'Endpoint security with FortiClient and Sophos, processing of phishing and spam reports. In a KRITIS-relevant environment.',
           fr: 'Sécurité des endpoints en infrastructure critique, administration FortiClient/Sophos, conformité sécuritaire.',
           uk: 'Безпека кінцевих пристроїв у критичній інфраструктурі, адміністрування FortiClient/Sophos для 90 000+ об\'єктів.',
           pl: 'Bezpieczeństwo endpointów w infrastrukturze krytycznej, administracja FortiClient/Sophos, zgodna z normami konfiguracja.',
@@ -150,8 +150,8 @@ window.KKIT_DATA = {
         title: { de: 'Monitoring & Operations', en: 'Monitoring & Operations', fr: 'Supervision & Exploitation', uk: 'Моніторинг & Операції', pl: 'Monitoring & Operacje' },
         sub: { de: 'Omnitracker · Innovaphone · PBX', en: 'Omnitracker · Innovaphone · PBX', fr: 'Omnitracker · Innovaphone · PBX', uk: 'Omnitracker · Innovaphone · PBX', pl: 'Omnitracker · Innovaphone · PBX' },
         desc: {
-          de: 'IT-Betrieb und Entstörung in KRITIS-Umgebung, Ticket-basierter Support-Betrieb, PBX-Administration und Systemüberwachung.',
-          en: 'IT operations and incident resolution in critical infrastructure, ticket-based support operations, PBX administration and system monitoring.',
+          de: 'Ticketbasierter Support-Betrieb in Omnitracker: 553 Tickets und 366 Stunden in knapp fünf Monaten.',
+          en: 'Ticket-based support operations in Omnitracker: 553 tickets and 366 hours in just under five months.',
           fr: 'Exploitation et résolution d\'incidents en environnement critique, gestion des tickets, administration PBX.',
           uk: 'IT-операції та усунення інцидентів у KRITIS-середовищі, підтримка за тікетами, адміністрування PBX.',
           pl: 'Operacje IT i usuwanie awarii w środowisku KRITIS, wsparcie oparte na ticketach, administracja PBX i nadzór systemów.',
@@ -162,8 +162,8 @@ window.KKIT_DATA = {
         title: { de: 'Governance & IAM', en: 'Governance & IAM', fr: 'Gouvernance & IAM', uk: 'Governance & IAM', pl: 'Governance & IAM' },
         sub: { de: 'IAM · RBAC · Compliance', en: 'IAM · RBAC · Compliance', fr: 'IAM · RBAC · Conformité', uk: 'IAM · RBAC · Відповідність', pl: 'IAM · RBAC · Zgodność' },
         desc: {
-          de: 'Benutzer- und Berechtigungsverwaltung, RBAC-Strukturierung, Einhaltung von Compliance-Anforderungen in regulierten Umgebungen.',
-          en: 'User and permission management, RBAC structuring, compliance requirements in regulated environments.',
+          de: 'Benutzer- und Berechtigungsverwaltung nach Rollen, Rechte für Fachanwendungen, Lizenzsteuerung über AD-Gruppen.',
+          en: 'Role-based user and permission management, rights for specialized applications, license control via AD groups.',
           fr: 'Gestion des utilisateurs et des permissions, structuration RBAC, exigences de conformité dans des secteurs régulés.',
           uk: 'Керування користувачами та правами, структура RBAC, дотримання вимог комплаєнсу в регульованих середовищах.',
           pl: 'Zarządzanie użytkownikami i uprawnieniami, strukturyzacja RBAC, spełnianie wymogów regulacyjnych w sektorach krytycznych.',
@@ -184,34 +184,34 @@ window.KKIT_DATA = {
       pl: 'Sprawdzone środowiska enterprise pod realną presją produkcyjną.',
     },
     tiers: [
-      { label: { de: 'Identity', en: 'Identity', fr: 'Identité', uk: 'Identity', pl: 'Identity' }, tech: 'Active Directory · Microsoft Entra ID', detail: { de: 'Core IAM Layer', en: 'Core IAM Layer', fr: 'Couche IAM Principale', uk: 'Базовий шар IAM', pl: 'Główna Warstwa IAM' } },
+      { label: { de: 'Identity', en: 'Identity', fr: 'Identité', uk: 'Identity', pl: 'Identity' }, tech: 'Active Directory', detail: { de: 'Core IAM Layer', en: 'Core IAM Layer', fr: 'Couche IAM Principale', uk: 'Базовий шар IAM', pl: 'Główna Warstwa IAM' } },
       { label: { de: 'Clients', en: 'Clients', fr: 'Clients', uk: 'Clients', pl: 'Clients' }, tech: 'Windows 11 · Deskcenter Studio · Citrix', detail: { de: 'Endpoint Management', en: 'Endpoint Management', fr: 'Gestion des Postes', uk: 'Керування кінцевими пристроями', pl: 'Zarządzanie Punktami Końcowymi' } },
-      { label: { de: 'Security', en: 'Security', fr: 'Sécurité', uk: 'Security', pl: 'Security' }, tech: 'FortiClient · Sophos · NetScaler', detail: { de: 'Perimeter & Endpoint', en: 'Perimeter & Endpoint', fr: 'Périmètre & Sécurité', uk: 'Периметр і кінцеві точки', pl: 'Obwód & Endpoint' } },
+      { label: { de: 'Security', en: 'Security', fr: 'Sécurité', uk: 'Security', pl: 'Security' }, tech: 'FortiClient · Sophos', detail: { de: 'Perimeter & Endpoint', en: 'Perimeter & Endpoint', fr: 'Périmètre & Sécurité', uk: 'Периметр і кінцеві точки', pl: 'Obwód & Endpoint' } },
       { label: { de: 'Automation', en: 'Automation', fr: 'Automatisation', uk: 'Automation', pl: 'Automation' }, tech: 'PowerShell · Python · REST APIs', detail: { de: 'Orchestration Layer', en: 'Orchestration Layer', fr: 'Couche d\'Orchestration', uk: 'Шар оркестрації', pl: 'Warstwa Orkiestracji' } },
       { label: { de: 'Operations', en: 'Operations', fr: 'Opérations', uk: 'Operations', pl: 'Operations' }, tech: 'Omnitracker · Innovaphone PBX', detail: { de: 'ITSM & Comms', en: 'ITSM & Comms', fr: 'ITSM & Téléphonie', uk: 'ITSM & Зв\'язок', pl: 'ITSM & Telefonia' } },
     ],
     cards: [
       {
-        title: { de: 'KRITIS-Infrastruktur bei JoBITS', en: 'Critical Infrastructure at JoBITS', fr: 'Infrastructure Critique chez JoBITS', uk: 'Критична інфраструктура в JoBITS', pl: 'Infrastruktura Krytyczna w JoBITS' },
+        title: { de: 'Johanniter Bundes-IT-Services', en: 'Johanniter Bundes-IT-Services', fr: 'Infrastructure Critique chez JoBITS', uk: 'Критична інфраструктура в JoBITS', pl: 'Infrastruktura Krytyczna w JoBITS' },
         desc: {
-          de: 'Bundesweite Verwaltung von 90.000+ AD-Objekten und Nutzerkonten bei den Johanniter Bundes-IT-Services. Citrix-Umgebung, Hybrid Azure AD Join, Windows-11-Migration, FortiClient/Sophos Endpoint Security.',
-          en: 'Nationwide management of 90,000+ AD objects and user accounts at Johanniter Bundes-IT-Services. Citrix environment, Hybrid Azure AD Join, Windows 11 migration, FortiClient/Sophos endpoint security.',
+          de: 'Bundesweite AD-Umgebung mit rund 90.000 Objekten. Benutzerverwaltung, Citrix-Support und Windows-11-Migration für 12 Organisationseinheiten.',
+          en: 'Nationwide AD environment with around 90,000 objects. User management, Citrix support and Windows 11 migration for 12 organizational units.',
           fr: 'Gestion nationale de 90.000+ objets AD chez Johanniter Bundes-IT-Services. Environnement Citrix, Hybrid Azure AD Join, migration Windows 11, sécurité FortiClient/Sophos.',
           uk: 'Всенімецьке адміністрування 90 000+ AD-об\'єктів у Johanniter Bundes-IT-Services. Citrix, Hybrid Azure AD Join, міграція Windows 11, FortiClient/Sophos.',
           pl: 'Ogólnokrajowe zarządzanie 90 000+ obiektami AD i kontami w Johanniter Bundes-IT-Services. Środowisko Citrix, Hybrid Azure AD Join, migracja Windows 11, bezpieczeństwo FortiClient/Sophos.',
         },
-        tags: ['Active Directory', 'Entra ID', 'Citrix', 'KRITIS', 'Windows 11'],
+        tags: ['Active Directory', 'Citrix', 'Windows 11', 'KRITIS-Umfeld'],
       },
       {
-        title: { de: 'BAUHAUS IT (14 Jahre Praxis)', en: 'BAUHAUS IT (14 years hands-on)', fr: 'BAUHAUS IT (14 ans de pratique)', uk: 'BAUHAUS IT (14 років практики)', pl: 'BAUHAUS IT (14 Lat Praktyki)' },
+        title: { de: 'BAUHAUS (14 Jahre)', en: 'BAUHAUS (14 years)', fr: 'BAUHAUS IT (14 ans de pratique)', uk: 'BAUHAUS IT (14 років практики)', pl: 'BAUHAUS IT (14 Lat Praktyki)' },
         desc: {
-          de: 'Technische Verantwortung für Warenwirtschaftssysteme, Hardware und IT-Infrastruktur im laufenden Handelsbetrieb. Tier-1-bis-3-Support mit direkter Anwenderkenntnis aus dem Produktivbetrieb.',
-          en: 'Technical responsibility for merchandise management systems, hardware and IT infrastructure in live retail operations. Tier 1–3 support with direct user knowledge from production environments.',
+          de: 'Warenwirtschaft, Inventory Management und Prozessoptimierung im laufenden Handelsbetrieb. Direkte Kenntnis der Anwenderseite aus dem Produktivbetrieb.',
+          en: 'Merchandise management, inventory management and process optimization in ongoing retail operations. Direct knowledge of the user side from production.',
           fr: 'Responsabilité technique des systèmes ERP, du matériel et de l\'infrastructure en milieu commercial. Support Niveaux 1 à 3 avec maîtrise opérationnelle.',
           uk: 'Технічна відповідальність за системи товарообігу, обладнання та IT-інфраструктуру. Підтримка 1-3 рівнів із глибоким розумінням щоденних процесів.',
           pl: 'Odpowiedzialność techniczna za systemy ERP, sprzęt i infrastrukturę IT w handlu. Wsparcie L1-L3 z bezpośrednią znajomością realiów użytkowników.',
         },
-        tags: ['Warenwirtschaft', '1st–3rd Level', 'Hardware', 'Prozessoptimierung'],
+        tags: ['Warenwirtschaft', 'Hardware', 'Prozessoptimierung'],
       },
     ],
   },
@@ -254,23 +254,23 @@ window.KKIT_DATA = {
     },
     cards: [
       {
-        title: { de: 'KRITIS-Compliance', en: 'Critical Infrastructure Compliance', fr: 'Conformité KRITIS', uk: 'Відповідність KRITIS', pl: 'Zgodność z KRITIS' },
+        title: { de: 'Betrieb in regulierter Umgebung', en: 'Operations in regulated environments', fr: 'Conformité KRITIS', uk: 'Відповідність KRITIS', pl: 'Zgodność z KRITIS' },
         status: 'verified',
-        statusLabel: { de: 'Verifiziert', en: 'Verified', fr: 'Vérifié', uk: 'Перевірено', pl: 'Zweryfikowano' },
+        statusLabel: { de: 'LAUT ZEUGNIS', en: 'ACC. TO REFERENCE', fr: 'Vérifié', uk: 'Перевірено', pl: 'Zweryfikowano' },
         items: [
-          { de: 'Administration bundesweiter KRITIS-Infrastruktur bei JoBITS', en: 'Administration of nationwide KRITIS infrastructure at JoBITS', fr: 'Administration d\'infrastructure critique nationale chez JoBITS', uk: 'Адміністрування всенімецької KRITIS-інфраструктури в JoBITS', pl: 'Administracja ogólnokrajową infrastrukturą KRITIS w JoBITS' },
-          { de: 'Strikte Trennung von Berechtigungen und Rollen (Least Privilege)', en: 'Strict separation of permissions and roles (Least Privilege)', fr: 'Séparation stricte des permissions et des rôles (Moindre Privilège)', uk: 'Суворий розподіл прав і ролей (Least Privilege)', pl: 'Ścisły podział uprawnień i ról (Zasada Najmniejszych Przywilejów)' },
-          { de: 'Nachvollziehbare Änderungsdokumentation und Audit-Trails', en: 'Traceable change documentation and audit trails', fr: 'Traçabilité complète des modifications et pistes d\'audit', uk: 'Повне документування змін та аудит-трейли', pl: 'Pełna dokumentacja zmian i ścieżki audytu' },
+          { de: 'Rollenbasierte Rechtevergabe nach Least Privilege', en: 'Role-based permission assignment according to Least Privilege', fr: 'Administration d\'infrastructure critique nationale chez JoBITS', uk: 'Адміністрування всенімецької KRITIS-інфраструктури в JoBITS', pl: 'Administracja ogólnokrajową infrastrukturą KRITIS w JoBITS' },
+          { de: 'Dokumentation jeder Änderung im Ticketsystem', en: 'Documentation of every change in the ticketing system', fr: 'Séparation stricte des permissions et des rôles (Moindre Privilège)', uk: 'Суворий розподіл прав і ролей (Least Privilege)', pl: 'Ścisły podział uprawnień i ról (Zasada Najmniejszych Przywilejów)' },
+          { de: 'Tätigkeit in einem KRITIS-relevanten Umfeld', en: 'Activity in a KRITIS-relevant environment', fr: 'Traçabilité complète des modifications et pistes d\'audit', uk: 'Повне документування змін та аудит-трейли', pl: 'Pełna dokumentacja zmian i ścieżki audytu' },
         ],
       },
       {
         title: 'Identity & Access Management',
         status: 'verified',
-        statusLabel: { de: 'Verifiziert', en: 'Verified', fr: 'Vérifié', uk: 'Перевірено', pl: 'Zweryfikowano' },
+        statusLabel: { de: 'BELEGT', en: 'VERIFIED', fr: 'Vérifié', uk: 'Перевірено', pl: 'Zweryfikowano' },
         items: [
-          { de: 'RBAC-strukturierte Benutzer- und Gruppensteuerung', en: 'RBAC-structured user and group management', fr: 'Gestion des utilisateurs et groupes structurée en RBAC', uk: 'Керування користувачами та групами за моделлю RBAC', pl: 'Zarządzanie użytkownikami i grupami oparte na strukturze RBAC' },
-          { de: 'Microsoft Entra ID Conditional Access Policies', en: 'Microsoft Entra ID Conditional Access Policies', fr: 'Stratégies Conditional Access Microsoft Entra ID', uk: 'Політики Conditional Access у Microsoft Entra ID', pl: 'Zasady Microsoft Entra ID Conditional Access' },
-          { de: '90.000+ AD-Objekte unter zentraler Governance', en: '90,000+ AD objects under central governance', fr: '90.000+ objets AD sous gouvernance centralisée', uk: '90 000+ об\'єктів AD під централізованим керуванням', pl: '90 000+ obiektów AD pod centralnym nadzorem' },
+          { de: '315 Benutzerverwaltungsvorgänge: Neuanlage, Änderung, Löschung', en: '315 user management processes: creation, modification, deletion', fr: 'Gestion des utilisateurs et groupes structurée en RBAC', uk: 'Керування користувачами та групами за моделлю RBAC', pl: 'Zarządzanie użytkownikami i grupami oparte na strukturze RBAC' },
+          { de: 'Rechte für Fachanwendungen und Lizenzsteuerung über AD-Gruppen', en: 'Rechte für Fachanwendungen und Lizenzsteuerung über AD-Gruppen', fr: 'Stratégies Conditional Access Microsoft Entra ID', uk: 'Політики Conditional Access у Microsoft Entra ID', pl: 'Zasady Microsoft Entra ID Conditional Access' },
+          { de: 'Einrichtung und Entstörung von 2FA und SSO', en: 'Setup and troubleshooting of 2FA and SSO', fr: '90.000+ objets AD sous gouvernance centralisée', uk: '90 000+ об\'єктів AD під централізованим керуванням', pl: '90 000+ obiektów AD pod centralnym nadzorem' },
         ],
       },
       {
@@ -278,19 +278,19 @@ window.KKIT_DATA = {
         status: 'active',
         statusLabel: { de: 'Aktiv', en: 'Active', fr: 'Actif', uk: 'Активно', pl: 'Aktywne' },
         items: [
-          { de: 'FortiClient & Sophos Endpoint-Verwaltung in KRITIS', en: 'FortiClient & Sophos endpoint management in KRITIS', fr: 'Gestion des endpoints FortiClient & Sophos en KRITIS', uk: 'Керування FortiClient & Sophos у KRITIS', pl: 'Zarządzanie endpointami FortiClient i Sophos w KRITIS' },
-          { de: 'NetScaler-Administration und sichere Zugriffskontrolle', en: 'NetScaler administration and secure access control', fr: 'Administration NetScaler et contrôle d\'accès sécurisé', uk: 'Адміністрування NetScaler та захищений контроль доступу', pl: 'Administracja NetScaler i bezpieczna kontrola dostępu' },
+          { de: 'FortiClient- und Sophos-Endpoint-Verwaltung', en: 'FortiClient and Sophos endpoint management', fr: 'Gestion des endpoints FortiClient & Sophos en KRITIS', uk: 'Керування FortiClient & Sophos у KRITIS', pl: 'Zarządzanie endpointami FortiClient i Sophos w KRITIS' },
+          
           { de: 'Sicherheitskonforme Windows-11-Migration via Deskcenter', en: 'Security-compliant Windows 11 migration via Deskcenter', fr: 'Migration sécurisée vers Windows 11 via Deskcenter', uk: 'Безпечна міграція на Windows 11 через Deskcenter', pl: 'Bezpieczna migracja do Windows 11 z wykorzystaniem Deskcenter' },
         ],
       },
       {
         title: 'KKEEY Standard — Methodik',
         status: 'active',
-        statusLabel: { de: 'In Betrieb', en: 'In Production', fr: 'En Production', uk: 'У продакшні', pl: 'W Produkcji' },
+        statusLabel: { de: 'EIGENE METHODIK', en: 'OWN METHODOLOGY', fr: 'En Production', uk: 'У продакшні', pl: 'W Produkcji' },
         items: [
           { de: 'Dokumentierte Methodik für reproduzierbare Fehlerdiagnose', en: 'Documented methodology for reproducible fault diagnosis', fr: 'Méthodologie documentée pour un diagnostic reproductible', uk: 'Документована методологія відтворюваної діагностики помилок', pl: 'Udokumentowana metodologia powtarzalnej diagnostyki usterek' },
           { de: 'Strukturierte Störungsanalyse statt Trial-and-Error', en: 'Structured incident analysis instead of trial and error', fr: 'Analyse structurée des incidents plutôt que par tâtonnement', uk: 'Структурований аналіз інцидентів замість методу спроб і помилок', pl: 'Strukturalna analiza incydentów zamiast metody prób i błędów' },
-          { de: 'Verifiziert im KRITIS-Produktivbetrieb', en: 'Verified in KRITIS production operations', fr: 'Vérifié en exploitation critique de production', uk: 'Перевірено в реальному продуктивному середовищі KRITIS', pl: 'Sprawdzona w operacjach produkcyjnych KRITIS' },
+          { de: 'Im eigenen Support-Alltag angewendet', en: 'Applied in daily support operations', fr: 'Vérifié en exploitation critique de production', uk: 'Перевірено в реальному продуктивному середовищі KRITIS', pl: 'Sprawdzona w operacjach produkcyjnych KRITIS' },
         ],
       },
     ],
@@ -357,31 +357,31 @@ window.KKIT_DATA = {
     items: [
       {
         period: { de: 'Dez 2025 – Mai 2026', en: 'Dec 2025 – May 2026', fr: 'Déc 2025 – Mai 2026', uk: 'Груд 2025 – Трав 2026', pl: 'Gru 2025 – Maj 2026' },
-        role: { de: 'IT-Administrator', en: 'IT Administrator', fr: 'Administrateur IT', uk: 'IT-Адміністратор', pl: 'Administrator IT' },
+        role: { de: 'Junior IT-Support Agent mit Aufgaben der Systemadministration', en: 'Junior IT Support Agent with system administration duties', fr: 'Administrateur IT', uk: 'IT-Адміністратор', pl: 'Administrator IT' },
         company: 'Johanniter Bundes-IT-Services',
         active: false,
         desc: {
-          de: 'Administration einer bundesweiten KRITIS-Infrastrukturumgebung für über 90.000+ User und AD-Objekte der gesamten Organisation: Active Directory, Microsoft Entra ID, Citrix (inkl. NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Migration via Deskcenter Studio und modifiziertem PowerShell-Skript. Endpoint-Security mit FortiClient & Sophos. Eigenentwicklungen: Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard.',
-          en: 'Administration of a nationwide critical-infrastructure environment for over 90,000+ users and AD objects: Active Directory, Microsoft Entra ID, Citrix (incl. NetScaler), Omnitracker, Innovaphone PBX. Windows 11 migration via Deskcenter Studio and modified PowerShell script. Endpoint security via FortiClient & Sophos. Own developments: automated ticket assignment tool and the KKEEY Standard.',
+          de: '553 Tickets und 366 Stunden dokumentierte Bearbeitungszeit für 12 Organisationseinheiten. Bundesweite AD-Umgebung mit rund 90.000 Objekten. Benutzer- und Gruppenverwaltung im Active Directory, Citrix-Support, Postfach- und Verteilerverwaltung, Windows-11-Rollout für rund 200 Endpoints mit Deskcenter Studio und angepasstem PowerShell-Skript. Endpoint-Security mit FortiClient und Sophos. Eigenentwicklungen: Tool zur Ticket-Zuweisung und der KKEEY-Standard. Laut Arbeitszeugnis zusätzlich Gruppenrichtlinien, Kerberos, Mail-Flow-Regeln und Citrix-Terminalserver.',
+          en: '553 tickets and 366 hours of documented processing time for 12 organizational units. Nationwide AD environment with around 90,000 objects. User and group management in Active Directory, Citrix support, mailbox and distribution list management, Windows 11 rollout for around 200 endpoints with Deskcenter Studio and adapted PowerShell script. Endpoint security with FortiClient and Sophos. Own developments: tool for ticket assignment and the KKEEY standard. According to reference additionally Group Policies, Kerberos, mail flow rules and Citrix terminal servers.',
           fr: 'Administration d\'une infrastructure critique nationale pour 90.000+ objets AD : Active Directory, Microsoft Entra ID, Citrix (NetScaler), Omnitracker, téléphonie PBX. Déploiement Windows 11 via Deskcenter Studio et scripts PowerShell. Sécurité FortiClient & Sophos. Outil de routage de tickets développé sur mesure.',
           uk: 'Адміністрування загальнонаціональної KRITIS-інфраструктури для 90 000+ користувачів та AD-об\'єктів: Active Directory, Microsoft Entra ID, Citrix, NetScaler, Omnitracker, Innovaphone PBX. Міграція на Windows 11 через Deskcenter Studio та PowerShell. Безпека FortiClient & Sophos. Власні розробки: інструмент маршрутизації тікетів та стандарт KKEEY.',
           pl: 'Administracja ogólnokrajową infrastrukturą KRITIS dla ponad 90 000+ użytkowników i obiektów AD: Active Directory, Microsoft Entra ID, Citrix (w tym NetScaler), Omnitracker, Innovaphone PBX. Migracja Windows 11 przez Deskcenter Studio i dedykowany skrypt PowerShell. Bezpieczeństwo punktów końcowych z FortiClient i Sophos. Autorskie rozwiązania: narzędzie do automatycznego przydzielania zgłoszeń oraz standard KKEEY.',
         },
-        tags: ['Active Directory', 'Entra ID', 'Citrix', 'NetScaler', 'Deskcenter Studio', 'PowerShell', 'Windows 11', 'KRITIS', 'FortiClient', 'Sophos'],
+        tags: ['Active Directory', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'Windows 11', 'KRITIS-Umfeld', 'FortiClient', 'Sophos'],
       },
       {
         period: { de: '2010 – 2024 · 14 Jahre', en: '2010 – 2024 · 14 years', fr: '2010 – 2024 · 14 ans', uk: '2010 – 2024 · 14 років', pl: '2010 – 2024 · 14 lat' },
-        role: { de: 'IT-Beauftragter & Inventory Management', en: 'IT Officer & Inventory Management', fr: 'Responsable IT & Gestion d\'Inventaire', uk: 'IT-Спеціаліст & Керування інвентарем', pl: 'Specjalista IT & Zarządzanie Stanami Magazynowymi' },
+        role: { de: 'Inventory Management & Warenwirtschaft', en: 'Inventory Management & Merchandise Management', fr: 'Responsable IT & Gestion d\'Inventaire', uk: 'IT-Спеціаліст & Керування інвентарем', pl: 'Specjalista IT & Zarządzanie Stanami Magazynowymi' },
         company: 'BAUHAUS',
         active: false,
         desc: {
-          de: 'Tier-1-bis-3-Support, technische Betreuung der Warenwirtschaft, Hardware- und Prozessverantwortung im laufenden Handelsbetrieb. 14 Jahre operative Praxis: Ich kenne den Arbeitsalltag der Anwender aus erster Hand — welche Prozesse funktionieren und wo Systeme im Betrieb brechen.',
-          en: 'Tier 1–3 support, technical ownership of the merchandise management system, hardware and process responsibility in day-to-day retail operations. 14 years of hands-on practice: I know users’ daily work first-hand — which processes work and where systems break in production.',
+          de: '14 Jahre operative Praxis in Warenwirtschaft, Inventory Management und Prozessoptimierung. Ich kenne den Arbeitsalltag der Anwender aus erster Hand: welche Prozesse funktionieren und wo Systeme im Betrieb brechen.',
+          en: '14 years of operational practice in merchandise management, inventory management and process optimization. I know users’ daily work first-hand: which processes work and where systems break in production.',
           fr: 'Support technique Niveaux 1 à 3, maintenance de l\'ERP commercial, gestion du parc matériel et des processus opérationnels pendant 14 ans. Connaissance concrète des besoins utilisateurs sur le terrain.',
           uk: 'Підтримка користувачів 1–3 рівнів, супровід системи товарообігу, відповідальність за обладнання та робочі процеси. 14 років практичного досвіду в щоденній роботі.',
           pl: 'Wsparcie L1-L3, techniczna obsługa systemów gospodarki towarowej ERP, odpowiedzialność za sprzęt i procesy w bieżącej działalności handlowej. 14 lat praktyki operacyjnej: znam codzienność użytkowników z pierwszej ręki — które procesy działają, a gdzie systemy zawodzą w praktyce.',
         },
-        tags: ['1st–3rd-Level-Support', 'Warenwirtschaft', 'Prozessoptimierung', 'Anwenderbetreuung'],
+        tags: ['Warenwirtschaft', 'Prozessoptimierung', 'Anwenderbetreuung'],
       },
       {
         period: { de: 'seit Juni 2026', en: 'since June 2026', fr: 'depuis Juin 2026', uk: 'з Червня 2026', pl: 'od Czerwca 2026' },
@@ -407,15 +407,15 @@ window.KKIT_DATA = {
     groups: [
       {
         label: { de: 'Identity & Access Management', en: 'Identity & Access Management', fr: 'Gestion des Identités et Accès', uk: 'Identity & Access Management', pl: 'Zarządzanie Tożsamością i Dostępem' },
-        items: ['Active Directory', 'Microsoft Entra ID', { de: 'Benutzer- & Berechtigungsverwaltung', en: 'User & permissions management', fr: 'Gestion utilisateurs & droits', uk: 'Керування користувачами та правами', pl: 'Zarządzanie użytkownikami i uprawnieniami' }, { de: 'IAM in KRITIS-Umgebungen', en: 'IAM in critical infrastructure', fr: 'IAM en infrastructure critique', uk: 'IAM у критичних середовищах', pl: 'IAM w środowiskach KRITIS' }],
+        items: ['Active Directory', { de: 'Benutzer- & Berechtigungsverwaltung', en: 'User & permissions management', fr: 'Gestion utilisateurs & droits', uk: 'Керування користувачами та правами', pl: 'Zarządzanie użytkownikami i uprawnieniami' }, { de: 'Rechte für Fachanwendungen', en: 'Rights for specialized applications', fr: 'IAM en infrastructure critique', uk: 'IAM у критичних середовищах', pl: 'IAM w środowiskach KRITIS' }],
       },
       {
         label: { de: 'Client & Infrastruktur', en: 'Client & Infrastructure', fr: 'Clients & Infrastructure', uk: 'Клієнти та інфраструктура', pl: 'Stacje Robocze & Infrastruktura' },
-        items: [{ de: 'Windows-11-Migrationen', en: 'Windows 11 migrations', fr: 'Migrations Windows 11', uk: 'Міграції на Windows 11', pl: 'Migracje do Windows 11' }, 'Deskcenter Studio', 'Citrix (NetScaler)', 'Omnitracker', 'Innovaphone PBX', { de: 'Hardware-Betreuung', en: 'Hardware support', fr: 'Support Matériel', uk: 'Обслуговування апаратного забезпечення', pl: 'Obsługa sprzętu IT' }],
+        items: [{ de: 'Windows-11-Migrationen', en: 'Windows 11 migrations', fr: 'Migrations Windows 11', uk: 'Міграції на Windows 11', pl: 'Migracje do Windows 11' }, 'Deskcenter Studio', 'Citrix Workspace & Director', 'Omnitracker', 'Innovaphone PBX', { de: 'Hardware-Betreuung', en: 'Hardware support', fr: 'Support Matériel', uk: 'Обслуговування апаратного забезпечення', pl: 'Obsługa sprzętu IT' }],
       },
       {
         label: { de: 'Security & Netzwerk', en: 'Security & Network', fr: 'Sécurité & Réseau', uk: 'Безпека та мережі', pl: 'Bezpieczeństwo & Sieci' },
-        items: ['FortiClient', 'Sophos', { de: 'Endpoint Security', en: 'Endpoint Security', fr: 'Sécurité des Endpoints', uk: 'Безпека кінцевих точок', pl: 'Bezpieczeństwo Endpointów' }, { de: 'KRITIS-Infrastruktur', en: 'Critical Infrastructure', fr: 'Infrastructures Critiques', uk: 'Критична інфраструктура', pl: 'Infrastruktura Krytyczna' }],
+        items: ['FortiClient', 'Sophos', { de: 'Endpoint Security', en: 'Endpoint Security', fr: 'Sécurité des Endpoints', uk: 'Безпека кінцевих точок', pl: 'Bezpieczeństwo Endpointów' }, { de: 'Phishing- und Spam-Meldungen', en: 'Phishing and spam reports', fr: 'Infrastructures Critiques', uk: 'Критична інфраструктура', pl: 'Infrastruktura Krytyczna' }],
       },
       {
         label: { de: 'Automatisierung & Scripting', en: 'Automation & Scripting', fr: 'Automatisation & Scripting', uk: 'Автоматизація та скрипти', pl: 'Automatyzacja & Skrypty' },
@@ -423,7 +423,7 @@ window.KKIT_DATA = {
       },
       {
         label: { de: 'Support & Methodik', en: 'Support & Methodology', fr: 'Support & Méthodologie', uk: 'Підтримка та методологія', pl: 'Wsparcie & Metodologia' },
-        items: [{ de: '1st–3rd-Level-Support', en: 'Tier 1–3 support', fr: 'Support N1–N3', uk: 'Підтримка 1–3 рівнів', pl: 'Wsparcie L1–L3' }, { de: 'Ticketsysteme', en: 'Ticketing systems', fr: 'Systèmes de tickets', uk: 'Тікет-системи', pl: 'Systemy zgłoszeniowe' }, { de: 'Warenwirtschaftssysteme', en: 'Merchandise management systems', fr: 'Systèmes ERP', uk: 'Системи обліку товарів', pl: 'Systemy gospodarki towarowej ERP' }, { de: 'Reproduzierbare Fehlerdiagnose', en: 'Reproducible fault diagnosis', fr: 'Diagnostic d\'erreur reproductible', uk: 'Відтворювана діагностика помилок', pl: 'Powtarzalna diagnostyka błędów' }],
+        items: [{ de: 'Ticketbasierter Support', en: 'Ticket-based support', fr: 'Support N1–N3', uk: 'Підтримка 1–3 рівнів', pl: 'Wsparcie L1–L3' }, { de: 'Ticketsysteme', en: 'Ticketing systems', fr: 'Systèmes de tickets', uk: 'Тікет-системи', pl: 'Systemy zgłoszeniowe' }, { de: 'Warenwirtschaftssysteme', en: 'Merchandise management systems', fr: 'Systèmes ERP', uk: 'Системи обліку товарів', pl: 'Systemy gospodarki towarowej ERP' }, { de: 'Reproduzierbare Fehlerdiagnose', en: 'Reproducible fault diagnosis', fr: 'Diagnostic d\'erreur reproductible', uk: 'Відтворювана діагностика помилок', pl: 'Powtarzalna diagnostyka błędów' }],
       },
       {
         label: { de: 'AI Engineering & Innovation', en: 'AI Engineering & Innovation', fr: 'Ingénierie IA & Innovation', uk: 'AI Інженерія та інновації', pl: 'AI Engineering & Innowacje' },
@@ -457,7 +457,7 @@ window.KKIT_DATA = {
       },
       {
         name: 'KKEEY-Standard',
-        sub: { de: '● Standardisierte Methodik · Verifiziert', en: '● Standardized methodology · Verified', fr: '● Méthodologie standardisée · Vérifiée', uk: '● Стандартизована методика · Перевірено', pl: '● Standaryzowana metodologia · Zweryfikowano' },
+        sub: { de: '● Eigene Methodik', en: '● Own methodology', fr: '● Méthodologie standardisée · Vérifiée', uk: '● Стандартизована методика · Перевірено', pl: '● Standaryzowana metodologia · Zweryfikowano' },
         desc: {
           de: 'Dokumentierte Methodik für strukturierte, reproduzierbare Fehlerdiagnose — damit Störungen nachvollziehbar gelöst werden statt per Trial-and-Error.',
           en: 'Documented methodology for structured, reproducible fault diagnosis — so incidents are resolved traceably instead of by trial and error.',
@@ -468,7 +468,7 @@ window.KKIT_DATA = {
       },
       {
         name: 'KKI Agent-Framework',
-        sub: { de: '● Aktives Framework · In-House Library', en: '● Active framework · Internal library', fr: '● Framework actif · Bibliothèque interne', uk: '● Активний фреймворк · Внутрішня бібліотека', pl: '● Aktywny framework · Wewnętrzna biblioteka' },
+        sub: { de: '● Eigenes Framework · privat', en: '● Own framework · private', fr: '● Framework actif · Bibliothèque interne', uk: '● Активний фреймворк · Внутрішня бібліотека', pl: '● Aktywny framework · Wewnętrzna biblioteka' },
         desc: {
           de: 'Privat entwickelte Agentenstruktur mit wiederverwendbaren Bausteinen für Automatisierungs-Workflows — die gemeinsame Grundlage meiner eigenen Tools.',
           en: 'Privately developed agent structure with reusable building blocks for automation workflows — the shared foundation of my own tools.',
@@ -492,8 +492,8 @@ window.KKIT_DATA = {
       pl: 'Oprócz administracji tworzę aplikacje wspomagane przez sztuczną inteligencję — dodatkowe narzędzie rozwijające automatyzację.',
     },
     items: [
-      { name: 'Claire V2.5 Native Audio', desc: { de: '● Produktiv v2.5.0 · Voice-AI-Agent · LiveKit 2.x, Python, ~200ms Latenz', en: '● Production v2.5 · Voice AI agent · LiveKit 2.x, Python, ~200ms latency', fr: '● En production v2.5 · Agent vocal IA · LiveKit 2.x, Python, latence ~200ms', uk: '● Продакшн v2.5 · Голосовий AI-агент · LiveKit 2.x, Python, затримка ~200мс', pl: '● Wdrożenie v2.5 · Głosowy agent AI · LiveKit 2.x, Python, opóźnienie ~200ms' } },
-      { name: 'AuraTone AI v2.0', desc: { de: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz', en: '● Standalone v2.0 · Native macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU 120Hz', fr: '● Application native v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU', uk: '● Нативний застосунок v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU', pl: '● Aplikacja natywna v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU' } },
+      { name: 'Claire V2.5 Native Audio', desc: { de: '● v2.5 · öffentlich · Voice-AI-Agent · LiveKit 2.x, Python', en: '● v2.5 · public · Voice AI agent · LiveKit 2.x, Python', fr: '● En production v2.5 · Agent vocal IA · LiveKit 2.x, Python, latence ~200ms', uk: '● Продакшн v2.5 · Голосовий AI-агент · LiveKit 2.x, Python, затримка ~200мс', pl: '● Wdrożenie v2.5 · Głosowy agent AI · LiveKit 2.x, Python, opóźnienie ~200ms' } },
+      { name: 'AuraTone AI v2.0', desc: { de: '● Private Codebasis v2.0.0 · Native macOS Audio-Workstation · Tauri 2 (Rust)', en: '● Private Codebasis v2.0.0 · Native macOS Audio-Workstation · Tauri 2 (Rust)', fr: '● Application native v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU', uk: '● Нативний застосунок v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU', pl: '● Aplikacja natywna v2.0 · macOS Audio Workstation · Tauri 2.0 (Rust), Metal GPU' } },
       { name: 'KKI Agent-Framework', desc: { de: '● Aktives Framework · Wiederverwendbare Bausteine für Automation-Workflows', en: '● Active framework · Reusable building blocks for automation workflows', fr: '● Framework actif · Modules d\'automatisation réutilisables', uk: '● Активний фреймворк · Багаторазові модулі автоматизації', pl: '● Aktywny framework · Moduły automatyzacji wielokrotnego użytku' } },
     ],
     moreLink: 'https://kkeey.dev/',
