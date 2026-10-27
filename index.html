@@ -23,6 +23,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Kevin Kuck","jobTitle":"IT-Administrator · Systemadministration · IAM","address":{"@type":"PostalAddress","addressLocality":"Butzbach","addressCountry":"DE"},"email":"mailto:hello@kkeey.dev","url":"https://it.kkeey.dev/","sameAs":["https://github.com/KKEEY92","https://www.linkedin.com/in/kevin-kuck-it/","https://kkeey.dev/"]}
   </script>
+<link rel="stylesheet" href="css/engineering-cases.css?v=20261027-rc2">
 </head>
 <body>
 <a href="#main" class="skip-link">Zum Hauptinhalt springen</a>
@@ -92,7 +93,8 @@
     <div class="pipeline-container reveal" id="pipelineContainer" role="list"></div>
     <div class="agent-grid" id="agentGrid" role="list"></div>
   </div></section>
-  <section id="compliance" class="section-alt" aria-labelledby="complianceHeading"><div class="container">
+  <section id="engineering" class="engineering" aria-labelledby="engineering-title" data-variant="compact"><div class="container"><p class="section-label">Engineering / Deep Dive</p><h2 class="section-title" id="engineering-title">Engineering aus der Praxis</h2><p class="section-sub">Drei Projekte. Konkrete technische Entscheidungen. Architektur, Codebelege und offene Prüfungen.</p><article class="glass-card case-panel" id="engineering-job-scout"><h3>Job-Scout — Dokumente mit klaren Freigabegrenzen.</h3><p>Ein lokales Python/FastAPI-System für Karriere-Workflows. Der Engineering-Fokus: PDF-Validierung, explizite Fehlerzustände und nachvollziehbare Regressionstestlogik.</p><p>Code vorhanden · Laufzeitprüfung offen</p><p>Der Review belegt PDF-Kontrolllogik und Testdesign. Ein erfolgreicher End-to-End-Export oder produktiver Betrieb wurde nicht verifiziert.</p><a href="https://kkeey.dev/#engineering-job-scout">Case Study erkunden →</a></article><article class="glass-card case-panel" id="engineering-claire-v2"><h3>Claire V2 — Streaming bis zur Sprachausgabe durchdenken.</h3><p>Ein LiveKit-basierter Voice-Agent mit Stream-Filterlogik und zustandsabhängiger Prosodie. Im Mittelpunkt stehen Integrationsgrenzen und das Verhalten über Chunk-Grenzen hinweg.</p><p>Claire V2 · V2.5 separat</p><p>Der Code-Review betrifft claire-v2. Die bestehende V2.5-Karte ist eine andere Variante. Providerkonfiguration und End-to-End-Verhalten bleiben zu prüfen.</p><a href="https://kkeey.dev/#engineering-claire-v2">Case Study erkunden →</a></article><article class="glass-card case-panel" id="engineering-auratone"><h3>AuraTone — Audioverarbeitung über Prozessgrenzen.</h3><p>Rust/Tauri orchestriert einen lokalen DSP-Sidecar und eine asynchrone Audio-Pipeline. Die Case Study macht Prozesssteuerung, Protokoll und Deduplizierung nachvollziehbar.</p><p>Implementiert · E2E offen</p><p>GPU-Beschleunigung und sichere Prozessbereinigung wurden nicht verifiziert. Aus der Architekturerklärung folgt kein gemessener Audio-Benchmark.</p><a href="https://kkeey.dev/#engineering-auratone">Case Study erkunden →</a></article></div></section>
+<section id="compliance" class="section-alt" aria-labelledby="complianceHeading"><div class="container">
     <p class="section-label"><span id="complianceLabel">Governance</span></p>
     <h2 class="section-title" id="complianceHeading"><span id="complianceTitle">Compliance & Betriebssicherheit</span></h2>
     <p class="section-sub" id="complianceSub"></p>
@@ -231,6 +233,7 @@
   <p class="footer-cross"><a href="https://kkeey.dev/" target="_blank" rel="noopener noreferrer" id="footerCross">AI-Engineering-Portfolio ansehen →</a></p>
 </footer>
 <script src="js/data.js?v=20261007b" defer></script>
-<script src="js/main.js?v=20261007b" defer></script>
+<script src="js/main.js?v=20261027-rc1" defer></script>
+<script src="js/engineering-cases.js?v=20261027-rc1" defer></script>
 </body>
 </html>
