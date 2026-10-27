@@ -4,6 +4,7 @@
  */
 
 const D = window.KKIT_DATA;
+const itMotionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 const LANGUAGES = ['de', 'en', 'fr', 'uk', 'pl'];
 let lang = localStorage.getItem('kkit_lang') || 'de';
 if (!LANGUAGES.includes(lang)) lang = 'de';
@@ -75,6 +76,7 @@ function initNav() {
       hamburger.setAttribute('aria-expanded', String(open));
     });
   }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) { links.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); hamburger.textContent='☰'; hamburger.focus(); } });
   document.querySelectorAll('#navLinks a').forEach(a => {
     a.addEventListener('click', () => {
       links.classList.remove('open');
@@ -128,7 +130,9 @@ function initNav() {
 let typedTimer, typedIdx = 0, typedDeleting = false, typedText = '';
 
 function initTyped() {
-  typedTimer = setTimeout(nextChar, 800);
+  restartTyped();
+  itMotionPreference.addEventListener('change', restartTyped);
+  document.addEventListener('visibilitychange', () => { if(document.hidden) clearTimeout(typedTimer); else restartTyped(); });
 }
 
 function restartTyped() {
@@ -136,10 +140,13 @@ function restartTyped() {
   typedIdx = 0; typedDeleting = false; typedText = '';
   const el = document.getElementById('typedOutput');
   if (el) el.textContent = '';
+  if (itMotionPreference.matches || document.hidden) { if (el) el.textContent = t(D.hero.roles)?.[0] || D.hero.roles.de[0]; return; }
   typedTimer = setTimeout(nextChar, 350);
 }
 
 function nextChar() {
+  if (itMotionPreference.matches) { restartTyped(); return; }
+  if (document.hidden) return;
   const roles = D.hero.roles[lang] || D.hero.roles.de;
   const target = roles[typedIdx % roles.length];
   const el = document.getElementById('typedOutput');
@@ -453,7 +460,7 @@ function initContactForm() {
 }
 
 // ─── EXACT MASTER SHADER ENGINE (from CV_KKEEY) ──────────────────────────────
-let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, rafId;
+let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, rafId, refreshBg = () => {};
 
 function initBg() {
   const c = document.getElementById('lo-bg');
@@ -523,18 +530,25 @@ function initBg() {
 
   let t0 = null;
   const loop = ts => {
-    if (!gl) return;
-    if (!t0) t0 = ts;
-    gl.uniform1f(uTime, (ts - t0) * 0.001);
+    rafId = 0;
+    if (!gl || document.hidden) return;
+    if (t0 === null) t0 = ts;
+    gl.uniform1f(uTime, itMotionPreference.matches ? 0 : (ts - t0) * 0.001);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    rafId = requestAnimationFrame(loop);
+    if (!itMotionPreference.matches) rafId = requestAnimationFrame(loop);
   };
-  rafId = requestAnimationFrame(loop);
+  refreshBg = () => { cancelAnimationFrame(rafId); rafId = 0; if (!document.hidden) loop(performance.now()); };
+  itMotionPreference.addEventListener('change', refreshBg);
+  document.addEventListener('visibilitychange', refreshBg);
+  refreshBg();
 
   window.addEventListener('resize', () => {
     const W2 = window.innerWidth, H2 = window.innerHeight;
+    c.width = W2; c.height = H2;
     c.style.width = W2 + 'px'; c.style.height = H2 + 'px';
+    gl.viewport(0, 0, W2, H2);
     if (gl && uRes) gl.uniform2f(uRes, W2, H2);
+    refreshBg();
   }, { passive: true });
 }
 
@@ -550,6 +564,7 @@ function updateBgLight() {
       gl.uniform3f(uC2, 0.0, 0.831, 0.667);
     }
   }
+  refreshBg();
 }
 
 
