@@ -5,7 +5,7 @@
   <h3>Kevin Kuck — IT Administrator & System Engineer</h3>
   
   [![Live Demo](https://img.shields.io/badge/Live_Portfolio-CV__IT__KKEEY-1a5fa8?style=for-the-badge&logo=github&logoColor=white)](https://it.kkeey.dev/)
-  [![Language: DE/EN](https://img.shields.io/badge/Language-Bilingual_DE%2FEN-00E5FF?style=for-the-badge)]()
+  [![Language: DE/EN/FR/UK/PL](https://img.shields.io/badge/Language-DE%2FEN%2FFR%2FUK%2FPL-00E5FF?style=for-the-badge)]()
   [![Framework: KKI Glass](https://img.shields.io/badge/Framework-KKI_Liquid_Glass-FF7A00?style=for-the-badge)]()
   [![Compliance: DSGVO](https://img.shields.io/badge/Compliance-DSGVO_%2F_DDG-34A853?style=for-the-badge)]()
 </div>
@@ -15,7 +15,7 @@
 ## 🇩🇪 Deutsch
 
 ### Über dieses Repository
-Dieses Repository beherbergt das interaktive IT-Administrator-Portfolio von **Kevin Kuck**. Es demonstriert fundierte 15 Jahre praktische Betriebserfahrung in der Verwaltung komplexer Enterprise-IT-Infrastrukturen, Identity & Access Management (Active Directory, Microsoft Entra ID), Citrix-Farmen, Windows 11 Rollouts, PowerShell-Automatisierung und KRITIS-Infrastrukturen.
+Dieses Repository beherbergt das interaktive IT-Administrator-Portfolio von **Kevin Kuck**. Die 14-jährige Gesamtberufspraxis umfasst Handel und IT. Das Portfolio zeigt Erfahrungen in der Verwaltung komplexer Enterprise-IT-Infrastrukturen, Identity & Access Management (Active Directory, Microsoft Entra ID), Citrix-Farmen, Windows 11 Rollouts, PowerShell-Automatisierung und KRITIS-Infrastrukturen.
 
 ### Kernkompetenzen & Schwerpunkte
 - 🔐 **Identity & Access Management (IAM):** Active Directory, Microsoft Entra ID (Azure AD), SSO, MFA, Rollen- & Berechtigungskonzepte (RBAC).
@@ -29,7 +29,7 @@ Dieses Repository beherbergt das interaktive IT-Administrator-Portfolio von **Ke
 ## 🇬🇧 English
 
 ### Overview
-This repository hosts the interactive IT System Administration portfolio of **Kevin Kuck**. It showcases 15 years of hands-on enterprise IT experience managing complex infrastructures, Identity & Access Management (Active Directory, Microsoft Entra ID), Citrix virtualization environments, Windows 11 Enterprise rollouts, PowerShell automation, and critical infrastructure (KRITIS) security standards.
+This repository hosts the interactive IT System Administration portfolio of **Kevin Kuck**. The 14 years of total professional experience span retail and IT. The portfolio presents experience managing complex infrastructures, Identity & Access Management (Active Directory, Microsoft Entra ID), Citrix virtualization environments, Windows 11 Enterprise rollouts, PowerShell automation, and critical infrastructure (KRITIS) security standards.
 
 ### Core Technical Focus
 - 🔐 **Identity & Access Management (IAM):** Active Directory, Microsoft Entra ID (Azure AD), SSO, MFA, RBAC permission matrix enforcement.
@@ -46,7 +46,7 @@ This repository hosts the interactive IT System Administration portfolio of **Ke
 graph TD
     subgraph Client["🖥️ Client Browser"]
         UI["KKI IT Professional UI"]
-        LANG["DE / EN Language Engine"]
+        LANG["DE / EN / FR / UK / PL Language Engine"]
         THEME["Light / Dark Theme Switch"]
     end
     
@@ -84,10 +84,10 @@ python3 -m http.server 3000
 
 ---
 
-## 💼 Freelance & Contact Information
+## 💼 Professional Opportunities & Contact Information
 
 **Kevin Kuck** — *IT Administrator & System Engineer*  
-Available for IT administration contracts, IAM architecture, PowerShell automation, and infrastructure projects.
+Open to employment opportunities, future projects and collaboration in IT administration, IAM and automation. No active self-employment is asserted.
 
 - 🌐 **Live Portfolio:** [it.kkeey.dev/](https://it.kkeey.dev/)
 - 👔 **LinkedIn:** [linkedin.com/in/kevin-kuck-it/](https://www.linkedin.com/in/kevin-kuck-it/)
@@ -96,3 +96,7 @@ Available for IT administration contracts, IAM architecture, PowerShell automati
 
 ---
 &copy; 2026 Kevin Kuck. All rights reserved. / Alle Rechte vorbehalten.
+
+## Kontextarchitektur / Context architecture
+
+Der IT-Fokus bleibt Systemadministration, IAM und nachgewiesene Praxis. Der ergänzende [ContextNexus-Einstieg](https://kkeey.dev/#engineering-contextnexus) erklärt die lokale Graph-Anwendung und das Context-Bridge-M4-Modul mit getrennten Prüf- und Freigabeschranken. M4 bleibt Entwicklungsstand; produktive Consumerabnahme ist offen.
