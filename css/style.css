@@ -672,6 +672,9 @@ section {
   gap: 24px;
   align-items: start;
 }
+.systems-layout > * {
+  min-inline-size: 0;
+}
 .tier-stack {
   display: flex;
   flex-direction: column;
