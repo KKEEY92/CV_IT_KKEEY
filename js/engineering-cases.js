@@ -8,7 +8,7 @@
       "name": "Job-Scout",
       "index": "01 / CAREER OPERATIONS",
       "title": "Stellenabruf auf AWS Lambda",
-      "summary": "Ein lokales Python/FastAPI-System für Karriere-Workflows, erweitert um den serverlosen Abruf öffentlicher n8n-Stellen. Der AWS-Pilot lief in Stockholm bei ausgeschaltetem Mac.",
+      "summary": "Ein lokales Python/FastAPI-System für Karriere-Workflows, erweitert um den serverlosen Abruf öffentlicher Stellenanzeigen von n8n über die Ashby Job Postings API. Der AWS-Pilot lief in Stockholm bei ausgeschaltetem Mac.",
       "tags": [
         "Python",
         "FastAPI",
@@ -24,7 +24,7 @@
         [
           "AWS-Stellenabruf",
           "Pilot validiert",
-          "Eine private Lambda-Funktion in Stockholm fragt die öffentliche n8n-Stellenliste ab. Die Laufzeitrolle darf ausschließlich in die eigene CloudWatch-Loggruppe schreiben. Nach dem Test wurde die Funktion gesperrt."
+          "Eine private Lambda-Funktion in Stockholm ruft öffentliche Stellenanzeigen von n8n über die Ashby Job Postings API ab. Die Laufzeitrolle darf ausschließlich in die eigene CloudWatch-Loggruppe schreiben. Nach dem Test wurde die Funktion gesperrt."
         ],
         [
           "Verifikationsstatus",
@@ -59,7 +59,7 @@
       "name": "Job-Scout",
       "index": "01 / CAREER OPERATIONS",
       "title": "Job listing retrieval on AWS Lambda",
-      "summary": "A local Python/FastAPI system for career workflows, extended with serverless retrieval of public n8n job listings. The AWS pilot ran in Stockholm with the Mac switched off.",
+      "summary": "A local Python/FastAPI system for career workflows, extended with serverless retrieval of public job listings from n8n through the Ashby Job Postings API. The AWS pilot ran in Stockholm with the Mac switched off.",
       "tags": [
         "Python",
         "FastAPI",
@@ -75,7 +75,7 @@
         [
           "AWS job retrieval",
           "Pilot validated",
-          "A private Lambda function in Stockholm fetches the public n8n job board. Its execution role can write logs only to the pilot CloudWatch log group. The function was disabled after the test."
+          "A private Lambda function in Stockholm fetches public job listings from n8n through the Ashby Job Postings API. Its execution role can write logs only to the pilot CloudWatch log group. The function was disabled after the test."
         ],
         [
           "Verification status",
