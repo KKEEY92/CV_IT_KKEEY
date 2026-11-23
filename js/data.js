@@ -235,7 +235,7 @@ window.KKIT_DATA = {
       { num: '05', title: { de: 'Audit & Logging', en: 'Audit & Logging', fr: 'Audit & Journalisation', uk: 'Аудит & Логування', pl: 'Audyt & Logowanie' }, desc: { de: 'Nachvollziehbare Protokollierung aller Aktionen für Compliance und Review', en: 'Traceable logging of all actions for compliance and review', fr: 'Journalisation complète pour la conformité et les audits', uk: 'Прозоре документування всіх дій для комплаєнсу та аудиту', pl: 'Przejrzyste rejestrowanie wszystkich działań na potrzeby compliance i audytów' }, status: 'queued' },
     ],
     agents: [
-      { icon: '⚡', name: 'JoBIT Tracker', desc: { de: 'Regelbasierte Zuweisung für Support-Tickets im Team', en: 'Rule-based ticket assignment for support teams', fr: 'Attribution intelligente des tickets de support', uk: 'Маршрутизація тікетів підтримки на основі правил', pl: 'Automatyczne przypisywanie ticketów wsparcia w zespole' } },
+      { icon: '⚡', name: 'Support-Ticket-Router', desc: { de: 'Regelbasierte Zuweisung für Support-Tickets im Team', en: 'Rule-based ticket assignment for support teams', fr: 'Attribution intelligente des tickets de support', uk: 'Маршрутизація тікетів підтримки на основі правил', pl: 'Automatyczne przypisywanie ticketów wsparcia w zespole' } },
       { icon: '🔐', name: { de: 'IAM-Provisioner', en: 'IAM Provisioner', fr: 'Provisionneur IAM', uk: 'IAM Provisioner', pl: 'IAM Provisioner' }, desc: { de: 'AD/Entra ID Benutzer-Lifecycle Automation', en: 'AD/Entra ID user lifecycle automation', fr: 'Automatisation du cycle de vie des comptes AD/Entra ID', uk: 'Автоматизація життєвого циклу користувачів AD/Entra ID', pl: 'Automatyzacja cyklu życia kont AD/Entra ID' } },
       { icon: '🔄', name: 'KKI Agent Framework', desc: { de: 'Wiederverwendbare Bausteine für Workflow-Automatisierung', en: 'Reusable building blocks for workflow automation', fr: 'Composants réutilisables pour l\'automatisation de workflows', uk: 'Багаторазові модулі для автоматизації робочих процесів', pl: 'Modułowe komponenty do automatyzacji procesów' } },
     ],
@@ -462,7 +462,7 @@ window.KKIT_DATA = {
     },
     items: [
       {
-        name: 'JoBIT Tracker',
+        name: 'Support-Ticket-Router',
         sub: { de: '● Im Team-Einsatz · Eigenentwicklung', en: '● Used in production · Internal tool', fr: '● Déployé en équipe · Développement interne', uk: '● У командній роботі · Власна розробка', pl: '● Używane w produkcji · Rozwiązanie własne' },
         desc: {
           de: 'Selbstentwickeltes Tool, das eingehende Support-Tickets regelbasiert dem passenden Bearbeiter zuweist. Ersetzt tägliche manuelle Verteilarbeit.',
